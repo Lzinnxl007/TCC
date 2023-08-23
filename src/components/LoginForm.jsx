@@ -28,7 +28,7 @@ export default function LoginForm() {
 
     return (
         <div className="absolute top-1/2 left-1/2 
-        -translate-y-1/2 -translate-x-1/2 rounded-2xl p-8 bg-zinc-100
+        -translate-y-1/2 -translate-x-1/2 rounded-3xl p-8 bg-zinc-100
         backdrop-blur bg-opacity-50 w-full max-w-xs h-80">
             <form onSubmit={e => verifyPassword(password, e)}
             className="flex flex-col justify-center 
