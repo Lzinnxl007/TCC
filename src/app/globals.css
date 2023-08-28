@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 :root {
-    --button: #FF9E44;
-    --buttonHovered: #FF9737;
+    --green: #A3BD36;
 }
 
