@@ -12,8 +12,8 @@ export default function Header() {
     }
 
     return (
-        <header className="w-full h-20 bg-[var(--green)]">
-            <nav className="w-full h-full flex items-center justify-around relative z-20">
+        <header className="w-screen h-[9vh] bg-[var(--green)] overflow-hidden">
+            <nav className="w-full h-full flex items-center justify-around z-20">
                <Link href="/">
                 <div className="flex items-center gap-4 md:gap-2">
                         <img src="/logo.png" alt="logo"
@@ -21,12 +21,15 @@ export default function Header() {
                         <span className="text-2xl font-bold whitespace-nowrap">Desperdício Zero</span>
                     </div>
                </Link>
-                <ul className={`flex items-center gap-6 font-medium text-lg md:absolute md:flex-col md:items-start md:bg-[#FBEEDB] md:px-6 md:py-4 md:rounded md:right-0 md:transition-top md:duration-500 md:z-0 ${menuShow ? 'md:visible md:top-20' : 'md:invisible md:-top-full'}`}>
+                <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-[40vw]
+                md:absolute md:flex-col md:bg-[#FBEEDB] md:justify-normal md:h-[91vh] md:px-6 
+                md:py-8 md:rounded md:transition-right md:duration-500 md:top-[9vh]
+                md:z-0 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>
                     <li className="hover:text-zinc-800 transition">
-                        <Link href="/cardapio">Cardapio</Link>
+                        <Link href="/cardapio">Cardapio</Link> 
                     </li>
                     <li className="hover:text-zinc-800 transition">
-                        <Link href="/Receitas">Receitas</Link>
+                        <Link href="/receitas">Receitas</Link>
                     </li>
                     <li className="hover:text-zinc-800 transition">
                         <Link href="/Dahsboard">Dashboard</Link>
