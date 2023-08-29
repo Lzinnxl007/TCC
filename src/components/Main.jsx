@@ -8,7 +8,7 @@ export default function Main() {
                     <br/>
                     se alimentar
                 </h1>
-                <p className="max-w-md text-sm md:text-center">Desperdício Zero ensina nutrição consciente e uso sustentável de alimentos, evitando desperdícios, aproveitando ingredientes e escolhendo alimentos sazonais, visando benefícios pessoais e ambientais.</p>
+                <p className="max-w-md md:max-w-sm text-sm md:text-center">Desperdício Zero ensina nutrição consciente e uso sustentável de alimentos, evitando desperdícios, aproveitando ingredientes e escolhendo alimentos sazonais, visando benefícios pessoais e ambientais.</p>
                 <button className="rounded px-4 py-1.5 text-zinc-50 
                 bg-[var(--green)] font-medium hover:opacity-90 transition">
                     Descobrir
@@ -16,7 +16,7 @@ export default function Main() {
             </div>
             <div>
                 <img src="/main-image.png" alt="complementar" 
-                className="max-w-2xl md:max-w-lg"/>
+                className="max-w-2xl md:max-w-md"/>
             </div>
         </main>
     )
