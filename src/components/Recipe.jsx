@@ -16,7 +16,7 @@ export default async function Recipe({ id }) {
                         alt="food-image" 
                         className="w-full"/>
                     </div>
-                    <div className="px-10 space-y-6 w-full lg:flex lg:items-center lg:flex-col">
+                    <div className="px-10 space-y-6 w-full lg:flex lg:items-center lg:flex-col md:px-4">
                         <div className="bg-[#ffaa49] lg:bg-transparent lg:text-[#ffaa49] lg:font-bold lg:text-xl px-3 py-1 w-fit rounded text-zinc-50 mb-10 lg:mb-2">
                             {recipeById?.meal}
                         </div>
