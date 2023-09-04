@@ -44,7 +44,7 @@ export default async function Recipe({ id }) {
                             </div>
                         </div>
 
-                        <div className="max-w-lg lg:max-w-xs">
+                        <div className="max-w-lg lg:max-w-xs mb-10">
                             <h1 className="font-medium text-3xl mb-6">
                                 Modo de Preparo
                             </h1>
