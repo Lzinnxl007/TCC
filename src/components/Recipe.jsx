@@ -7,8 +7,6 @@ export default async function Recipe({ id }) {
 
     const recipeById = await recipes.filter((recipe) => recipe.id == id)[0]
 
-    console.log(recipeById)
-
 
     return (
         <section className="w-full min-h-screen pt-10 px-4 bg-zinc-100  text-zinc-900">
@@ -37,9 +35,9 @@ export default async function Recipe({ id }) {
                             <h1 className="font-medium text-3xl mb-6">Ingredientes</h1>
                             <div className="w-auto">
                                 <ul>
-                                    {recipeById?.ingredients?.map((ingredient) => {
+                                    {recipeById?.ingredients?.map((ingredient, index) => {
                                         return (
-                                            <li>- {ingredient}</li>
+                                            <li key={index}>- {ingredient}</li>
                                         )
                                     })}
                                 </ul>
@@ -53,7 +51,7 @@ export default async function Recipe({ id }) {
                             <ul className="space-y-4">
                                 {recipeById?.instructions?.map((instruction, index) => {
                                     return (
-                                        <li className="flex relative w-full">
+                                        <li key={index} className="flex relative w-full">
                                             <div className="w-5 h-5 rounded-full bg-orange-500 text-zinc-50 flex items-center justify-center text-sm font-semibold absolute top-[2px]">
                                                 {index + 1}
                                             </div>

@@ -15,9 +15,9 @@ export default async function Recipes() {
         <section className="h-auto">
             <Header/>
             <div className="grid grid-cols-fit gap-6 p-6">
-                {recipes.map((recipe) => {
+                {recipes.map((recipe, index) => {
                     return (
-                        <RecipeCard recipe={recipe}/>
+                        <RecipeCard key={index} recipe={recipe}/>
                     )
                 })}
             </div>
