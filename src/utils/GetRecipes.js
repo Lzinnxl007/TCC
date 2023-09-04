@@ -1,5 +1,5 @@
 export const GetRecipes = async() => {
-    const response = await fetch(`https://api.spoonacular.com/recipes/random?number=1&apiKey=${process.env.RECIPES_API_KEY}`)
+  const response = await fetch('https://desperdicio-zero-api.vercel.app/api/recipes')
 
     const data = await response.json()
     
