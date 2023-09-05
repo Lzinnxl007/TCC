@@ -55,7 +55,7 @@ export default function CalcIMC() {
     return (
         <div className="rounded-2xl bg-orange-300/50 px-10 py-6 w-full max-w-md h-[350px] flex items-center relative">
 
-            <div className="group absolute -right-8 top-2 cursor-pointer">
+            <div className="group absolute left-4 top-4 cursor-pointer z-30">
                 <Info size={20}/>
                 <div className="w-[150px] text-xs text-zinc-900 px-4 py-4 rounded-lg bg-zinc-50 absolute translate-y-2 invisible group-hover:visible transition">
                     <p>

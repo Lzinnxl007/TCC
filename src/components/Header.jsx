@@ -39,7 +39,10 @@ export default function Header() {
                         <Link href="/receitas">Receitas</Link>
                     </li>
                     <li className="hover:text-zinc-800 transition">
-                        <Link href="/Dahsboard">Dashboard</Link>
+                        <Link href="/dashboard">Dashboard</Link>
+                    </li>
+                    <li className="hover:text-zinc-800 transition">
+                        <Link href="/IMC">IMC</Link>
                     </li>
                 </ul>
                 <button onClick={openCloseMenu}
