@@ -15,6 +15,11 @@ export default function IMCTable() {
         </thead>
         <tbody>
           <tr>
+            <td>Menos de 20</td>
+            <td>Menos de 19</td>
+            <td>Abaixo do normal</td>
+          </tr>
+          <tr>
             <td>20 a 25</td>
             <td>19 a 24</td>
             <td>Normal</td>
@@ -35,8 +40,8 @@ export default function IMCTable() {
             <td>Obeso grau II</td>
           </tr>
           <tr>
-            <td>IMC ≥ 40</td>
-            <td>IMC &gt; 39</td>
+            <td>Maior que 40</td>
+            <td>Maior que 39</td>
             <td>Obeso grau III</td>
           </tr>
         </tbody>
