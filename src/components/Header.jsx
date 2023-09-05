@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { Menu } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Logo from "./Logo"
 export default function Header() {
 
@@ -11,6 +11,13 @@ export default function Header() {
     const openCloseMenu = () => {
         setMenuShow(!menuShow)
     }
+
+    useEffect(() => {
+        if(menuShow) {
+            window.document.body.style.overflow = 'hidden'
+        }
+        else window.document.body.style.overflow = 'scroll'
+    }, [menuShow])
 
     return (
         <header className="w-screen h-[10vh] bg-[var(--green)] overflow-hidden">

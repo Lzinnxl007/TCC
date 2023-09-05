@@ -6,3 +6,7 @@
     --green: #A3BD36;
 }
 
+tr, td, th {
+    border: 1px solid #111;
+    padding: 1px 1rem
+}
