@@ -7,12 +7,9 @@ import { Context } from "@/context/IMC"
 import { useState } from "react"
 export default function IMC() {
 
-    const [result, setResult] = useState({
-        IMC: null,
-        gender: null
-    })
+    const [IMC, setIMC] = useState(null)
 
-    console.log(result)
+    console.log(IMC)
 
     return (
         <section className="w-screen h-[120vh] bg-[#FFE4C5]">
@@ -22,13 +19,13 @@ export default function IMC() {
                     Calcule seu IMC
                 </h1>
             <Context.Provider value={{
-                    setResult, result
+                    setIMC, IMC
             }}>
                     <CalcIMC/>
-                    {result.IMC && result.gender && (
+                    {IMC && (
                         <div>
                             <p className="text-lg mb-2">
-                                IMC: <strong>{result.IMC}</strong>
+                                IMC: <strong>{IMC}</strong>
                             </p>
                             <IMCTable/>
                         </div>

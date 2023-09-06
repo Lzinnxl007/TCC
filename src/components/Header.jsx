@@ -24,7 +24,7 @@ export default function Header() {
             <nav className="w-full h-full flex items-center justify-around z-20 py-4">
                <Link href="/">
                 <div className="flex items-center gap-4 md:gap-2">
-                        <Logo size={100}/>
+                        <Logo size={90}/>
                         <span className="text-2xl font-bold whitespace-nowrap">Desperdício Zero</span>
                     </div>
                </Link>
