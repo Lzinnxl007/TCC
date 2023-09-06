@@ -9,7 +9,11 @@ export default function IMC() {
 
     const [IMC, setIMC] = useState(null)
 
-    console.log(IMC)
+    const saveResult = () => {
+        if(IMC) {
+            localStorage.setItem('IMC', JSON.stringify(IMC))
+        }
+    }
 
     return (
         <section className="w-screen h-[120vh] bg-[#FFE4C5]">
@@ -23,11 +27,17 @@ export default function IMC() {
             }}>
                     <CalcIMC/>
                     {IMC && (
-                        <div>
+                        <div className="relative">
                             <p className="text-lg mb-2">
                                 IMC: <strong>{IMC}</strong>
                             </p>
                             <IMCTable/>
+                            <button onCLick={saveResult()} 
+                            className="mx-auto bg-[var(--green)] rounded px-4 
+                            py-1.5 text-zinc-50 font-semibold absolute left-1/2 -translate-x-1/2
+                             translate-y-6 whitespace-nowrap transition hover:opacity-90">
+                                Adicionar a linha do tempo
+                            </button>
                         </div>
                     )}
             </Context.Provider>

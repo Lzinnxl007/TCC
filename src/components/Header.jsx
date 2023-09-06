@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from "./Logo"
+import LightMode from "./LightMode"
 export default function Header() {
 
     const [menuShow, setMenuShow] = useState(false)
@@ -45,6 +46,7 @@ export default function Header() {
                         <Link href="/IMC">IMC</Link>
                     </li>
                 </ul>
+                <LightMode/>
                 <button onClick={openCloseMenu}
                 className="hidden md:block cursor-pointer z-10">
                     <Menu size={36}/>
