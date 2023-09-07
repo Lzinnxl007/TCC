@@ -7,6 +7,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Desperdício Zero | Se alimente melhor',
   description: 'Aprenda a se alimentar de verdade!',
+  icons: {
+    icon: '/favicon.ico'
+  }
 }
 
 
@@ -17,7 +20,6 @@ export default function RootLayout({ children }) {
         <ThemeProviders>
           {children}
         </ThemeProviders>
-        
       </body>
     </html>
   )
