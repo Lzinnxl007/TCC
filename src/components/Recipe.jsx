@@ -3,6 +3,7 @@
 import { GetRecipes } from '@/utils/GetRecipes'
 export default async function Recipe({ id }) {
 
+
     const recipes = await GetRecipes()
 
     const recipeById = await recipes.filter((recipe) => recipe.id == id)[0]

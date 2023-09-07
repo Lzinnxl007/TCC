@@ -3,19 +3,23 @@
 import StarRatings from 'react-star-ratings'
 import { Clock4 } from 'lucide-react'
 import { useRouter } from 'next/navigation'
+import { useTheme } from 'next-themes'
 export default function RecipeCard({ recipe }) {
+
+    const { theme } = useTheme()
 
     const router = useRouter()
 
     const viewRecipe = (recipe) => {
-        console.log(recipe)
         router.push(`/${recipe.name}?id=${recipe.id}`)
     }
 
 
     return (
         <button onClick={() => viewRecipe(recipe)}
-        className="w-full h-[330px] max-w-xs md:max-w-sm md:h-[350px] rounded bg-zinc-50 transition hover:shadow-[6px_6px_0_rgb(255,170,73)] cursor-pointer overflow-hidden hover:translate-y-[5px] mx-auto ">
+        className={`w-full h-[330px] max-w-xs md:max-w-sm md:h-[350px] rounded bg-zinc-50
+         transition hover:shadow-[6px_6px_0_rgb(255,170,73)] cursor-pointer overflow-hidden 
+         hover:translate-y-[5px] mx-auto ${theme == 'dark' && 'bg-zinc-800'} `}>
             <div className="w-full h-3/5 relative">
                 <img src={recipe.image} 
                 alt="recipe-image" 

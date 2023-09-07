@@ -1,7 +1,12 @@
+
+import { useTheme } from 'next-themes'
 export default function Main() {
+
+    const { theme } = useTheme()
+
     return (
-        <main className="w-screen h-[91vh] bg-[#FFE4C5] flex 
-        items-center justify-evenly md:flex-col-reverse overflow-hidden">
+        <main className={`w-screen h-[91vh] ${theme == 'light' ? 'bg-[#FFE4C5]' : 'bg-zinc-800'} flex 
+        items-center justify-evenly md:flex-col-reverse overflow-hidden`}>
             <div className="space-y-4 md:flex md:flex-col md:items-center">
                 <h1 className="text-7xl md:text-6xl font-bold leading-[70px] md:text-center">
                     Aprenda a 

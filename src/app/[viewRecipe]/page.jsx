@@ -9,8 +9,6 @@ export default function ViewRecipe() {
 
     const recipeId = searchParams.get('id')
 
-    console.log(recipeId)
-
     return (
         <section>
             <Header/>
