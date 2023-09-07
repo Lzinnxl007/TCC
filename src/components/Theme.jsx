@@ -1,27 +1,22 @@
 'use client'
 
 import { Sun, Moon } from "lucide-react"
-import { useEffect, useState } from "react"
 import { useTheme } from 'next-themes'
 export default function Theme() {
 
     const { theme, setTheme } = useTheme()
 
-    const [mode, setMode] = useState('light')
+    console.log(theme)
 
     const selectMode = () => {
-        mode == 'light' ? setMode('dark') : setMode('light')
+        theme == 'light' ? setTheme('dark') : setTheme('light')
         
     }
 
-    useEffect(() => {
-        setTheme(mode)
-    }, [mode])
-
     return (
-        <button onClick={selectMode}
-        className={`p-2 rounded-full shadow-md ${mode == 'light' ? 'bg-[var(--orange)]' : 'bg-[var(--green)]'}`}>
-            {mode == 'light' ? (
+        <button onClick={() => selectMode()}
+        className={`p-2 rounded-full shadow-md  dark:bg-orange-400 ${theme == 'light' ? 'bg-orange-300' : 'bg-[var(--green)]'}`}>
+            {theme == 'dark' ? (
                 <Sun/>
             ) : (
                 <Moon/>

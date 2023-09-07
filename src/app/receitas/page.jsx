@@ -12,10 +12,10 @@ export default async function Recipes() {
 
 
     return (
-        <section className="h-auto">
+        <section className="h-auto w-screen">
             <Header/>
-            <div className="grid grid-cols-fit gap-6 p-6">
-                {recipes.map((recipe, index) => {
+            <div className="grid grid-cols-fit gap-6 p-6 dark:bg-zinc-900">
+            {recipes.map((recipe, index) => {
                     return (
                         <RecipeCard key={index} recipe={recipe}/>
                     )

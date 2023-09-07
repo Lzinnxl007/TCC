@@ -26,7 +26,7 @@ export default function Header() {
     }, [menuShow])
 
     return (
-        <header className={`w-screen h-[10vh] ${theme == 'light' ? 'bg-[var(--green)]' : 'bg-zinc-900'} overflow-hidden`}>
+        <header className={`w-screen h-[10vh] ${theme == 'light' ? 'bg-[var(--green)]' : 'bg-zinc-950'} dark:bg-zinc-950 dark:text-zinc-50 overflow-hidden`}>
             <nav className="w-full h-full flex items-center justify-around z-20 py-4">
                <Link href="/">
                 <div className="flex items-center gap-4 md:gap-2">
@@ -38,16 +38,16 @@ export default function Header() {
                 md:absolute md:flex-col md:bg-[#FBEEDB] md:justify-normal md:h-[91vh] md:px-6 
                 md:py-8 md:rounded md:transition-right md:duration-500 md:top-[10vh] md:text-zinc-900
                 md:z-50 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>
-                    <li className="hover:text-zinc-800 transition">
+                    <li className="hover:text-zinc-800 dark:hover:text-zinc-200 transition">
                         <Link href="/cardapio">Cardapio</Link> 
                     </li>
-                    <li className="hover:text-zinc-800 transition">
+                    <li className="hover:text-zinc-800 dark:hover:text-zinc-200 transition">
                         <Link href="/receitas">Receitas</Link>
                     </li>
-                    <li className="hover:text-zinc-800 transition">
+                    <li className="hover:text-zinc-800 dark:hover:text-zinc-200 transition">
                         <Link href="/dashboard">Dashboard</Link>
                     </li>
-                    <li className="hover:text-zinc-800 transition">
+                    <li className="hover:text-zinc-800 dark:hover:text-zinc-200 transition">
                         <Link href="/IMC">IMC</Link>
                     </li>
                 </ul>
