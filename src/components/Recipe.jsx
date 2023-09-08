@@ -1,23 +1,28 @@
 'use client'
 
 import { GetRecipes } from '@/utils/GetRecipes'
+import { useSearchParams } from "next/navigation"
 import  { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-export default function Recipe({ id }) {
+export default function Recipe() {
 
     const { theme } = useTheme()
+
+    const searchParams = useSearchParams()
+
+    const recipeId = searchParams.get('id')
 
     const [recipe, setRecipe] = useState(null)
 
     const getRecipe = async() => {
         const recipes = await GetRecipes()
 
-        const recipeById = await recipes.filter((recipe) => recipe.id == id)[0]
+        const recipeById = await recipes.filter((recipe) => recipe.id == recipeId)[0]
 
         setRecipe(await recipeById)
     }
 
-    useEffect(() => getRecipe(), [])
+    getRecipe()
     
 
 
