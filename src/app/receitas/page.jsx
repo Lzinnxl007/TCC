@@ -12,7 +12,7 @@ export default async function Recipes() {
 
 
     return (
-        <section className="h-auto w-screen">
+        <div className="h-auto w-screen">
             <Header/>
             <div className="grid grid-cols-fit gap-6 p-6 dark:bg-zinc-900">
             {recipes.map((recipe, index) => {
@@ -21,6 +21,6 @@ export default async function Recipes() {
                     )
                 })}
             </div>
-        </section>
+        </div>
     )
 }

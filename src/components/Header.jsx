@@ -31,7 +31,7 @@ export default function Header() {
                <Link href="/">
                 <div className="flex items-center gap-4 md:gap-2">
                         <Logo size={90}/>
-                        <span className="text-2xl font-bold whitespace-nowrap">Desperdício Zero</span>
+                        <span className="text-2xl font-bold whitespace-nowrap md:text-lg">Desperdício Zero</span>
                     </div>
                </Link>
                 <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-[40vw]
@@ -53,7 +53,7 @@ export default function Header() {
                 </ul>
                 <Theme/>
                 <button onClick={openCloseMenu}
-                className="hidden md:block cursor-pointer z-10 md:-translate-x-6">
+                className="hidden md:block cursor-pointer z-10 md:-translate-x-4">
                     <Menu size={36}/>
                 </button>
             </nav>

@@ -10,7 +10,7 @@ export default function Intro() {
     }, 4000)
 
     return (
-        <section className={`flex items-center justify-center w-full h-screen fixed
+        <div className={`flex items-center justify-center w-full h-screen fixed
          top-0 left-0 z-50 bg-[var(--orange)] transition duration-700 ${!introShow && 'opacity-0 hidden'}`}>
             <div>
                 <video autoPlay muted
@@ -18,6 +18,6 @@ export default function Intro() {
                     <source src="/intro-video.mp4" type="video/mp4" />
                 </video>
             </div>
-        </section>
+        </div>
     )
 }

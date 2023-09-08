@@ -17,9 +17,13 @@ export default function Theme() {
         <button onClick={() => selectMode()}
         className={`p-2 rounded-full shadow-md  dark:bg-orange-400 ${theme == 'light' ? 'bg-orange-300' : 'bg-[var(--green)]'}`}>
             {theme == 'dark' ? (
-                <Sun/>
+                <span>
+                    <Sun/>
+                </span>
             ) : (
-                <Moon/>
+                <span>
+                    <Moon/>
+                </span>
             )}
         </button>
     )
