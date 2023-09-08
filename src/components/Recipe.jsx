@@ -4,6 +4,8 @@ import { GetRecipes } from '@/utils/GetRecipes'
 import { useSearchParams } from "next/navigation"
 import  { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
+import { Suspense } from 'react'
+import Loading from '/loading'
 export default function Recipe() {
 
     const { theme } = useTheme()
@@ -23,11 +25,12 @@ export default function Recipe() {
     }
 
     getRecipe()
-    
 
 
     return (
-        <div className={`w-full min-h-screen pt-10 px-4 ${theme == 'light' ? ' bg-zinc-100  text-zinc-900' : 'bg-zinc-900 text-zinc-50'} dark:bg-zinc-900 dark:text-zinc-50`}>
+        <div>
+            <Loading/>
+            <div className={`w-full min-h-screen pt-10 px-4 ${theme == 'light' ? ' bg-zinc-100  text-zinc-900' : 'bg-zinc-900 text-zinc-50'} dark:bg-zinc-900 dark:text-zinc-50`}>
                 <div className="w-full flex lg:flex-col-reverse items-center justify-evenly lg:gap-8 lg:px-8 md:px-2">
                     <div className="w-full">
                         <img src={recipe?.image} 
@@ -84,6 +87,7 @@ export default function Recipe() {
                     </div>
                 </div>
                 
+            </div>
         </div>
     )
 }
