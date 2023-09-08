@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation"
 import  { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import { Suspense } from 'react'
-import Loading from './loading'
+import Loading from '@/components/Loading'
 export default function Recipe() {
 
     const { theme } = useTheme()
