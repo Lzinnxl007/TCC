@@ -4,7 +4,6 @@ import { GetRecipes } from '@/utils/GetRecipes'
 import { useSearchParams } from "next/navigation"
 import  { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { Suspense } from 'react'
 import Loading from '@/components/Loading'
 export default function Recipe() {
 
