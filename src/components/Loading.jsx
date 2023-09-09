@@ -8,7 +8,7 @@ export default function Loading() {
 
     setTimeout(() => {
         setShow(false)
-    }, 2000)
+    }, 1000)
 
     useEffect(() => {
         if(show) {
@@ -26,7 +26,7 @@ export default function Loading() {
                     <BeatLoader
                     color="#A3BD36"
                     loading={true}
-                    size={50}
+                    size={30}
                     aria-label="Loading Beat"
                     data-testid="loader"/>
                 </div>
