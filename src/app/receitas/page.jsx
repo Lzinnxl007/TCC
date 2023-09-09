@@ -16,7 +16,9 @@ export default function Recipes() {
         setRecipes(await GetRecipes())
     }
      
-    useEffect(() => getRecipes(), [])
+    useEffect(() => {
+        getRecipes(), []
+    }, [])
 
     return (
         <div className={`h-auto w-screen dark:bg-zinc-900 ${theme == 'light' ? 'bg-[var(--orange)]' : 'bg-zinc-900'}`}>
@@ -30,7 +32,7 @@ export default function Recipes() {
                 </p>
             </div>
             <div className="grid grid-cols-fit gap-6 p-6 ">
-            {recipes.map((recipe, index) => {
+            {recipes?.map((recipe, index) => {
                     return (
                         <RecipeCard key={index} recipe={recipe}/>
                     )
