@@ -19,7 +19,7 @@ export default function IMC() {
     }
 
     return (
-        <section className={`w-screen h-[120vh] ${theme == 'light' ? 'bg-[#FFE4C5]' : 'bg-zinc-900'} dark:bg-zinc-900`}>
+        <section className={`w-screen h-[130vh] ${theme == 'light' ? 'bg-[#FFE4C5]' : 'bg-zinc-900'} dark:bg-zinc-900`}>
             <Header/>
             <div className="w-full flex flex-col items-center justify-center gap-8 px-6 translate-y-[10vh]">
                 <h1 className={`text-center text-5xl font-bold md:text-4xl ${theme == 'light' ? 'text-zinc-900' : 'text-zinc-50'} dark:text-zinc-50`}>
