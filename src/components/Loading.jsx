@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, CSSProperties  } from 'react'
+import BeatLoader from "react-spinners/BeatLoader"
 export default function Loading() {
 
     const [show, setShow] = useState(true)
@@ -17,13 +18,20 @@ export default function Loading() {
         }
     }, [show])
 
+
     return (
         <div>
             {show && (
-                <div className="flex w-screen h-screen z-50 flex items-center justify-center text-6xl absolute top-0 left-0 bg-zinc-50 bg-opacity-60 backdrop-blur-lg">
-                    <div className="w-[200px] h-[200px] rounded-full border-solid border-16 border-orange-400 animate-spin" />
+                <div className="flex w-screen h-screen z-50 flex items-center justify-center text-6xl absolute top-0 left-0 bg-red-500 ">
+                    <BeatLoader
+                    color="#A3BD36"
+                    loading={true}
+                    size={150}
+                    aria-label="Loading Beat"
+                    data-testid="loader"/>
                 </div>
             )}
         </div>
     )
 }
+//bg-opacity-60 backdrop-blur-lg
