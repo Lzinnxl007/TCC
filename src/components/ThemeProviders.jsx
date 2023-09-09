@@ -3,9 +3,7 @@
 import { ThemeProvider } from 'next-themes'
 export default function ThemeProviders({ children }) {
     return (
-        <ThemeProvider 
-        enableSystem
-        forcedTheme={children.theme || null}>
+        <ThemeProvider >
             {children}
         </ThemeProvider>
     )
