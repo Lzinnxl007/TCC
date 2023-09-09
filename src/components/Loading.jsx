@@ -26,7 +26,7 @@ export default function Loading() {
                     <BeatLoader
                     color="#A3BD36"
                     loading={true}
-                    size={150}
+                    size={50}
                     aria-label="Loading Beat"
                     data-testid="loader"/>
                 </div>
