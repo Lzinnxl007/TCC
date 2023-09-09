@@ -9,6 +9,14 @@ export default function Loading() {
         setShow(false)
     }, 2000)
 
+    useEffect(() => {
+        if(show) {
+            window.document.body.style.overflow = 'hidden'
+        } else {
+            window.document.body.style.overflow = 'scroll'
+        }
+    }, [show])
+
     return (
         <div>
             {show && (
