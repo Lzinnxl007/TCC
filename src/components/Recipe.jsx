@@ -5,6 +5,7 @@ import { useSearchParams } from "next/navigation"
 import  { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 import Loading from '@/components/Loading'
+import NutritionTable from './NutritionTable'
 export default function Recipe() {
 
     const { theme } = useTheme()
@@ -85,7 +86,9 @@ export default function Recipe() {
                         </div>
                     </div>
                 </div>
-                
+                <div className="mt-10 pb-10 px-4">
+                    <NutritionTable nutrition={recipe?.nutrition}/>
+                </div>
             </div>
         </div>
     )
