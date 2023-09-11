@@ -12,26 +12,39 @@ export default function Recipes() {
     const { theme } = useTheme()
 
     const [recipes, setRecipes] = useState([])
+    const [filteredRecipes, setFilteredRecipes] = useState([])
 
     const filterByCategory = (e) => {
         if(e.target.value !== 'todas') {
             const recipesByCategory = recipes.filter((recipe) => recipe.meal == e.target.value)
 
-            setRecipes(recipesByCategory)
+            setFilteredRecipes(recipesByCategory)
         }
     }
 
     const getRecipes = async(e) => {
         setRecipes(await GetRecipes())
-
-        if(recipes.length) {
-            await filterByCategory(e)
-        }
     }
      
     useEffect(() => {
         getRecipes(), []
     }, [])
+
+    const createCard = () => {
+       if(filteredRecipes.length) {
+            return filteredRecipes.map((recipe, index) => {
+                return (
+                    <RecipeCard key={index} recipe={recipe}/>
+                )
+            })
+       } else {
+            return recipes.map((recipe, index) => {
+                return (
+                    <RecipeCard key={index} recipe={recipe}/>
+                )
+            })
+       }
+    }
 
     return (
         <div className={`h-auto w-screen dark:bg-zinc-900 ${theme == 'light' ? 'bg-[var(--orange)]' : 'bg-zinc-900'}`}>
@@ -45,13 +58,9 @@ export default function Recipes() {
                 </p>
             </div>
             <div className="mt-6">
-                <SelectCategory getRecipes={getRecipes}/>
+                <SelectCategory filterByCategory={filterByCategory}/>
                 <div className="grid grid-cols-fit gap-6 p-6 ">
-                {recipes?.map((recipe, index) => {
-                        return (
-                            <RecipeCard key={index} recipe={recipe}/>
-                        )
-                    })}
+                {createCard()}
                 </div>
             </div>
         </div>
