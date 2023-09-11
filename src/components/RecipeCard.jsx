@@ -17,7 +17,7 @@ export default function RecipeCard({ recipe }) {
 
     return (
         <button onClick={() => viewRecipe(recipe)}
-        className={`w-full h-[330px] max-w-xs md:max-w-sm md:h-[350px] rounded ${theme == 'light' ? 'bg-zinc-100' : 'bg-zinc-800'} dark:bg-zinc-800 dark:text-zinc-50
+        className={`w-full min-h-[400px] max-w-xs md:max-w-sm md:h-[350px] rounded ${theme == 'light' ? 'bg-zinc-100' : 'bg-zinc-800'} dark:bg-zinc-800 dark:text-zinc-50
          transition hover:shadow-[6px_6px_0_rgb(255,170,73)] cursor-pointer overflow-hidden 
          hover:translate-y-[5px] mx-auto`}>
             <div className="w-full h-3/5 relative">
@@ -29,7 +29,7 @@ export default function RecipeCard({ recipe }) {
                 <span className="text-orange-500 text-medium">
                     {recipe.meal}
                 </span>
-                <h2 className="my-3 font-semibold text-xl">
+                <h2 className="my-3 font-semibold text-xl text-left">
                     {recipe.name}
                 </h2>
                 <div className="flex items-center justify-between w-full">

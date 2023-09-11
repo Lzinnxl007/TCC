@@ -2,7 +2,7 @@
 
 import { GetRecipes } from '@/utils/GetRecipes'
 import { useSearchParams } from "next/navigation"
-import  { useEffect, useState } from 'react'
+import  { useState } from 'react'
 import { useTheme } from 'next-themes'
 import Loading from '@/components/Loading'
 import NutritionTable from './NutritionTable'

@@ -5,6 +5,7 @@ import RecipeCard from "@/components/RecipeCard"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from 'react'
 import { GetRecipes } from "@/utils/GetRecipes"
+import SelectCategory from "@/components/SelectCategory"
 
 export default function Recipes() {
 
@@ -12,8 +13,20 @@ export default function Recipes() {
 
     const [recipes, setRecipes] = useState([])
 
-    const getRecipes = async() => {
+    const filterByCategory = (e) => {
+        if(e.target.value !== 'todas') {
+            const recipesByCategory = recipes.filter((recipe) => recipe.meal == e.target.value)
+
+            setRecipes(recipesByCategory)
+        }
+    }
+
+    const getRecipes = async(e) => {
         setRecipes(await GetRecipes())
+
+        if(recipes.length) {
+            await filterByCategory(e)
+        }
     }
      
     useEffect(() => {
@@ -31,12 +44,15 @@ export default function Recipes() {
                     Melhores sua alimentação com as melhores receitas para seu dia a dia.
                 </p>
             </div>
-            <div className="grid grid-cols-fit gap-6 p-6 ">
-            {recipes?.map((recipe, index) => {
-                    return (
-                        <RecipeCard key={index} recipe={recipe}/>
-                    )
-                })}
+            <div className="mt-6">
+                <SelectCategory getRecipes={getRecipes}/>
+                <div className="grid grid-cols-fit gap-6 p-6 ">
+                {recipes?.map((recipe, index) => {
+                        return (
+                            <RecipeCard key={index} recipe={recipe}/>
+                        )
+                    })}
+                </div>
             </div>
         </div>
     )
