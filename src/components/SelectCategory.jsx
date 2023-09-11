@@ -2,7 +2,7 @@
 
 export default function SelectCategory({ getRecipes }) {
     return (
-        <div className="ml-6">
+        <div className="ml-6 md:ml-14 lg:ml-12">
             <select onChange={e => getRecipes(e)}
             className="rounded-2xl px-4 py-1.5 outline-none cursor-pointer border-solid border-r-[10px] border-zinc-700 bg-zinc-700">
                 <option value="todas"
