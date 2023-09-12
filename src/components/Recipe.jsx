@@ -29,7 +29,7 @@ export default function Recipe() {
 
     const path = usePathname()
 
-    const query = `${path.split('/receita/')[0]}?id=${recipeId}`
+    const query = `${path.split('/receita/')[1]}?id=${recipeId}`
 
 
     return (
