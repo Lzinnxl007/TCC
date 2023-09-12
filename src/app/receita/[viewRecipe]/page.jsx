@@ -12,7 +12,7 @@ export default function ViewRecipe() {
 
    const id = searchParams.get('id')
 
-   const query = `${path.split('/receita/')[1]}id=${id}`
+   const query = `${path.split('/receita/')[1]}?id=${id}`
 
 
     return (
