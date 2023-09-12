@@ -1,11 +1,12 @@
 'use client'
 
 import { GetRecipes } from '@/utils/GetRecipes'
-import { useSearchParams } from "next/navigation"
+import { usePathname, useSearchParams } from "next/navigation"
 import  { useState } from 'react'
 import { useTheme } from 'next-themes'
 import Loading from '@/components/Loading'
 import NutritionTable from './NutritionTable'
+import Share from './Share'
 export default function Recipe() {
 
     const { theme } = useTheme()
@@ -25,6 +26,10 @@ export default function Recipe() {
     }
 
     getRecipe()
+
+    const path = usePathname()
+
+    const query = `${path.split('/receita/')[0]}?id=${recipeId}`
 
 
     return (
@@ -47,6 +52,7 @@ export default function Recipe() {
                         <p className="max-w-xl text-sm lg:text-center lg:mt-4 lg:text-md">
                             {recipe?.description}
                         </p>
+                        <Share param={query}/>
                     </div>
                 </div>
 
