@@ -11,7 +11,7 @@ export default function RecipeCard({ recipe }) {
     const router = useRouter()
 
     const viewRecipe = (recipe) => {
-        router.push(`/${recipe.name}?id=${recipe.id}`)
+        router.push(`/receita/${recipe.name}?id=${recipe.id}`)
     }
 
 
