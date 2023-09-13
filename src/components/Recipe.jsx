@@ -37,10 +37,10 @@ export default function Recipe() {
             <Loading/>
             <div className={`w-full min-h-screen pt-10 px-4 ${theme == 'light' ? ' bg-zinc-100  text-zinc-900' : 'bg-zinc-900 text-zinc-50'} dark:bg-zinc-900 dark:text-zinc-50`}>
                 <div className="w-full flex lg:flex-col-reverse items-center justify-evenly lg:gap-8 lg:px-8 md:px-2">
-                    <div className="w-full">
+                    <div className="w-full h-[65vh] ">
                         <img src={recipe?.image} 
                         alt="food-image" 
-                        className="w-full"/>
+                        className="w-full h-full object-cover"/>
                     </div>
                     <div className="px-10 space-y-6 w-full lg:flex lg:items-center lg:flex-col md:px-4">
                         <div className="bg-[#ffaa49] lg:bg-transparent lg:text-[#ffaa49] lg:font-bold lg:text-xl px-3 py-1 w-fit rounded text-zinc-50 mb-10 lg:mb-2">

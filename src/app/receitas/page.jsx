@@ -6,6 +6,7 @@ import { useTheme } from "next-themes"
 import { useState, useEffect } from 'react'
 import { GetRecipes } from "@/utils/GetRecipes"
 import SelectCategory from "@/components/SelectCategory"
+import Loading from "@/components/Loading"
 
 export default function Recipes() {
 
@@ -14,17 +15,21 @@ export default function Recipes() {
     const [recipes, setRecipes] = useState([])
     const [filteredRecipes, setFilteredRecipes] = useState([])
 
+    const getRecipes = async() => {
+        setRecipes(await GetRecipes())
+    }
+
     const filterByCategory = (e) => {
         if(e.target.value !== 'todas') {
             const recipesByCategory = recipes.filter((recipe) => recipe.meal == e.target.value)
 
             setFilteredRecipes(recipesByCategory)
+        } else {
+            setFilteredRecipes([])
         }
     }
 
-    const getRecipes = async(e) => {
-        setRecipes(await GetRecipes())
-    }
+    
      
     useEffect(() => {
         getRecipes(), []
@@ -58,6 +63,7 @@ export default function Recipes() {
                 </p>
             </div>
             <div className="mt-6">
+                <Loading/>
                 <SelectCategory filterByCategory={filterByCategory}/>
                 <div className="grid grid-cols-fit gap-6 p-6 ">
                 {createCard()}

@@ -20,10 +20,10 @@ export default function RecipeCard({ recipe }) {
         className={`w-full min-h-[400px] max-w-xs md:max-w-sm md:h-[350px] rounded ${theme == 'light' ? 'bg-zinc-100' : 'bg-zinc-800'} dark:bg-zinc-800 dark:text-zinc-50
          transition hover:shadow-[6px_6px_0_rgb(255,170,73)] cursor-pointer overflow-hidden 
          hover:translate-y-[5px] mx-auto`}>
-            <div className="w-full h-3/5 relative">
+            <div className="w-full h-3/5 relative bottom-4">
                 <img src={recipe.image} 
                 alt="recipe-image" 
-                className="w-full h-full object-cover"/>
+                className="w-full h-full object-cover absolute top-0 left-0"/>
             </div>
             <div className="w-full p-4 flex flex-col items-start">
                 <span className="text-orange-500 text-medium">
