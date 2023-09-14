@@ -25,7 +25,8 @@ export default function RecipeCard({ recipe }) {
                 alt="recipe-image" 
                 className="w-full h-full object-cover absolute top-0 left-0"/>
             </div>
-            <div className="w-full p-4 flex flex-col items-start">
+            <div className={`w-full p-4 flex flex-col items-start ${theme == 'dark' ? 
+                'text-zinc-50' : 'text-zinc-900'}`}>
                 <span className="text-orange-500 text-medium">
                     {recipe.meal}
                 </span>

@@ -49,6 +49,9 @@ export default function Header() {
                         <Link href="/cardapio">Cardapio</Link> 
                     </li>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
+                        <Link href="/sobre">Sobre Nós</Link>
+                    </li>
+                    <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
                         <Link href="/receitas">Receitas</Link>
                     </li>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">

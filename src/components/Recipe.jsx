@@ -6,7 +6,9 @@ import  { useState } from 'react'
 import { useTheme } from 'next-themes'
 import Loading from '@/components/Loading'
 import NutritionTable from './NutritionTable'
+import CommentsForm from "@/components/CommentsForm"
 import Share from './Share'
+import Comments from './Comments'
 export default function Recipe() {
 
     const { theme } = useTheme()
@@ -92,8 +94,14 @@ export default function Recipe() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-10 pb-10 px-4">
-                    <NutritionTable nutrition={recipe?.nutrition}/>
+                <div className="flex w-full justify-around md:flex-col items-center">
+                    <div className="mt-10 pb-10 px-4">
+                        <NutritionTable nutrition={recipe?.nutrition}/>
+                    </div>
+                    <div className="mt-8 w-full max-w-md">
+                        <CommentsForm/>
+                        <Comments/>
+                    </div>
                 </div>
             </div>
         </div>
