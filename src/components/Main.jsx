@@ -7,9 +7,9 @@ export default function Main() {
 
     return (
         <main className={`w-screen h-[91vh] flex 
-        items-center justify-evenly md:flex-col-reverse overflow-hidden  dark:bg-zinc-900 dark:text-zinc-50 ${theme == 'light' ? 'bg-[var(--orange)]' : 'bg-zinc-900'}`}>
+        items-center justify-evenly md:flex-col-reverse overflow-hidden  dark:bg-zinc-900 dark:text-zinc-50 ${theme == 'light' ? 'bg-[var(--orange)]' : 'bg-zinc-900'} pb-10`}>
             <div className="space-y-4 md:flex md:flex-col md:items-center">
-                <h1 className="text-7xl md:text-6xl font-bold leading-[70px] md:text-center">
+                <h1 className="text-7xl md:text-5xl font-bold leading-[70px] md:text-center">
                     Aprenda a 
                     <br/>
                     se alimentar
