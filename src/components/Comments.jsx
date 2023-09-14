@@ -16,6 +16,7 @@ export default function Comments() {
         let totalComments = await GetCommentsAction()
 
         totalComments = totalComments.filter((comment) => comment.recipeId == recipeId)
+        console.log(totalComments)
    
         setComments(totalComments)
     }
