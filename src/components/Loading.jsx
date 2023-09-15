@@ -5,14 +5,12 @@ import BeatLoader from "react-spinners/BeatLoader"
 export default function Loading() {
 
     const [show, setShow] = useState(true)
-    const [scroll, setScroll] = useState(0)
 
     setTimeout(() => {
         setShow(false)
     }, 1000)
 
     useEffect(() => {
-        setScroll(window.scrollY)
         if(show) {
             window.document.body.style.overflow = 'hidden' 
         } else {
@@ -27,7 +25,7 @@ export default function Loading() {
     return (
         <div>
             {show && (
-                <div className={`w-screen h-screen z-50 flex items-center justify-center text-6xl absolute top-[${scroll}px] left-0 bg-zinc-50 bg-opacity-60 backdrop-blur-lg`}>
+                <div className="w-screen h-screen z-50 flex items-center justify-center text-6xl absolute left-0 bg-zinc-50 bg-opacity-60 backdrop-blur-lg">
                     <BeatLoader
                     color="#A3BD36"
                     loading={true}
