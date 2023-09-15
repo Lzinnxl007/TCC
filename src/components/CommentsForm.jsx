@@ -18,6 +18,8 @@ export default function CommentsForm() {
 
         if(name && comment) {
             await CreateCommentAction(name, comment, +recipeId)
+            setName('')
+            setComment('')
         }
 
     }
