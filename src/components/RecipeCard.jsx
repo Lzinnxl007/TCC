@@ -26,7 +26,7 @@ export default function RecipeCard({ recipe }) {
                 className="w-full h-full object-cover absolute top-0 left-0"/>
             </div>
             <div className={`w-full p-4 flex flex-col items-start ${theme == 'dark' ? 
-                'text-zinc-50' : 'text-zinc-900'}`}>
+                'text-zinc-50' : 'text-zinc-900'} dark:text-zinc-50`}>
                 <span className="text-orange-500 text-medium">
                     {recipe.meal}
                 </span>
@@ -36,7 +36,7 @@ export default function RecipeCard({ recipe }) {
                 <div className="flex items-center justify-between w-full">
                     <div className="flex items-center gap-2">
                         <Clock4 size={20}/>
-                        <p className="text-xs">{recipe.prep_time}</p>
+                        <p className="text-xs dark:text-zinc-50">{recipe.prep_time}</p>
                     </div>
                     <div>
                         <StarRatings
