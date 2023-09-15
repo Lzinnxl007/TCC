@@ -28,7 +28,7 @@ export default function Comments() {
 
     return (
         <div>
-            <ul className="mt-10 space-y-6 pb-10 ">
+            <ul className="mt-10 space-y-6 pb-10 md:px-4">
                 {comments?.map((comment) => {
                     return (
                         <li key={comment.id} className="px-4 py-4 rounded bg-[var(--orange)] text-zinc-900">
