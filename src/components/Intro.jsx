@@ -1,9 +1,13 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 export default function Intro() {
 
     const [introShow, setIntroShow] = useState(true)
+
+    useEffect(() => {
+        window.document.body.overflow = 'hidden'
+    }, [])
 
     setTimeout(() => {
         setIntroShow(false)
