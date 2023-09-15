@@ -17,7 +17,7 @@ export default function RecipeCard({ recipe }) {
 
     return (
         <button onClick={() => viewRecipe(recipe)}
-        className={`w-full min-h-[400px] max-w-xs md:max-w-sm md:h-[350px] rounded ${theme == 'light' ? 'bg-zinc-100' : 'bg-zinc-800'} dark:bg-zinc-800 dark:text-zinc-50
+        className={`w-full min-h-[400px] max-w-xs md:max-w-md md:h-[350px] rounded ${theme == 'light' ? 'bg-zinc-100' : 'bg-zinc-800'} dark:bg-zinc-800 dark:text-zinc-50
          transition hover:shadow-[6px_6px_0_rgb(255,170,73)] cursor-pointer overflow-hidden 
          hover:translate-y-[5px] mx-auto`}>
             <div className="w-full h-3/5 relative bottom-4">
@@ -26,7 +26,7 @@ export default function RecipeCard({ recipe }) {
                 className="w-full h-full object-cover absolute top-0 left-0"/>
             </div>
             <div className={`w-full p-4 flex flex-col items-start ${theme == 'dark' ? 
-                'text-zinc-50' : 'text-zinc-900'}`}>
+                'text-zinc-50' : 'text-zinc-900'} dark:text-zinc-50`}>
                 <span className="text-orange-500 text-medium">
                     {recipe.meal}
                 </span>
@@ -36,7 +36,7 @@ export default function RecipeCard({ recipe }) {
                 <div className="flex items-center justify-between w-full">
                     <div className="flex items-center gap-2">
                         <Clock4 size={20}/>
-                        <p className="text-xs">{recipe.prep_time}</p>
+                        <p className="text-xs dark:text-zinc-50">{recipe.prep_time}</p>
                     </div>
                     <div>
                         <StarRatings

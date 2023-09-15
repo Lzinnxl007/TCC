@@ -62,7 +62,7 @@ export default function Recipes() {
                     Melhores sua alimentação com as melhores receitas para seu dia a dia.
                 </p>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 w-full">
                 <Loading/>
                 <SelectCategory filterByCategory={filterByCategory}/>
                 <div className="grid grid-cols-fit gap-6 p-6 ">

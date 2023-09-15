@@ -18,12 +18,14 @@ export default function CommentsForm() {
 
         if(name && comment) {
             await CreateCommentAction(name, comment, +recipeId)
+            setName('')
+            setComment('')
         }
 
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full md:px-4">
             <h1 className="font-semibold text-xl">
                 Adicione um comentario!
             </h1>
@@ -33,12 +35,14 @@ export default function CommentsForm() {
                 <input onChange={e => setName(e.target.value)}
                 type="text"
                 maxLength="20" 
+                value={name}
                 placeholder="Nome"
                 className="w-full rounded px-4 py-1.5 outline-none text-zinc-900 bg-zinc-50"/>
 
                 <input onChange={e => setComment(e.target.value)} 
                 type="text"
                 maxLength="60" 
+                value={comment}
                 placeholder="Comentario"
                 className="pb-28 py-1.5 rounded px-4 outline-none text-zinc-900 bg-zinc-50"/>
 
