@@ -1,10 +1,9 @@
 'use client'
 
-import Link from "next/link"
 import { Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from "./Logo"
-import Theme from "./Theme"
+import Theme from "../Theme/Theme"
 import { useTheme } from 'next-themes'
 export default function Header() {
 
@@ -31,7 +30,7 @@ export default function Header() {
     return (
         <header className={`w-screen h-[10vh] ${theme == 'light' ? 'bg-[var(--green)]' : 'bg-zinc-950'} dark:bg-zinc-950 dark:text-zinc-50 overflow-hidden`}>
             <nav className="w-full h-full flex items-center justify-around z-20 py-4">
-               <Link href="/">
+               <a href="/">
                 <div className="flex items-center gap-4 md:gap-2">
                         {theme == 'light' ? (
                             <Logo size={90} url="/logo.png"/>
@@ -40,25 +39,25 @@ export default function Header() {
                         )}
                         <span className="text-2xl font-bold whitespace-nowrap md:text-lg">Desperdício Zero</span>
                     </div>
-               </Link>
+               </a>
                 <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-[40vw]
                 md:absolute md:flex-col md:bg-[#FBEEDB] md:justify-normal md:h-[91vh] md:px-6 
                 md:py-8 md:transition-right md:duration-500 md:top-[10vh] md:text-zinc-900 dark:text-zinc-50
                 md:z-50 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
-                        <Link href="/cardapio">Cardapio</Link> 
+                        <a href="/cardapio">Cardapio</a> 
                     </li>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
-                        <Link href="/sobre">Sobre Nós</Link>
+                        <a href="/sobre">Sobre Nós</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
-                        <Link href="/receitas">Receitas</Link>
+                        <a href="/receitas">Receitas</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
-                        <Link href="/dashboard">Dashboard</Link>
+                        <a href="/dashboard">Dashboard</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
-                        <Link href="/IMC">IMC</Link>
+                        <a href="/IMC">IMC</a>
                     </li>
                 </ul>
                 {!systemIsDark && (

@@ -1,12 +1,12 @@
 'use client'
 
-import Header from "@/components/Header"
-import RecipeCard from "@/components/RecipeCard"
+import Header from "@/components/Default/Header"
+import RecipeCard from "@/components/Recipes/RecipeCard"
 import { useTheme } from "next-themes"
 import { useState, useEffect } from 'react'
 import { GetRecipes } from "@/utils/GetRecipes"
-import SelectCategory from "@/components/SelectCategory"
-import Loading from "@/components/Loading"
+import SelectCategory from "@/components/Recipes/SelectCategory"
+import Loading from "@/components/Default/Loading"
 
 export default function Recipes() {
 

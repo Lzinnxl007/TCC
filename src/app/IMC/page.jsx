@@ -1,8 +1,8 @@
 'use client'
 
-import CalcIMC from "@/components/CalcIMC"
-import Header from "@/components/Header"
-import IMCTable from "@/components/IMCTable"
+import CalcIMC from "@/components/IMC/CalcIMC"
+import Header from "@/components/Default/Header"
+import IMCTable from "@/components/IMC/IMCTable"
 import { Context } from "@/context/IMC"
 import { useTheme } from "next-themes"
 import { useState } from "react"

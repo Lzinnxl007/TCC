@@ -1,8 +1,9 @@
 
-import Header from "@/components/Header"
-import Intro from "@/components/Intro"
-import Main from "@/components/Main"
-import VideoApresentation from "@/components/VideoApresentation"
+import Footer from "@/components/Default/Footer"
+import Header from "@/components/Default/Header"
+import Intro from "@/components/Initial/Intro"
+import Main from "@/components/Initial/Main"
+import VideoApresentation from "@/components/Initial/VideoApresentation"
 
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
         <Header/>
         <Main/>
         <VideoApresentation/>
+        <Footer/>
         <Intro/>
     </div>
   )

@@ -1,8 +1,8 @@
 
 
-import Recipe from "@/components/Recipe"
-import Header from "@/components/Header"
-import Share from "@/components/Share"
+import Recipe from "@/components/Recipes/Recipe"
+import Header from "@/components/Default/Header"
+import Share from "@/components/Recipes/Share"
 
 export default function ViewRecipe() {
 

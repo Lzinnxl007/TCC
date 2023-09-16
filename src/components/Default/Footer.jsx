@@ -10,7 +10,7 @@ export default function Footer() {
 
     return (
         <footer className={`w-screen h-auto ${theme == 'light' ? 'bg-[var(--green)] text-zinc-50' : 'bg-[var(--orange)] text-zinc-900'} dark:bg-[var(--orange)] dark:text-zinc-900`}>
-            <header className="w-full h-full py-8 px-10">
+            <header className="w-full h-full py-4 px-10">
                 <nav className="w-full h-full flex justify-around md:justify-between items-center py-4">
                     <Link href="/">
                         <div className="flex items-center gap-4">

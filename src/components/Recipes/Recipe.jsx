@@ -4,9 +4,9 @@ import { GetRecipes } from '@/utils/GetRecipes'
 import { usePathname, useSearchParams } from "next/navigation"
 import  { useState } from 'react'
 import { useTheme } from 'next-themes'
-import Loading from '@/components/Loading'
+import Loading from '@/components/Default/Loading'
 import NutritionTable from './NutritionTable'
-import CommentsForm from "@/components/CommentsForm"
+import CommentsForm from "@/components/Recipes/CommentsForm"
 import Share from './Share'
 import Comments from './Comments'
 export default function Recipe() {
