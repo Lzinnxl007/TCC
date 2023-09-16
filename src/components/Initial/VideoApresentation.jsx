@@ -37,10 +37,7 @@ export default function VideoApresentation() {
 
     return (
         <div className="w-screen h-[50vw] lg:h-[80vw] flex flex-col items-center justify-center bg-[url('/video-apresentation-background.jpg')] bg-center bg-cover bg-no-repeat 
-        px-10 md:px-6 pb-4 ">
-            <h1 className="text-center my-8 mb-10 text-6xl font-bold md:text-3xl text-zinc-900">
-                O Projeto Desperdício Zero
-            </h1>
+        px-10 md:px-6 ">
             <div className="relative z-0 group rounded flex items-center justify-center h-[70%] lg:h-[50%]">
                 <PlayButton playVideo={playVideo} playing={playing}/>
                 <video 
