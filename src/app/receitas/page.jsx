@@ -52,7 +52,7 @@ export default function Recipes() {
     }
 
     return (
-        <div className={`h-auto w-screen dark:bg-zinc-900 ${theme == 'light' ? 'bg-[var(--orange)]' : 'bg-zinc-900'}`}>
+        <div className={`min-h-screen dark:bg-zinc-900 ${theme == 'light' ? 'bg-[var(--orange)]' : 'bg-zinc-900'}`}>
             <Header/>
             <div className="py-8 space-y-4 ">
                 <h1 className="text-5xl font-bold text-orange-400 text-center md:text-4xl mx-auto">
