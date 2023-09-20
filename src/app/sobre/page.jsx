@@ -30,7 +30,7 @@ export default function About() {
                     <h2 className="text-zinc-700 text-xl">
                         Nossa História
                     </h2>
-                    <h1 className="text-4xl font-semibold px-4">A história da Desperdício Zero</h1>
+                    <h1 className="text-4xl font-semibold px-4 text-zinc-900">A história da Desperdício Zero</h1>
                     <p className="max-w-5xl lg:max-w-2xl md:max-w-md text-zinc-700 mt-4 text-lg">
                     O projeto Desperdício Zero foi 
                     desenvolvido por três alunos comprometidos com a promoção de escolhas alimentares 
