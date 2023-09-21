@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react'
 import { GetRecipes } from "@/utils/GetRecipes"
 import SelectCategory from "@/components/Recipes/SelectCategory"
 import Loading from "@/components/Default/Loading"
+import ScrollToTop from "@/components/Default/ScrollToTop"
 
 export default function Recipes() {
 
@@ -69,6 +70,7 @@ export default function Recipes() {
                 {createCard()}
                 </div>
             </div>
+            <ScrollToTop/>
         </div>
     )
 }

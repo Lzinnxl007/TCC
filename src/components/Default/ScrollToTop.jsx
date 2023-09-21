@@ -23,10 +23,10 @@ export default function ScrollToTop() {
 
     return (
         <button onClick={backToTop}
-        className={`fixed z-50 bottom-20 right-20 w-16 aspect-square rounded-full 
+        className={`fixed z-50 bottom-20 right-20 md:bottom-12 md:right-8 w-16 aspect-square rounded-full 
         ${scrollY > 400 ? 'flex' : 'hidden'} items-center 
         justify-center bg-zinc-200 shadow-xl hover:bg-zinc-300 transition`}>
-            <ChevronUp size={20} color="#000"/>
+            <ChevronUp size={28} color="#000"/>
         </button>
     )
 }

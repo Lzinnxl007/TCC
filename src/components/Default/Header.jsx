@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import Logo from "./Logo"
 import Theme from "../Theme/Theme"
 import { useTheme } from 'next-themes'
+
 export default function Header() {
 
     const { theme } = useTheme()
@@ -28,7 +29,8 @@ export default function Header() {
     }, [])
 
     return (
-        <header className={`h-[10vh] ${theme == 'light' ? 'bg-[var(--green)]' : 'bg-zinc-950'} dark:bg-zinc-950 dark:text-zinc-50 overflow-hidden`}>
+        <header className={`h-[10vh] ${theme == 'light' ? 'bg-[var(--green)]' : 'bg-zinc-950 text-zinc-50'}
+         dark:bg-zinc-950 dark:text-zinc-50 overflow-hidden`}>
             <nav className="w-full h-full flex items-center justify-around z-20 py-4">
             <a href="/">
                 <div className="flex items-center gap-4 md:gap-2">
