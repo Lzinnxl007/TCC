@@ -8,7 +8,7 @@ export default function About() {
              lg:mt-[0.5vh] lg:gap-[0.5vh]">
                 <div className="lg:text-center">
                     <h2 className="text-xl tracking-wider text-zinc-700 dark:text-zinc-200 ">Sobre Nós</h2>
-                    <h1 className="px-4 text-6xl font-semibold max-w-xl my-4 lg:mb-6 md:text-4xl text-zinc-900 
+                    <h1 className="md:px-4 text-6xl font-semibold max-w-xl my-4 lg:mb-6 md:text-4xl text-zinc-900 
                     leading-[70px] dark:text-zinc-50">
                         Alimente-se com consciência, cuide do planeta e de você.
                     </h1>
