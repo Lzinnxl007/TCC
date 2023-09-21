@@ -1,6 +1,7 @@
 
 import Footer from "@/components/Default/Footer"
 import Header from "@/components/Default/Header"
+import ScrollToTop from "@/components/Default/ScrollToTop"
 import Intro from "@/components/Initial/Intro"
 import Main from "@/components/Initial/Main"
 import VideoApresentation from "@/components/Initial/VideoApresentation"
@@ -14,6 +15,7 @@ export default function Home() {
         <Main/>
         <VideoApresentation/>
         <Footer/>
+        <ScrollToTop/>
         <Intro/>
     </div>
   )
