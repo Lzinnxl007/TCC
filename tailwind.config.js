@@ -9,7 +9,17 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         fit: 'repeat(auto-fit, minmax(280px, 1fr))'
-      }
+      },
+      keyframes: {
+        open: {
+          '0%': { top: '-100%' },
+          '100%': { top: '50%' },
+        },
+      },
+      animation: {
+        'open-modal': 'open 1s linear',
+        'close-modal': 'close 1s linear'
+      },
     },
     screens: {
       '2xl': {'max': '1535px'},
@@ -25,3 +35,4 @@ module.exports = {
   },
   plugins: [],
 }
+
