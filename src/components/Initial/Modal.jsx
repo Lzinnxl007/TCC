@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { X } from "lucide-react"
+import { SaveEmailAction } from '@/utils/SaveEmailsAction'
 export default function Modal() {
 
     const [email, setEmail] = useState('')
@@ -18,11 +19,11 @@ export default function Modal() {
         setEmail(e.target.value)
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
 
         if(email) {
-            alert(email)
+            await SaveEmailAction(email)
             setEmail('')
             setShow(false)
             localStorage.setItem('modal-view', JSON.stringify(true))

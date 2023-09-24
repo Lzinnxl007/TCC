@@ -10,9 +10,14 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Comments {
+model comments {
   id        Int     @id @unique  @default(autoincrement())
   name      String
   comment   String
   recipeId  Int
+}
+
+model emails {
+  id     Int      @id  @unique  @default(autoincrement())
+  email  String
 }
