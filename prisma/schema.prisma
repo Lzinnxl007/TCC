@@ -19,5 +19,6 @@ model comments {
 
 model emails {
   id     Int      @id  @unique  @default(autoincrement())
+  name   String
   email  String
 }

@@ -6,6 +6,7 @@ import { SaveEmailAction } from '@/utils/SaveEmailsAction'
 export default function Modal() {
 
     const [email, setEmail] = useState('')
+    const [name, setName] = useState('')
     const [show, setShow] = useState(null)
 
     useEffect(() => {
@@ -19,12 +20,17 @@ export default function Modal() {
         setEmail(e.target.value)
     }
 
+    const handleName = (e) => {
+        setName(e.target.value)
+    }
+
     const handleSubmit = async(e) => {
         e.preventDefault()
 
-        if(email) {
-            await SaveEmailAction(email)
+        if(email && name) {
+            await SaveEmailAction(email, name)
             setEmail('')
+            setName('')
             setShow(false)
             localStorage.setItem('modal-view', JSON.stringify(true))
         }
@@ -44,11 +50,19 @@ export default function Modal() {
                 </h2>
                 <form onSubmit={e => handleSubmit(e)}
                 className="flex flex-col items-center gap-2 mt-6 w-full mx-auto px-2 lg:px-4">
+
+                    <input onChange={e => handleName(e)}
+                    type="text" 
+                    value={name}
+                    placeholder="Name"
+                    className="rounded-[20px] px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm outline-none border-zinc-300 border-[1px] bg-zinc-50 text-zinc-900 w-full"/>
+
                     <input onChange={e => handleEmail(e)}
                     type="email" 
                     value={email}
                     placeholder="E-mail"
                     className="rounded-[20px] px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm outline-none border-zinc-300 border-[1px] bg-zinc-50 text-zinc-900 w-full"/>
+
                     <button className="px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm rounded-[20px] bg-[var(--green)] w-full font-semibold hover:opacity-90 transition">
                         Continuar
                     </button>
