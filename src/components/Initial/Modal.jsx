@@ -72,6 +72,7 @@ export default function Modal() {
             className="absolute z-30 top-4 left-4">
                 <X size={20} color="#111"/>
             </button>
+            
             <div className="w-1/2 h-full">
                 <img src="/modal-image.jpg" alt="modal-image" 
                 className="w-full h-full object-cover"/>
