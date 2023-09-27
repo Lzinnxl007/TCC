@@ -29,7 +29,7 @@ export default function About() {
             
             <div className="w-full h-screen flex items-center justify-around px-20 md:px-8 lg:flex-col lg:h-auto lg:py-10 md:py-16 bg-zinc-800 -translate-y-8">
                 <div className="w-full lg:mx-auto">
-                    <h1 className="mb-6 text-4xl md:text-3xl font-semibold max-w-xl lg:mx-auto">
+                    <h1 className="mb-6 text-4xl md:text-3xl font-semibold max-w-xl lg:mx-auto text-zinc-900 dark:text-zinc-50">
                         Sabia que cerca de 30% dos alimentos produzidos no Brasil são desperdiçados?
                     </h1>
                     <p className="w-full max-w-xl text-lg lg:mx-auto md:text-6 dark:text-zinc-200 text-zinc-800">
