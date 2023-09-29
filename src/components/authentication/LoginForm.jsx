@@ -3,6 +3,7 @@
 import { CreateToken } from "@/utils/auth/CreateToken"
 import { LoginAction } from "@/utils/auth/LoginAction"
 import { useState } from "react"
+import Cookies from "js-cookie"
 export default function LogInForm() {
 
     const [email, setEmail] = useState('')
@@ -16,7 +17,7 @@ export default function LogInForm() {
 
             if(user.email == email && user.password == password) {
                 if(window.document !== undefined) {
-                    document.cookie = await CreateToken(user)
+                    Cookies.set('token', await CreateToken(user))
 
                     setEmail('')
                     setPassword('')

@@ -6,6 +6,7 @@ export async function CreateUser(name, email, password) {
             name,
             email,
             password,
+            profile_photo: ''
         }
     })
 }

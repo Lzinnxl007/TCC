@@ -6,7 +6,8 @@ import Logo from "./Logo"
 import Theme from "../Theme/Theme"
 import { useTheme } from 'next-themes'
 import AuthButton from './AuthButton'
-
+import Profile from '../account/Profile'
+import Cookies from "js-cookie"
 export default function Header() {
 
     const { theme } = useTheme()
@@ -28,6 +29,8 @@ export default function Header() {
     useEffect(() => {
         setSystemIsDark(window.matchMedia("(prefers-color-scheme: dark)").matches)
     }, [])
+
+    const token = Cookies.get('token')
 
     return (
         <header className={`h-[10vh] ${theme == 'light' ? 'bg-[var(--green)]' : 'bg-zinc-950 text-zinc-50'}
@@ -62,12 +65,19 @@ export default function Header() {
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
                         <a href="/IMC">IMC</a>
                     </li>
-                    <li className="translate-x-12">
-                        <AuthButton
-                        bg="bg-[var(--green)]"
-                        method="Entrar"
-                        destiny="/login"/>
-                    </li>
+                    {!token && (
+                        <li className={`translate-x-12 flex items-center gap-6`}>
+                            <AuthButton
+                            bg="bg-[var(--green)]"
+                            method="Entrar"
+                            destiny="/login"/>
+
+                            <AuthButton
+                            bg="bg-orange-400"
+                            method="Cadastrar"
+                            destiny="/signup"/>
+                        </li>
+                    )}
                 </ul>
                 <div>
                     {!systemIsDark && (
@@ -78,6 +88,9 @@ export default function Header() {
                 className="hidden md:block cursor-pointer z-10 md:-translate-x-4">
                     <Menu size={36}/>
                 </button>
+                {token && (
+                    <Profile/>
+                )}
             </nav>
         </header>
     )
