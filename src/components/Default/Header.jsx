@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import Logo from "./Logo"
 import Theme from "../Theme/Theme"
 import { useTheme } from 'next-themes'
+import AuthButton from './AuthButton'
 
 export default function Header() {
 
@@ -42,7 +43,7 @@ export default function Header() {
                         <span className="text-2xl font-bold whitespace-nowrap md:text-lg">Desperdício Zero</span>
                     </div>
                </a>
-               <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-[40vw]
+               <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-[45vw]
                 md:absolute md:flex-col md:bg-[#FBEEDB] md:justify-normal md:h-[91vh] md:px-6 
                 md:py-8 md:transition-right md:duration-500 md:top-[10vh] md:text-zinc-900 dark:text-zinc-50
                 md:z-50 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>
@@ -60,6 +61,12 @@ export default function Header() {
                     </li>
                     <li className="md:dark:hover:text-zinc-700 hover:text-zinc-200 transition">
                         <a href="/IMC">IMC</a>
+                    </li>
+                    <li className="translate-x-12">
+                        <AuthButton
+                        bg="bg-[var(--green)]"
+                        method="Entrar"
+                        destiny="/login"/>
                     </li>
                 </ul>
                 <div>

@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <ThemeProviders>
           {children}
-          
         </ThemeProviders>
       </body>
     </html>

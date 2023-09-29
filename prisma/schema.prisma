@@ -22,3 +22,10 @@ model emails {
   name   String
   email  String
 }
+
+model users {
+  id        Int      @id  @unique  @default(autoincrement())
+  name      String
+  email     String
+  password  String
+}
