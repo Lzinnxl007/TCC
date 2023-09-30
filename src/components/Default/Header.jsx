@@ -12,6 +12,8 @@ export default function Header() {
 
     const { theme } = useTheme()
 
+    const token = Cookies.get('token')
+
     const [menuShow, setMenuShow] = useState(false)
     const [systemIsDark, setSystemIsDark] = useState(null)
 
@@ -30,7 +32,6 @@ export default function Header() {
         setSystemIsDark(window.matchMedia("(prefers-color-scheme: dark)").matches)
     }, [])
 
-    const token = Cookies.get('token')
 
     return (
         <header className={`h-[10vh] ${theme == 'light' ? 'bg-[var(--green)]' : 'bg-zinc-950 text-zinc-50'}
@@ -46,7 +47,7 @@ export default function Header() {
                         <span className="text-2xl font-bold whitespace-nowrap md:text-lg">Desperdício Zero</span>
                     </div>
                </a>
-               <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-[45vw]
+               <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-auto
                 md:absolute md:flex-col md:bg-[#FBEEDB] md:justify-normal md:h-[91vh] md:px-6 
                 md:py-8 md:transition-right md:duration-500 md:top-[10vh] md:text-zinc-900 dark:text-zinc-50
                 md:z-50 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>

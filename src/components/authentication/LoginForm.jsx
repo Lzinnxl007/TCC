@@ -18,6 +18,7 @@ export default function LogInForm() {
             if(user.email == email && user.password == password) {
                 if(window.document !== undefined) {
                     Cookies.set('token', await CreateToken(user))
+                    Cookies.set('user', JSON.stringify(user))
 
                     setEmail('')
                     setPassword('')

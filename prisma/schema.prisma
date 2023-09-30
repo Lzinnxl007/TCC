@@ -28,5 +28,5 @@ model users {
   name              String
   email             String
   password          String
-  profile_photo     String
+  photo     String
 }

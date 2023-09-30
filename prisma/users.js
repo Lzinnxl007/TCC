@@ -6,7 +6,7 @@ export async function CreateUser(name, email, password) {
             name,
             email,
             password,
-            profile_photo: ''
+            photo: ''
         }
     })
 }
@@ -16,5 +16,24 @@ export async function Login(email) {
         where: {
             email
         }
+    })
+}
+
+export async function UploadProfileImage(id, url) {
+    await prisma.users.update({
+        where: {
+            id: id
+        },
+        data: {
+            photo: url
+        }
+    })
+}
+
+export async function GetUser(id) {
+    return await prisma.users.findFirst({
+        where: {
+            id
+        },
     })
 }
