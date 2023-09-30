@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -11,22 +8,22 @@ datasource db {
 }
 
 model comments {
-  id        Int     @id @unique  @default(autoincrement())
-  name      String
-  comment   String
-  recipeId  Int
+  id       Int    @id @unique @default(autoincrement())
+  name     String
+  comment  String
+  recipeId Int
 }
 
 model emails {
-  id     Int      @id  @unique  @default(autoincrement())
-  name   String
-  email  String
+  id    Int    @id @unique @default(autoincrement())
+  name  String
+  email String
 }
 
 model users {
-  id                Int      @id  @unique  @default(autoincrement())
-  name              String
-  email             String
-  password          String
-  photo     String
+  id       Int    @id @unique @default(autoincrement())
+  name     String
+  email    String
+  password String
+  photo    String
 }
