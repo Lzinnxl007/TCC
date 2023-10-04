@@ -6,7 +6,8 @@ export async function CreateUser(name, email, password) {
             name,
             email,
             password,
-            photo: ''
+            photo: '',
+            favorite_recipes: '[]'
         }
     })
 }
@@ -35,5 +36,35 @@ export async function GetUser(id) {
         where: {
             id
         },
+    })
+}
+
+export async function AddFavoriteRecipe(id, recipes) {
+    await prisma.users.update({
+        where: {
+            id,
+        }, 
+        data: {
+            favorite_recipes: recipes
+        }
+    })
+}
+
+export async function GetFavoriteRecipes(id) {
+    return await prisma.users.findFirst({
+        where: {
+            id,
+        },
+    })
+}
+
+export async function RemoveFavoritedRecipe(id, recipes) {
+    await prisma.users.update({
+        where: {
+            id,
+        },
+        data: {
+            favorite_recipes: recipes
+        }
     })
 }

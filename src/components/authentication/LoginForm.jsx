@@ -4,7 +4,7 @@ import { CreateToken } from "@/utils/auth/CreateToken"
 import { LoginAction } from "@/utils/auth/LoginAction"
 import { useState } from "react"
 import Cookies from "js-cookie"
-export default function LogInForm() {
+export default function LogInForm({ notify }) {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -22,8 +22,11 @@ export default function LogInForm() {
 
                     setEmail('')
                     setPassword('')
+                    notify()
 
-                    history.back()
+                    setTimeout(() => {
+                        history.back()
+                    }, 1000)
                 }
                 
             }
@@ -31,7 +34,7 @@ export default function LogInForm() {
     }
 
     return (
-        <div className="w-full max-w-sm h-auto p-6 rounded-lg bg-zinc-100">
+        <div className="w-full max-w-sm h-auto p-6 rounded-lg bg-zinc-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
             <h1 className="mb-6 text-3xl font-bold text-center text-zinc-900">Login</h1>
             <form onSubmit={e => handleSubmit(e)}
             className="flex flex-col w-full px-4 gap-2">

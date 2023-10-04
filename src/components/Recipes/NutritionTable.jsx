@@ -1,10 +1,12 @@
 export default function NutritionTable({ nutrition }) {
 
     return (
-        <div className="w-full max-w-lg rounded-xl bg-[var(--green)] p-6 flex flex-col items-center mx-auto">
+        <div className="w-full max-w-lg rounded-xl bg-[var(--green)] p-6 flex flex-col items-center mx-auto text-zinc-50">
             <h1 className="text-3xl text-center font-bold mt-4 mb-8">Informações nutricionais</h1>
 
-            <span className="text-left mb-2">Porção de {nutrition?.gramsPerPortion}</span>
+            <span className="text-left mb-2">
+                Porção de {nutrition?.gramsPerPortion}
+            </span>
             <table className="border-solid border-[1px] border-zinc-50">
                 <tr className="bg-[var(--light-green)]">
                     <th>Nutriente</th>

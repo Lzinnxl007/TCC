@@ -11,7 +11,7 @@ import {
 
 export default function Share({ param }) {
     return (
-        <div className="flex items-center gap-4 bg-zinc-900 float-left mt-4 mr-4">
+        <div className="flex items-center gap-4 bg-transparent float-left mt-4 mr-4">
             <FacebookShareButton
             url={`https://desperdiciozero.vercel.app/receita/${param}`}
             quote={'Compartilhando uma receita deliciosa e saudável para nutrir o corpo e a alma!'}

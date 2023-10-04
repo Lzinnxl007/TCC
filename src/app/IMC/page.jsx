@@ -4,11 +4,10 @@ import CalcIMC from "@/components/IMC/CalcIMC"
 import Header from "@/components/Default/Header"
 import IMCTable from "@/components/IMC/IMCTable"
 import { Context } from "@/context/IMC"
-import { useTheme } from "next-themes"
 import { useState } from "react"
 export default function IMC() {
 
-    const { theme } = useTheme()
+  
 
     const [IMC, setIMC] = useState(null)
 
@@ -19,10 +18,10 @@ export default function IMC() {
     }
 
     return (
-        <section className={`w-screen h-[130vh] ${theme == 'light' ? 'bg-[#FFE4C5]' : 'bg-zinc-900'} dark:bg-zinc-900`}>
+        <section className="w-screen h-[130vh] bg-[var(--light-grey)] dark:bg-zinc-900 ">
             <Header/>
             <div className="w-full flex flex-col items-center justify-center gap-8 px-6 translate-y-[10vh]">
-                <h1 className={`text-center text-5xl font-bold md:text-4xl ${theme == 'light' ? 'text-zinc-900' : 'text-zinc-50'} dark:text-zinc-50`}>
+                <h1 className="text-center text-5xl font-bold md:text-4xl dark:text-zinc-50">
                     Calcule seu IMC
                 </h1>
             <Context.Provider value={{

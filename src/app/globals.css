@@ -4,11 +4,14 @@
 
 :root {
     --green: #A3BD36;
-    --light-green: #93ab36;
-    --orange: rgb(253,229,197)
+    --light-green: rgb(180, 212, 53);
+    --light-grey: #f5f5f5;
+    --toastify-color-progress-light :#A3BD36;
 }
 
 tr, td, th {
     border: 1px solid #111;
     padding: 2px 1rem
 }
+/*#A3BD36*/
+/*rgb(253,229,197)*/

@@ -4,10 +4,8 @@ import { useState } from 'react'
 import { Context } from '@/context/IMC'
 import { useContext } from 'react'
 import { Info } from 'lucide-react'
-import { useTheme } from 'next-themes'
-export default function CalcIMC() {
 
-    const { theme } = useTheme()
+export default function CalcIMC() {
 
     const { setIMC } = useContext(Context)
 
@@ -43,11 +41,11 @@ export default function CalcIMC() {
 
 
     return (
-        <div className={`rounded-2xl ${theme == 'light' ? 'bg-orange-300/50 text-zinc-900' : 'bg-zinc-800 text-zinc-50'} px-10 py-6 w-full max-w-md h-[350px] flex items-center relative dark:bg-zinc-800 dark:text-zinc-50`}>
+        <div className="rounded-2xl px-10 py-6 w-full max-w-md h-[350px] flex items-center relative bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-50">
 
             <div className="group absolute left-4 top-4 cursor-pointer z-30">
                 <Info size={20} 
-                color={theme == 'light' ? "#222" : '#fff'}
+                color="#222"
                 className="dark:stroke-white"/>
                 <div className="w-[150px] text-xs px-4 py-4 rounded-lg bg-zinc-50 absolute translate-y-2 invisible group-hover:visible transition text-zinc-900">
                     <p>
@@ -57,7 +55,7 @@ export default function CalcIMC() {
             </div>
 
             <form onSubmit={e => calculate(e)} 
-            className={`h-auto ${theme == 'light' ? 'text-zinc-900' : 'text-zinc-50'} dark:text-zinc-50`}>
+            className="h-auto dark:text-zinc-50">
                 <label className="text-sm">
                     Peso em KG:
                 </label>
@@ -66,7 +64,7 @@ export default function CalcIMC() {
                 name="weight"
                 value={data.weight}
                 placeholder="Ex: 70"
-                className={`px-4 py-1.5 rounded ${theme == 'light' ? ' bg-zinc-50 text-zinc-900' : 'bg-zinc-700 text-zinc-50'} w-full outline-none mb-2 dark:bg-zinc-700 dark:text-zinc-50`}/>
+                className="px-4 py-1.5 rounded w-full outline-none mb-2 dark:bg-zinc-700 dark:text-zinc-50"/>
 
                 <label className="mt-4 text-sm">
                     Altura em CM:
@@ -76,7 +74,7 @@ export default function CalcIMC() {
                 name="height"
                 value={data.height}
                 placeholder="Ex: 170"
-                className={`px-4 py-1.5 rounded ${theme == 'light' ? ' bg-zinc-50 text-zinc-900' : 'bg-zinc-700 text-zinc-50'} w-full outline-none mb-2 dark:bg-zinc-700 dark:text-zinc-50`}/>
+                className="px-4 py-1.5 rounded w-full outline-none mb-2 dark:bg-zinc-700 dark:text-zinc-50"/>
                
                 <button className="w-full px-4 py-2 bg-[var(--green)] rounded font-semibold hover:opacity-90 transition text-zinc-50 mt-3 outline-none">
                     Calcular

@@ -73,7 +73,7 @@ export default function SetProfileImage({ show, closeSelectImage }) {
         <div>
             {show && (
                 <div className="p-8 rounded-lg absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
-                bg-[var(--orange)] dark:bg-zinc-700 text-zinc-900 dark:text-zinc-50 h-auto">
+                bg-[var(--light-grey)] dark:bg-zinc-700 text-zinc-900 dark:text-zinc-50 h-auto shadow-lg z-40">
     
                     <button onClick={closeSelectImage}
                     className="absolute top-3 left-3">
@@ -97,7 +97,7 @@ export default function SetProfileImage({ show, closeSelectImage }) {
                     )}
                     <button onClick={handleUpload}
                     disabled={!previewImage}
-                    className="w-full py-1.5 font-medium text-zinc-50 bg-orange-400 disabled:opacity-40 transition hover:opacity-90 rounded mt-4">
+                    className="w-full py-1.5 font-medium text-zinc-50 bg-orange-400 disabled:opacity-60 transition hover:opacity-90 rounded mt-4">
                         Salvar
                     </button>
                 </div>

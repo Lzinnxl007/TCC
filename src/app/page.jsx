@@ -11,7 +11,7 @@ import VideoApresentation from "@/components/Initial/VideoApresentation"
 export default function Home() {
 
   return (
-    <div className="min-h-screen bg-black overflow-hidden">
+    <div className="min-h-screen bg-[var(--orange)] overflow-hidden">
         <Header/>
         <Main/>
         <VideoApresentation/>

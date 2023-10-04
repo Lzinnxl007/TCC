@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
-import { GetCommentsAction } from "@/utils/GetCommentsAction"
+import { GetCommentsAction } from "@/utils/recipes/GetCommentsAction"
 import { UserCircle2 } from "lucide-react"
 import { useSearchParams } from "next/navigation"
 export default function Comments() {

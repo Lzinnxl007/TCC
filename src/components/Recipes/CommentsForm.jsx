@@ -1,6 +1,6 @@
 'use client'
 
-import { CreateCommentAction } from "@/utils/CreateCommentAction"
+import { CreateCommentAction } from "@/utils/recipes/CreateCommentAction"
 import { useState } from "react"
 import { useSearchParams } from "next/navigation"
 export default function CommentsForm() {
