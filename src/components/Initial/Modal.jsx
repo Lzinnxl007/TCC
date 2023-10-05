@@ -42,7 +42,7 @@ export default function Modal() {
     }
 
     return (
-        <div className={`flex w-full max-w-2xl lg:max-w-lg md:max-w-sm h-[450px] lg:h-[400px] md:h-[300px] rounded-lg bg-[var(--orange)] fixed ${show ? 'animate-open-modal top-1/2' : '-top-full'} transition-all duration-1000 left-1/2 z-30 -translate-x-1/2 -translate-y-1/2 overflow-hidden`}>
+        <div className={`flex w-full max-w-2xl shadow-xl lg:max-w-lg md:max-w-sm h-[450px] lg:h-[400px] md:h-[300px] rounded-lg bg-[var(--light-grey)] fixed ${show ? 'animate-open-modal top-1/2' : '-top-full'} transition-all duration-1000 left-1/2 z-30 -translate-x-1/2 -translate-y-1/2 overflow-hidden`}>
             <div className="text-zinc-900 w-[60%] px-4 my-auto md:py-6">
                 <h1 className="text-3xl lg:text-2xl md:text-xl font-bold text-center mb-4">Desperdício Zero</h1>
                 <h2 className="text-xl lg:text-lg md:text-sm font-semibold text-center mt-2">

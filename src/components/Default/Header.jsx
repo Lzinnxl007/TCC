@@ -51,6 +51,9 @@ export default function Header() {
                 md:absolute md:flex-col md:bg-[var(--light-grey)] md:shadow-xl md:dark:bg-zinc-700  md:justify-normal md:h-[91vh] md:px-6 md:py-8 md:transition-right md:duration-500 md:top-[10vh] md:text-zinc-900 dark:text-zinc-50
                 md:z-50 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>
                     <li className="md:dark:hover:text-zinc-700  transition ">
+                        <a href="/">Início</a> 
+                    </li>
+                    <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/cardapio">Cardapio</a> 
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">

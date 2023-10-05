@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { Context } from '@/context/IMC'
 import { useContext } from 'react'
 import { Info } from 'lucide-react'
-
+import { toast } from 'react-toastify'
 export default function CalcIMC() {
 
     const { setIMC } = useContext(Context)
@@ -13,6 +13,8 @@ export default function CalcIMC() {
         weight: null,
         height: null,
     })
+
+    const emptyCredentials = () => toast("Preencha todos os campos!")
 
     const HandleData = (e) => {
         if(e.target.getAttribute('name') == 'weight') {
@@ -35,6 +37,8 @@ export default function CalcIMC() {
         if(data.height && data.weight && data.gender !== null) {
            setIMC((+data.weight / ((+data.height / 100) * (+data.height / 100))).toFixed(2))
 
+        } else {
+            emptyCredentials()
         }
     }
 
@@ -64,6 +68,7 @@ export default function CalcIMC() {
                 name="weight"
                 value={data.weight}
                 placeholder="Ex: 70"
+                required
                 className="px-4 py-1.5 rounded w-full outline-none mb-2 dark:bg-zinc-700 dark:text-zinc-50"/>
 
                 <label className="mt-4 text-sm">
@@ -74,6 +79,7 @@ export default function CalcIMC() {
                 name="height"
                 value={data.height}
                 placeholder="Ex: 170"
+                required
                 className="px-4 py-1.5 rounded w-full outline-none mb-2 dark:bg-zinc-700 dark:text-zinc-50"/>
                
                 <button className="w-full px-4 py-2 bg-[var(--green)] rounded font-semibold hover:opacity-90 transition text-zinc-50 mt-3 outline-none">

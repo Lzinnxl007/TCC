@@ -12,7 +12,7 @@ export default function SignUpForm() {
 
     const sucessSignUp = () => toast("Cadastro realizado com sucesso!")
 
-    const notFilled = () => toast("Preencha todos os campos")
+    const emptyCredentials = () => toast("Preencha todos os campos")
 
     const errorPassword = () => toast("As senhas nao coincidem!")
 
@@ -38,7 +38,7 @@ export default function SignUpForm() {
             }
             
         } else {
-            notFilled()
+            emptyCredentials()
         }
     }
     

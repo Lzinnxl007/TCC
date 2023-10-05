@@ -1,10 +1,11 @@
-import { ToastContainer } from "react-toastify"
+import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-export default function ErrorNotification() {
+export default function Notification() {
+
     return (
-        <div>
-            <ToastContainer
+        <div className="absolute top-20 right-16">
+            <ToastContainer 
             position="top-right"
             autoClose={1000}
             hideProgressBar={false}

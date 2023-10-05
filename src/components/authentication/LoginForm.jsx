@@ -4,10 +4,15 @@ import { CreateToken } from "@/utils/auth/CreateToken"
 import { LoginAction } from "@/utils/auth/LoginAction"
 import { useState } from "react"
 import Cookies from "js-cookie"
-export default function LogInForm({ notify }) {
+import { toast } from "react-toastify"
+export default function LogInForm() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+
+    const emptyCredentials = () => toast("Preencha todos os campos!")
+    const errorCredentials = () => toast("E-mail ou senha incorretos!")
+    const loginSucess = () => toast("Login realizado com sucesso!")
 
     const handleSubmit = async(e) => {
         e.preventDefault()
@@ -16,22 +21,26 @@ export default function LogInForm({ notify }) {
             const user = await LoginAction(email)
 
             if(user.email == email && user.password == password) {
-                if(window.document !== undefined) {
-                    Cookies.set('token', await CreateToken(user))
-                    Cookies.set('user', JSON.stringify(user))
-
-                    setEmail('')
-                    setPassword('')
-                    notify()
-
-                    setTimeout(() => {
-                        history.back()
-                    }, 1000)
-                }
                 
+                Cookies.set('token', await CreateToken(user))
+                Cookies.set('user', JSON.stringify(user))
+
+                setEmail('')
+                setPassword('')
+                loginSucess()
+
+                setTimeout(() => {
+                    history.back()
+                }, 1000)
+                
+                
+                } else {
+                    errorCredentials()
+                }
+            } else {
+                emptyCredentials()
             }
         }
-    }
 
     return (
         <div className="w-full max-w-sm h-auto p-6 rounded-lg bg-zinc-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
@@ -44,6 +53,7 @@ export default function LogInForm({ notify }) {
                 </label>
                 <input onChange={e => setEmail(e.target.value)}
                 type="email" 
+                required
                 placeholder="E-mail"
                 className="px-4 py-1.5 rounded text-zinc-900 bg-zinc-50 border-solid border-[1px] border-zinc-300 outline-none"/>
                 
@@ -52,6 +62,7 @@ export default function LogInForm({ notify }) {
                 </label>
                 <input onChange={e => setPassword(e.target.value)} 
                 type="password" 
+                required
                 placeholder="Senha"
                 className="px-4 py-1.5 rounded text-zinc-900 bg-zinc-50 border-solid border-[1px] border-zinc-300 outline-none"/>
 
