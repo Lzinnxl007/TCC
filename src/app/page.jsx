@@ -1,4 +1,4 @@
-
+'use client'
 
 import Footer from "@/components/Default/Footer"
 import Header from "@/components/Default/Header"
