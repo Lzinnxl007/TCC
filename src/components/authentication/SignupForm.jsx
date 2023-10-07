@@ -45,7 +45,7 @@ export default function SignUpForm() {
 
     return (
         <div className="w-full max-w-sm h-auto p-6 rounded-lg bg-zinc-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
-            <h1 className="mb-6 text-3xl font-bold text-center text-zinc-900">Signin</h1>
+            <h1 className="mb-6 text-3xl font-bold text-center text-zinc-900">Cadastrar</h1>
             <form onSubmit={e => handleSubmit(e)}
             className="flex flex-col w-full px-4 gap-2">
 
