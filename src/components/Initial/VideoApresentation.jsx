@@ -42,7 +42,7 @@ export default function VideoApresentation() {
                 <PlayButton playVideo={playVideo} playing={playing}/>
                 <video 
                 ref={video}
-                autoplay loop poster="apresentation-thumbnail.png"
+                autoPlay loop poster="apresentation-thumbnail.png"
                 className="rounded outline-none mt-40 w-full h-full shadow-xl mb-40">
                     <source src="/apresentation.mp4" type="video/mp4"/>
                 </video>

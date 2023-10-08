@@ -54,19 +54,16 @@ export default function Header() {
                         <a href="/">Início</a> 
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
-                        <a href="/cardapio">Cardapio</a> 
-                    </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/sobre">Sobre Nós</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/receitas">Receitas</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
-                        <a href="/dashboard">Dashboard</a>
+                        <a href="/IMC">IMC</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
-                        <a href="/IMC">IMC</a>
+                        <a href="/FAQ">FAQ</a>
                     </li>
                     {!token && (
                         <li className="translate-x-12 flex items-center gap-6 md:flex-col md:translate-x-0">

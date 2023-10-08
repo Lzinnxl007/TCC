@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Desperdício Zero | Se alimente melhor',
-  description: 'Aprenda a se alimentar de verdade!',
+  title: 'Desperdício Zero | Saúde e Sustentabilidade',
+  description: 'Cuide da sua saúde e do planeta!',
   icons: {
     icon: '/favicon.ico'
   }
@@ -13,11 +13,13 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}  
-      </body>
-    </html>
-  )
+  
+    return (
+      <html lang="en">
+        <body className={inter.className}>
+          {children}  
+        </body>
+      </html>
+    )
+  
 }
