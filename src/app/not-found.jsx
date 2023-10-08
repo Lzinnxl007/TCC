@@ -1,6 +1,6 @@
-import Footer from "@/components/Default/Footer";
-import Header from "@/components/Default/Header";
-import Link from "next/link";
+import Footer from "@/components/Default/Footer"
+import Header from "@/components/Default/Header"
+import Link from "next/link"
 
 export default function NotFound() {
     return (
@@ -14,7 +14,7 @@ export default function NotFound() {
                     <p className="max-w-md lg:text-center lg:w-full lg:px-4">
                     Desculpe, a página que você está procurando não foi encontrada. Parece que você se perdeu na internet. Por favor, volte à página inicial para continuar sua jornada.
                     </p>
-                   <Link href="/">
+                   <Link href="https://desperdiciozero.vercel.app">
                         <button className="px-4 py-1.5 rounded bg-[var(--green)] text-zinc-50 font-medium">
                             Voltar ao Início
                         </button>
