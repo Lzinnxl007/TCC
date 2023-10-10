@@ -2,7 +2,6 @@
 
 import Footer from "@/components/Default/Footer"
 import Header from "@/components/Default/Header"
-import Link from "next/link"
 
 export default function NotFound() {
 

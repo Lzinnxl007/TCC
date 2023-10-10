@@ -15,7 +15,7 @@ export default function FAQ() {
                     </p>
                 </div>
                 <div className="w-full flex justify-around mt-10 py-8">
-                    <ul className="grid grid-cols-1 gap-2">
+                    <ul className="flex flex-col gap-2 px-8">
                         <li>
                             <FAQToggle
                             question="Como ter uma alimentação saudavel?"

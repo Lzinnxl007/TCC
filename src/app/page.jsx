@@ -20,7 +20,7 @@ export default function Home() {
             name="Julia Dias"
             career="Nutricionista"
             image="https://img.freepik.com/free-photo/young-woman-holding-two-green-red-apple_23-2148076020.jpg?size=626&ext=jpg&uid=R66330385&ga=GA1.2.1125086435.1688662802&semt=ais"
-            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vulputate ultrices fermentum. Nunc aliquam, quam quis vestibulum ultrices, turpis ipsum lacinia lacus, eu elementum sem nibh eget enim."/>
+            text="[citação]"/>
 
             <ReviewCard
             name=""
