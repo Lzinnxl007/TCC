@@ -13,6 +13,7 @@ export default function Header() {
     const token = Cookies.get('token')
 
     const [menuShow, setMenuShow] = useState(false)
+    const [isDark, setIsDark] = useState(null)
 
     const openCloseMenu = () => {
         setMenuShow(!menuShow)
@@ -25,6 +26,10 @@ export default function Header() {
         else window.document.body.style.overflow = 'scroll'
     }, [menuShow])
 
+    useEffect(() => {
+        setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
+    }, [])
+
 
     const logout = () => {
         Cookies.remove('token') 
@@ -35,14 +40,18 @@ export default function Header() {
 
     return (
         <header className="h-[10vh] bg-[var(--light-grey)] text-zinc-50
-         dark:bg-zinc-950 dark:text-zinc-50 overflow-hidden">
+         dark:bg-zinc-900 dark:text-zinc-50 overflow-hidden">
             <nav className="w-full h-full flex items-center justify-around z-20 py-4">
             <a href="/">
                 <div className="flex items-center gap-4 md:gap-2">
                        
-                        <Logo size={80} url="/logo.png"/>
+                        {!isDark ? (
+                            <Logo size={80} url="/logo.png"/>
+                        ) : (
+                            <Logo size={80} url="/white-logo.png"/>
+                        )}
 
-                        <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900">Desperdício 
+                        <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50">Desperdício 
                             <span className="text-[var(--green)]">Zero</span>
                         </p>
                     </div>

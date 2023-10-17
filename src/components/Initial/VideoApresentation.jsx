@@ -8,6 +8,7 @@ export default function VideoApresentation() {
 
     const [playing, setPlaying] = useState(false)
     const [muted, setMuted] = useState(true)
+    const [isDark, setIsDark] = useState(null)
 
     const muteVideo = () => {
         setMuted(!muted)
@@ -35,9 +36,13 @@ export default function VideoApresentation() {
         }
     }, [muted])
 
+    useEffect(() => {
+        setIsDark(window.matchMedia('(prefers-color-scheme: dark)').matches)
+    }, [])
+
     return (
-        <div className="w-screen h-[50vw] lg:h-[80vw] flex flex-col items-center justify-center bg-[url('/video-apresentation-background.jpg')] bg-center bg-cover bg-no-repeat 
-        px-10 md:px-6 ">
+        <div className={`w-screen h-[50vw] lg:h-[80vw] flex flex-col items-center justify-center ${!isDark ? "bg-[url('/video-apresentation-background.jpg')]" : "bg-[url('/video-apresentation-black-background.jpg')]"} bg-center bg-cover bg-no-repeat 
+        px-10 md:px-6 `}>
             <div className="relative z-0 group rounded flex items-center justify-center h-[70%] lg:h-[50%]">
                 <PlayButton playVideo={playVideo} playing={playing}/>
                 <video 
