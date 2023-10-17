@@ -74,7 +74,7 @@ export default function Modal() {
             </button>
             
             <div className="w-1/2 h-full">
-                <img src="/modal-image.jpg" alt="modal-image" 
+                <img src="/modal-image.webp" alt="modal-image" 
                 className="w-full h-full object-cover"/>
             </div>
         </div>

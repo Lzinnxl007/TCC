@@ -44,15 +44,11 @@ export default function Header() {
             <nav className="w-full h-full flex items-center justify-around z-20 py-4">
             <a href="/">
                 <div className="flex items-center gap-4 md:gap-2">
-
                         {!isDark ? (
                             <Logo size={80} url="/logo.png"/>
                         ) : (
                             <Logo size={80} url="/white-logo.png"/>
                         )}
-                        <Logo size={90} url="/logo.png"/>
-
-
                         <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50">Desperdício 
                             <span className="text-[var(--green)]">Zero</span>
                         </p>
@@ -72,6 +68,9 @@ export default function Header() {
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/IMC">IMC</a>
+                    </li>
+                    <li className="md:dark:hover:text-zinc-700  transition ">
+                        <a href="/livros">Livros</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/FAQ">FAQ</a>

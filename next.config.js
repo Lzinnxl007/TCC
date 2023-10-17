@@ -4,7 +4,7 @@ const nextConfig = {
         serverActions: true
     },
     images: {
-        domains: ['upload.wikimedia.org', 'res.cloudinary.com', 'img.freepik.com'],
+        domains: ['upload.wikimedia.org', 'res.cloudinary.com', 'img.freepik.com', 'www.livrosabertos.sibi.usp.br'],
     },
 }
 

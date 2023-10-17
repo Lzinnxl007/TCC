@@ -5,7 +5,7 @@ import { Instagram, Youtube } from "lucide-react"
 export default function Footer() {
 
     return (
-        <footer className="w-screen h-auto text-zinc-900 bg-[var(--green)] dark:bg-zinc-900 dark:text-zinc-900">
+        <footer className="w-full border-solid border-t-[1px] dark:border-zinc-400 h-auto text-zinc-900 bg-[var(--green)] dark:bg-zinc-900 dark:text-zinc-900">
             <header className="w-full h-full py-6 px-10">
                 <nav className="w-full h-full flex justify-around md:justify-between items-center py-4">
                     <Link href="/">
@@ -19,8 +19,8 @@ export default function Footer() {
                 </nav>
                
             </header>
-            <div className="w-full flex mt-10 px-10 ml-[16vw] lg:ml-[12vw] md:ml-[3vw]">
-                    <div className="">
+            <div className="flex mt-10 px-10 ml-[16vw] lg:ml-[12vw] md:ml-[3vw]">
+                    <div>
                         <h1 className="text-lg font-semibold mb-2 text-zinc-50">Projeto Desperdicio Zero</h1>
                         <ul>
                             <li className="transition text-zinc-100 dark:hover:text-zinc-50">

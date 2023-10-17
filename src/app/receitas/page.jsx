@@ -74,7 +74,7 @@ export default function Recipes() {
     }
 
     return (
-        <div className="min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900 ">
+        <div className="min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900">
             <Loading/>
             <Header/>
             <div className="py-8 space-y-4 ">

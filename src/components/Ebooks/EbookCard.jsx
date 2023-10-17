@@ -1,4 +1,14 @@
+'use client'
+
+import { useRouter } from "next/navigation"
 export default function EBookCard({ title, image, date, author }) {
+
+    const router = useRouter()
+
+    const navigate = () => {
+        router.push(`/livro/${title}`)
+    }
+
     return (
         <div className="rounded-xl w-full max-w-[340px] h-[550px] shadow-lg bg-zinc-50 overflow-hidden md:mx-auto">
             <div className="w-full h-1/2 bg-zinc-200 flex items-center justify-center p-4">
@@ -15,7 +25,8 @@ export default function EBookCard({ title, image, date, author }) {
                 <p className="text-xs text-zinc-700 mt-4">
                     {date}
                 </p>
-                <button className="w-[85%] py-1.5 font-medium bg-orange-400 text-zinc-50 rounded hover:bg-orange-500 transition absolute bottom-6 left-1/2 -translate-x-1/2">
+                <button onClick={navigate}
+                className="w-[85%] py-1.5 font-medium bg-orange-400 text-zinc-50 rounded hover:bg-orange-500 transition absolute bottom-6 left-1/2 -translate-x-1/2">
                     Ver mais
                 </button>
             </div>
