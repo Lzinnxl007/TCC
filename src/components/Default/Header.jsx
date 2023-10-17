@@ -45,11 +45,15 @@ export default function Header() {
             <a href="/">
                 <div className="flex items-center gap-4 md:gap-2">
                        
+<<<<<<< HEAD
                         {!isDark ? (
                             <Logo size={80} url="/logo.png"/>
                         ) : (
                             <Logo size={80} url="/white-logo.png"/>
                         )}
+=======
+                        <Logo size={90} url="/logo.png"/>
+>>>>>>> 1a4b0da34565c59764337ca2fa1504364758986e
 
                         <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50">Desperdício 
                             <span className="text-[var(--green)]">Zero</span>

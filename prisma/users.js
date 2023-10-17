@@ -7,7 +7,8 @@ export async function CreateUser(name, email, password) {
             email,
             password,
             photo: '',
-            favorite_recipes: '[]'
+            favorite_recipes: '[]',
+            imc: '[]'
         }
     })
 }
@@ -68,3 +69,4 @@ export async function RemoveFavoritedRecipe(id, recipes) {
         }
     })
 }
+

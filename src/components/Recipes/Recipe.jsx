@@ -9,8 +9,7 @@ import CommentsForm from "@/components/Recipes/CommentsForm"
 import Share from './Share'
 import Comments from './Comments'
 import AddFavorite from './AddFavorite'
-import { GetFavoriteRecipesAction } from '@/utils/recipes/GetFavoriteRecipesAction'
-import Cookies from 'js-cookie'
+import Image from 'next/image'
 export default function Recipe() {
 
     const searchParams = useSearchParams()
@@ -42,6 +41,7 @@ export default function Recipe() {
                     <div className="w-full h-[65vh]">
                         <img src={recipe?.image} 
                         alt="food-image" 
+                        loading="lazy"
                         className="w-full h-full object-cover"/>
                     </div>
                     <div className="px-10 space-y-6 w-full lg:flex lg:items-center lg:flex-col md:px-4 ">

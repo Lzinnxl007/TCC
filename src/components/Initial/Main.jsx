@@ -1,7 +1,5 @@
-
+import Image from "next/image"
 export default function Main() {
-
-
     return (
         <main className="w-screen h-[91vh] flex z-20
         items-center justify-evenly md:flex-col-reverse overflow-hidden  dark:bg-zinc-900 dark:text-zinc-50 bg-[var(--light-grey)]  pb-10">
@@ -16,7 +14,13 @@ export default function Main() {
                 </button>
             </div>
             <div>
-                <img src="/main-image.png" alt="complementar" 
+                <Image 
+                src="/main-image.png" 
+                alt="complementar" 
+                layout="responsive"
+                width={100}
+                height={100}
+                loading="lazy"
                 className="max-w-2xl md:max-w-md"/>
             </div>
         </main>

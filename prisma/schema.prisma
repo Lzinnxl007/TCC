@@ -27,4 +27,5 @@ model users {
   password          String
   photo             String
   favorite_recipes  String
+  imc               String
 }
