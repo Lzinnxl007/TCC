@@ -22,6 +22,7 @@ export default function RecipeCard({ recipe }) {
                 <Image src={recipe.image} 
                 layout="fill"
                 alt="recipe-image" 
+                loading="lazy"
                 className="w-full h-full object-cover absolute top-0 left-0"/>
             </div>
             <div className="w-full p-4 flex flex-col items-start  dark:text-zinc-50">

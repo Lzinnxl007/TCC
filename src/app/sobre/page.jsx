@@ -25,6 +25,7 @@ export default function About() {
                     layout="responsive"
                     width={100}
                     height={100}
+                    loading="lazy"
                     className="w-full h-full"/>
                 </div>
             </div>
@@ -34,6 +35,7 @@ export default function About() {
                 layout="responsive"
                 width={100}
                 height={100}
+                loading="lazy"
                 className="w-screen object-contain h-[70vw]"/>
             </div>
             
@@ -58,6 +60,7 @@ export default function About() {
                     layout="responsive"
                     width={100}
                     height={100}
+                    loading="lazy"
                     className="w-full"/>
                 </div>
             </div>
@@ -84,6 +87,7 @@ export default function About() {
                 layout="responsive"
                 width={100}
                 height={100}
+                loading="lazy"
                 className="max-w-5xl lg:max-w-3xl md:max-w-md mx-auto mt-28 md:mt-16"/>
             </div>
         </section>

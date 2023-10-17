@@ -20,6 +20,7 @@ export default function Main() {
                 layout="responsive"
                 width={100}
                 height={100}
+                loading="lazy"
                 className="max-w-2xl md:max-w-md"/>
             </div>
         </main>
