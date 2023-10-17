@@ -7,25 +7,48 @@ import { GetRecipes } from "@/utils/recipes/GetRecipes"
 import SelectCategory from "@/components/Recipes/SelectCategory"
 import Loading from "@/components/Default/Loading"
 import ScrollToTop from "@/components/Default/ScrollToTop"
-
+import { GetFavoriteRecipesAction } from "@/utils/recipes/GetFavoriteRecipesAction"
+import Cookies from "js-cookie"
+import { toast } from "react-toastify"
+import Notification from "@/components/Notification/Notification"
 export default function Recipes() {
-
 
     const [recipes, setRecipes] = useState([])
     const [filteredRecipes, setFilteredRecipes] = useState([])
+
+    const user = Cookies.get('user') && JSON.parse(Cookies.get('user'))
+
+    const notLogin = () => toast("Faça login para ver suas receitas favoritas")
 
     const getRecipes = async() => {
         setRecipes(await GetRecipes())
     }
 
-    const filterByCategory = (e) => {
+    const filterByCategory = async(e) => {
         if(e.target.value !== 'todas') {
             const recipesByCategory = recipes.filter((recipe) => recipe.meal == e.target.value)
 
             setFilteredRecipes(recipesByCategory)
+
         } else {
             setFilteredRecipes([])
         }
+        if(e.target.value == 'Favoritas') {
+            if(user) {
+                const favoritedRecipes = await GetFavoriteRecipesAction(user.id)
+
+                const favoritedRecipesId = JSON.parse(favoritedRecipes.favorite_recipes)
+
+                const filterRecipe = recipe => favoritedRecipesId.includes(recipe.id.toString())
+
+                setFilteredRecipes(recipes.filter(filterRecipe))
+
+            } else {
+                notLogin()
+            }
+
+        } 
+        
     }
 
     
@@ -52,8 +75,10 @@ export default function Recipes() {
 
     return (
         <div className="min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900 ">
+            <Loading/>
             <Header/>
             <div className="py-8 space-y-4 ">
+                <Notification/>
                 <h1 className="text-5xl font-bold text-orange-400 text-center md:text-4xl mx-auto">
                     Receitas Saudaveis
                 </h1>
@@ -61,11 +86,10 @@ export default function Recipes() {
                     Melhores sua alimentação com as melhores receitas para seu dia a dia.
                 </p>
             </div>
-            <div className="mt-6 w-full">
-                <Loading/>
+            <div className="mt-6">
                 <SelectCategory filterByCategory={filterByCategory}/>
-                <div className="grid grid-cols-fit gap-6 p-6 ">
-                {createCard()}
+                <div className="w-auto grid grid-cols-fit gap-6 p-6">
+                    {createCard()}
                 </div>
             </div>
             <ScrollToTop/>

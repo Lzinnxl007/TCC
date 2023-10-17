@@ -16,6 +16,9 @@ export default function SelectCategory({ filterByCategory }) {
                 <option value="Sobremesa">
                     Sobremesas
                 </option>
+                <option value="Favoritas">
+                    Favoritas
+                </option>
             </select>
         </div>
     )

@@ -4,8 +4,8 @@ import { Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from "./Logo"
 import AuthButton from './AuthButton'
-import LogOutButton from '../account/LogOutButton'
-import Profile from '../account/Profile'
+import LogOutButton from '../Account/LogOutButton'
+import Profile from '../Account/Profile'
 import Cookies from "js-cookie"
 export default function Header() {
 
@@ -40,7 +40,7 @@ export default function Header() {
             <a href="/">
                 <div className="flex items-center gap-4 md:gap-2">
                        
-                        <Logo size={80} url="/logo.png"/>
+                        <Logo size={90} url="/logo.png"/>
 
                         <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900">Desperdício 
                             <span className="text-[var(--green)]">Zero</span>

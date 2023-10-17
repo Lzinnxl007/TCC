@@ -1,5 +1,6 @@
 
 import Header from "@/components/Default/Header"
+import Image from "next/image"
 export default function About() {
 
     return (
@@ -19,12 +20,20 @@ export default function About() {
                     </p>
                 </div>
                 <div className="w-full max-w-lg md:max-w-sm px-4 lg:mb-10">
-                    <img src="/about.png" alt="about-image" 
+                    <Image src="/about.png" 
+                    alt="about-image" 
+                    layout="responsive"
+                    width={100}
+                    height={100}
                     className="w-full h-full"/>
                 </div>
             </div>
             <div className="bg-[var(--light-grey)]">
-                <img src="/about-team-image.jpg" alt="team-image" 
+                <Image src="/about-team-image.jpg" 
+                alt="team-image" 
+                layout="responsive"
+                width={100}
+                height={100}
                 className="w-screen object-contain h-[70vw]"/>
             </div>
             
@@ -44,8 +53,11 @@ export default function About() {
                     </p>
                 </div>
                 <div className="max-w-lg lg:mt-10">
-                    <img src="/argumentation-complementary-image.jpg" 
+                    <Image src="/argumentation-complementary-image.jpg" 
                     alt="argumentation-complementary-image" 
+                    layout="responsive"
+                    width={100}
+                    height={100}
                     className="w-full"/>
                 </div>
             </div>
@@ -68,7 +80,10 @@ export default function About() {
                     alternativas mais saudáveis e sustentáveis disponíveis.
                     </p>
                 </div>
-                <img src="/about-work-image.jpg" alt="about-work-image" 
+                <Image src="/about-work-image.jpg" alt="about-work-image" 
+                layout="responsive"
+                width={100}
+                height={100}
                 className="max-w-5xl lg:max-w-3xl md:max-w-md mx-auto mt-28 md:mt-16"/>
             </div>
         </section>

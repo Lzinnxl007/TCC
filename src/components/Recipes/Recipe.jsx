@@ -9,8 +9,7 @@ import CommentsForm from "@/components/Recipes/CommentsForm"
 import Share from './Share'
 import Comments from './Comments'
 import AddFavorite from './AddFavorite'
-import { GetFavoriteRecipesAction } from '@/utils/recipes/GetFavoriteRecipesAction'
-import Cookies from 'js-cookie'
+import Image from 'next/image'
 export default function Recipe() {
 
     const searchParams = useSearchParams()

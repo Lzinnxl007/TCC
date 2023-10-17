@@ -6,13 +6,37 @@ import IMCTable from "@/components/IMC/IMCTable"
 import { Context } from "@/context/IMC"
 import { useState } from "react"
 import Notification from "@/components/Notification/Notification"
+import Cookies from "js-cookie"
+import { toast } from "react-toastify"
+import { GetIMCAction } from "@/utils/IMC/GetIMCAction"
+import { SaveIMCAction } from "@/utils/IMC/SaveIMCAction"
 export default function IMC() {
 
     const [IMC, setIMC] = useState(null)
 
-    const saveResult = () => {
-        if(IMC) {
-            localStorage.setItem('IMC', JSON.stringify(IMC))
+    const notLogin = () => toast("Faça login para salvar os resultados!")
+
+    const user = Cookies.get('user') && JSON.parse(Cookies.get('user'))
+    
+    const saveResult = async() => {
+        
+        if(user) {
+            const IMCHistory = JSON.parse(await GetIMCAction(user.id))
+            const date = new Date()
+            
+            const day = date.getDate()
+            const month = date.getMonth()
+            const year = date.getFullYear()
+
+            const fullDate = `${day < 10 ? '0' + day : day}-${month < 10 ? '0' + month : month}-${year}`
+
+            IMCHistory.push({
+                imc: IMC,
+                date: fullDate
+            })
+            await SaveIMCAction(user.id, JSON.stringify(IMCHistory))
+        } else {
+            notLogin()
         }
     }
 
@@ -27,23 +51,22 @@ export default function IMC() {
             <Context.Provider value={{
                     setIMC, IMC
             }}>
-                    <CalcIMC/>
-                    {IMC && (
-                        <div className="relative">
-                            <p className="text-lg mb-2">
-                                IMC: <strong>{IMC}</strong>
-                            </p>
-                            <IMCTable/>
-                            <button onCLick={saveResult()} 
-                            className="mx-auto bg-[var(--green)] rounded px-4 
-                            py-1.5 text-zinc-50 font-semibold absolute left-1/2 -translate-x-1/2
-                             translate-y-6 whitespace-nowrap transition hover:opacity-90">
-                                Adicionar a linha do tempo
-                            </button>
-                        </div>
-                    )}
+                <CalcIMC/>
+                {IMC && (
+                    <div className="relative">
+                        <p className="text-lg mb-2">
+                            IMC: <strong>{IMC}</strong>
+                        </p>
+                        <IMCTable/>
+                        <button onClick={saveResult} 
+                        className="mx-auto bg-[var(--green)] rounded px-4 py-1.5 text-zinc-50 font-semibold absolute left-1/2 -translate-x-1/2 translate-y-6 whitespace-nowrap transition hover:opacity-90">
+                            Adicionar a linha do tempo
+                        </button>
+                    </div>
+                )}
             </Context.Provider>
             </div>
+           
         </section>
     )
 }
