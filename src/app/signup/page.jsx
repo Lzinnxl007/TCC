@@ -1,6 +1,6 @@
 
 import Header from "@/components/Default/Header"
-import SignUpForm from "@/components/Authentication/SignupForm"
+import SignUpForm from "@/components/authentication/SignupForm"
 import Notification from "@/components/Notification/Notification"
 export default function SignUp() {
 

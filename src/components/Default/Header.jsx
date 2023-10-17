@@ -4,8 +4,8 @@ import { Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from "./Logo"
 import AuthButton from './AuthButton'
-import LogOutButton from '../Account/LogOutButton'
-import Profile from '../Account/Profile'
+import LogOutButton from '../account/LogOutButton'
+import Profile from '../account/Profile'
 import Cookies from "js-cookie"
 export default function Header() {
 
