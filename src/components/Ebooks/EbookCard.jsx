@@ -1,16 +1,16 @@
 'use client'
 
 import { useRouter } from "next/navigation"
-export default function EBookCard({ title, image, date, author }) {
+export default function EBookCard({ title, image, date, author, id }) {
 
     const router = useRouter()
 
     const navigate = () => {
-        router.push(`/livro/${title}`)
+        router.push(`/livro/${title}?id=${id}`)
     }
 
     return (
-        <div className="rounded-xl w-full max-w-[340px] h-[550px] shadow-lg bg-zinc-50 overflow-hidden md:mx-auto">
+        <div className="rounded-xl w-full max-w-[340px] min-h-[570px] shadow-lg bg-zinc-50 overflow-hidden md:mx-auto">
             <div className="w-full h-1/2 bg-zinc-200 flex items-center justify-center p-4">
                 <img src={image} alt="E-book-image" 
                 className="object-contain h-full"/>
@@ -19,8 +19,8 @@ export default function EBookCard({ title, image, date, author }) {
                 <p className="font-medium text-ellipsis text-zinc-900">
                     {title}
                 </p>
-                <p className="text-xs font-medium my-4 text-zinc-800">
-                    {author}
+                <p className="text-xs font-medium my-4 text-zinc-800 text-ellipsis">
+                    {author}...
                 </p>
                 <p className="text-xs text-zinc-700 mt-4">
                     {date}

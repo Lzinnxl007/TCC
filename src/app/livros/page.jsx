@@ -1,7 +1,10 @@
-import Header from "@/components/Default/Header";
-import EBookCard from "@/components/Ebooks/EbookCard";
+'use client'
 
+import Header from "@/components/Default/Header"
+import EBookCard from "@/components/Ebooks/EbookCard"
+import { booksList } from "@/components/Ebooks/Books"
 export default function Books() {
+
     return (
         <section className="min-h-screen bg-[var(--light-grey)]">
             <Header/>
@@ -11,12 +14,16 @@ export default function Books() {
                     Adquira mais conhecimento com a leitura
                 </p>
             </div>
-            <div className="w-full grid grid-cols-fit gap-8 px-12 mt-10">
-                <EBookCard
-                title="Detetives da comida: o que comemos e por que comemos o que comemos?"
-                image="https://www.livrosabertos.sibi.usp.br/public/presses/1/submission_1134_1461_coverImage_pt_BR_t.jpg"
-                author="Luís Gustavo Arruda, Sheina Koffler, Beatriz Sinelli Laham, Vanessa Goes, Antonio Mauro Saraiva (Organizador)"
-                date="Outubro 10, 2023"/>
+            <div className="w-full grid grid-cols-fit gap-8 px-12 mt-16">
+                {booksList?.map((book) => {
+                    return (
+                        <EBookCard
+                        id={book.id}
+                        title={book.title}
+                        date={book.date}
+                        author={book.authors.filter((i, index) => index <= 1)}/>
+                    )
+                })}
             </div>
         </section>
     )
