@@ -15,7 +15,8 @@ export default function IMCTable() {
     }
 
     return (
-        <table className="border-solid border-[1px] border-zinc-900">
+        <table className="border-solid border-[1px]
+         border-zinc-900 dark:border-zinc-50 dark:text-zinc-50">
         <thead>
           <tr>
             <th>IMC</th>
@@ -33,7 +34,7 @@ export default function IMCTable() {
           </tr>
           <tr className={getClassification(25, 30)}>
             <td>25 a 30</td>
-            <td>Levemente obeso</td>
+            <td>Acima do peso</td>
           </tr>
           <tr className={getClassification(30, 35)}>
             <td>30 a 35</td>

@@ -5,10 +5,11 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Desperdício Zero | Saúde e Sustentabilidade',
-  description: 'Cuide da sua saúde e do planeta!',
+  description: 'O Desperdício Zero é uma plataforma focada em saúde e sustentabilidade que proporciona métodos e ferramentas úteis para melhorar seu bem estar enquanto dissemina praticas sustentaveis',
   icons: {
     icon: '/favicon.ico'
-  }
+  },
+  
 }
 
 

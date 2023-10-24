@@ -54,7 +54,7 @@ export default function IMC() {
                 <CalcIMC/>
                 {IMC && (
                     <div className="relative">
-                        <p className="text-lg mb-2">
+                        <p className="text-lg mb-2 text-zinc-900 dark:text-zinc-50">
                             IMC: <strong>{IMC}</strong>
                         </p>
                         <IMCTable/>
