@@ -2,6 +2,8 @@ export const booksList = [
     {
         id: 1,
         date: "Outubro 10, 2023",
+        link: "https://1drv.ms/b/s!AgN2s-hWMHOfw3e6q9kqFTxXay6L?e=fUHWaH",
+        image: "https://res.cloudinary.com/devsiaq93/image/upload/v1697914002/books/book1-image_bvcxhs.webp",
         title: "O que comemos e por que comemos o que comemos",
         authors: [
           "Beatriz Sinelli Laham, University of São Paulo. Institute of Biosciences",
@@ -18,6 +20,8 @@ export const booksList = [
       {
         id: 2,
         date: "agosto 12, 2022",
+        link: "https://1drv.ms/b/s!AgN2s-hWMHOfw3aJ9pyMnykk0Ljb?e=p5eSQO",
+        image: "https://res.cloudinary.com/devsiaq93/image/upload/v1697914001/books/book2-image_rmp6xv.webp",
         title: "Educação alimentar e nutricional como estratégia para a prevenção da obesidade e seus agravos",
         authors: [
           "Ana Paula de Queiroz Mello, Centro Universitário São Camilo",

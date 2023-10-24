@@ -10,10 +10,10 @@ export default function EBookCard({ title, image, date, author, id }) {
     }
 
     return (
-        <div className="rounded-xl w-full max-w-[340px] min-h-[570px] shadow-lg bg-zinc-50 overflow-hidden md:mx-auto">
+        <div className="rounded-xl w-full max-w-[340px] max-h-[570px] shadow-lg bg-zinc-50 overflow-hidden md:mx-auto">
             <div className="w-full h-1/2 bg-zinc-200 flex items-center justify-center p-4">
                 <img src={image} alt="E-book-image" 
-                className="object-contain h-full"/>
+                className="object-cover h-full"/>
             </div>
             <div className="w-full px-6 py-6 relative h-1/2">
                 <p className="font-medium text-ellipsis text-zinc-900">

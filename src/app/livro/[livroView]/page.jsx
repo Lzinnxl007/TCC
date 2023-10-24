@@ -22,7 +22,7 @@ export default function Livro() {
             items-center justify-center mt-16">
                 <div className="bg-zinc-50 lg:flex-col lg:mx-auto flex gap-8 shadow-lg rounded-xl p-8 w-full max-w-4xl h-auto">
                     <div className="w-auto mt-6 lg:ml-4">
-                        <Image src="https://www.livrosabertos.sibi.usp.br/public/presses/1/submission_1125_1452_coverImage_pt_BR_t.jpg"
+                        <Image src={book.image}
                         layout="responsive"
                         width={100}
                         height={100} 
@@ -67,11 +67,11 @@ export default function Livro() {
                             
                         </p>
                         
-                        <a href="" download>
+                        <Link href={book.link}>
                             <button className="w-full py-1.5 bg-orange-400 hover:bg-orange-500 transition text-zinc-50 font-medium rounded mt-10">
                                 Baixar
                             </button>
-                        </a>
+                        </Link>
                     </div>
                     
                 </div>

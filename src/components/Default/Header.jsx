@@ -47,7 +47,7 @@ export default function Header() {
                         {!isDark ? (
                             <Logo size={80} url="/logo.png"/>
                         ) : (
-                            <Logo size={80} url="/white-logo.png"/>
+                            <Logo size={70} url="/white-logo.png"/>
                         )}
                         <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50">Desperdício 
                             <span className="text-[var(--green)]">Zero</span>
@@ -55,7 +55,7 @@ export default function Header() {
                     </div>
                </a>
                <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-auto text-zinc-900
-                md:absolute md:flex-col md:bg-[var(--light-grey)] md:shadow-xl md:dark:bg-zinc-700  md:justify-normal md:h-[91vh] md:px-6 md:py-8 md:transition-right md:duration-500 md:top-[10vh] md:text-zinc-900 dark:text-zinc-50
+                md:absolute md:flex-col md:bg-[var(--light-grey)] md:shadow-xl md:dark:bg-zinc-700  md:justify-normal md:h-[91vh] md:px-6 md:py-8 md:transition-right md:duration-500 md:top-[10vh] dark:text-zinc-50
                 md:z-50 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>
                     <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/">Início</a> 
@@ -71,6 +71,9 @@ export default function Header() {
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/livros">Livros</a>
+                    </li>
+                    <li className="md:dark:hover:text-zinc-700  transition ">
+                        <a href="/videos">Videos</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/FAQ">FAQ</a>
@@ -100,7 +103,7 @@ export default function Header() {
                 )}
                 <button onClick={openCloseMenu}
                 className="hidden md:block cursor-pointer z-10 md:-translate-x-4">
-                    <Menu size={36} color="#111"/>
+                    <Menu size={36} className="fill-zinc-900 dark:fill-zinc-50"/>
                 </button>
             </nav>
         </header>
