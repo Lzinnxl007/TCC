@@ -14,7 +14,8 @@ export default function Videos() {
                 </p>
             </div>
             <div className="px-10 pt-10 w-full mx-auto">
-                <VideoCard/>
+                <VideoCard url="https://www.youtube.com/embed/TvnQMk_FqqU?si=gX16Y1tVX9YYrNxr?fs=1&controls=1"
+                title="Curso de Nutrição Básica I - Conceitos Iniciais"/>
             </div>
         </section>
     )
