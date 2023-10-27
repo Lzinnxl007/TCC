@@ -18,6 +18,7 @@ export default function Books() {
                 {booksList?.map((book) => {
                     return (
                         <EBookCard
+                        key={book.id}
                         id={book.id}
                         title={book.title}
                         date={book.date}
