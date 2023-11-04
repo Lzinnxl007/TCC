@@ -34,7 +34,7 @@ export default function CommentsForm() {
             className="flex flex-col gap-2 w-full mt-3">
                 <input onChange={e => setName(e.target.value)}
                 type="text"
-                maxLength="20" 
+                maxLength="30" 
                 value={name}
                 placeholder="Nome"
                 className="w-full rounded px-4 py-1.5 outline-none text-zinc-900 bg-zinc-50"/>

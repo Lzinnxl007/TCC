@@ -1,7 +1,11 @@
 import Header from "@/components/Default/Header"
 import VideoCard from "@/components/Videos/VideoCard"
+import { GetVideos } from "@/utils/videos/GetVideos"
 
-export default function Videos() {
+export default async function Videos() {
+
+    const videos = await GetVideos()
+
     return (
         <section className="w-screen min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900">
             <Header/>
@@ -13,9 +17,15 @@ export default function Videos() {
                     Aprenda a ter uma Vida mais Saúdavel com Videos Educativos
                 </p>
             </div>
-            <div className="px-10 pt-10 w-full mx-auto">
-                <VideoCard url="https://www.youtube.com/embed/TvnQMk_FqqU?si=gX16Y1tVX9YYrNxr?fs=1&controls=1"
-                title="Curso de Nutrição Básica I - Conceitos Iniciais"/>
+            <div className="px-10 pt-10 w-full mx-auto grid grid-cols-fit gap-y-8">
+                {videos?.map((video) => {
+                    return (
+                        <VideoCard 
+                        key={video.id}
+                        video={video}/>
+                    )
+                })}
+                
             </div>
         </section>
     )

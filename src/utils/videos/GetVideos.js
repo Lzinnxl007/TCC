@@ -2,7 +2,7 @@
 
 export async function GetVideos() {
     try {
-        const response = await fetch('https://www.googleapis.com/youtube/v3/videos?key=AIzaSyA5gq8aNBVqQZHfnkiTNONsuvBLUgKrGxg&part=snippet&id=eAeon4jt7Cw')
+        const response = await fetch('http://desperdicio-zero-api.vercel.app/api/videos')
         const data = await response.json()
         return data
     } catch(error) {

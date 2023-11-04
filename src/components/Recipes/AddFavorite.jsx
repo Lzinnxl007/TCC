@@ -5,19 +5,20 @@ import { BookmarkPlus } from "lucide-react"
 import { AddFavoriteRecipeAction } from "@/utils/recipes/AddFavoriteRecipeAction"
 import { GetFavoriteRecipesAction } from "@/utils/recipes/GetFavoriteRecipesAction"
 import Cookies from "js-cookie"
+import { toast } from "react-toastify"
 export default function AddFavorite({ recipeId }) {
 
     const [favorited, setFavorited] = useState(false)
     const [favoritedRecipes, setFavoritedRecipes] = useState([])
 
-    
+    const notLogin = () => toast("Faça login para adicionar receitas favoritas!")
 
     const favorite = async() => {
         await addFavoriteRecipe()
     }
 
     const getFavoritedRecipes = async() => {
-        const user = JSON.parse(Cookies.get('user'))
+        const user = Cookies.get('user') && JSON.parse(Cookies.get('user'))
 
         if(user) {
             const favoritedRecipes = JSON.parse((await GetFavoriteRecipesAction(user.id)).favorite_recipes)
@@ -27,7 +28,7 @@ export default function AddFavorite({ recipeId }) {
                 setFavorited(true)
             }
         } else {
-            
+        
         }
         
     }
@@ -37,9 +38,9 @@ export default function AddFavorite({ recipeId }) {
     }, [])
 
     const addFavoriteRecipe = async() => {
-        setFavorited(true)
-        let user = JSON.parse(Cookies.get('user'))
+        let user = Cookies.get('user') && JSON.parse(Cookies.get('user'))
         if(user) {
+            setFavorited(true)
             if(!favorited){
 
                 const favoritedRecipesClone = [...favoritedRecipes]
@@ -61,7 +62,7 @@ export default function AddFavorite({ recipeId }) {
             } 
 
         } else {
-            alert("Faça login ou crie uma conta!")
+            notLogin()
         }
 
     }

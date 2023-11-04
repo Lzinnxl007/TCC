@@ -9,7 +9,7 @@ import CommentsForm from "@/components/Recipes/CommentsForm"
 import Share from './Share'
 import Comments from './Comments'
 import AddFavorite from './AddFavorite'
-import Image from 'next/image'
+import Notification from "../Notification/Notification"
 export default function Recipe() {
 
     const searchParams = useSearchParams()
@@ -36,6 +36,7 @@ export default function Recipe() {
     return (
         <div className="bg-[var(--light-grey)]">
             <Loading/>
+            <Notification/>
             <div className="w-full min-h-screen pt-10 px-4  dark:bg-zinc-900 dark:text-zinc-50 bg-[var(--orange)] "> 
                 <div className="w-full flex lg:flex-col-reverse items-center justify-evenly lg:gap-8 lg:px-8 md:px-2">
                     <div className="w-full h-[65vh]">
@@ -52,10 +53,10 @@ export default function Recipe() {
                             <AddFavorite 
                             recipeId={recipeId}/>
                        </div>
-                        <h1 className="text-6xl md:text-4xl leading-[60px] font-medium lg:text-center text-zinc-900">
+                        <h1 className="text-6xl md:text-4xl leading-[60px] font-medium lg:text-center text-zinc-900 dark:text-zinc-50">
                             {recipe?.name}
                         </h1>
-                        <p className="max-w-xl text-sm lg:text-center lg:mt-4 lg:text-md text-zinc-800">
+                        <p className="max-w-xl text-sm lg:text-center lg:mt-4 lg:text-md text-zinc-800 dark:text-zinc-100">
                             {recipe?.description}
                         </p>
                         <Share param={query}/>

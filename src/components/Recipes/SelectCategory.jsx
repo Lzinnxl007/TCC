@@ -6,8 +6,7 @@ export default function SelectCategory({ filterByCategory }) {
             <select onChange={e => filterByCategory(e)}
             className="rounded-2xl px-4 py-1.5 outline-none cursor-pointer border-solid border-r-[10px]
              border-zinc-200 bg-zinc-200 dark:border-zinc-700 dark:bg-zinc-700 dark:text-zinc-50">
-                <option value="todas"
-                className="">
+                <option value="todas">
                     Todas
                 </option>
                 <option value="Prato Principal">

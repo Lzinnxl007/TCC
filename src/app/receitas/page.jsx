@@ -22,16 +22,19 @@ export default function Recipes() {
 
     const getRecipes = async() => {
         setRecipes(await GetRecipes())
+        setFilteredRecipes(await GetRecipes())
     }
+
+    console.log(filteredRecipes)
 
     const filterByCategory = async(e) => {
         if(e.target.value !== 'todas') {
-            const recipesByCategory = recipes.filter((recipe) => recipe.meal == e.target.value)
+            const recipesByCategory = recipes?.filter((recipe) => recipe.meal == e.target.value)
 
             setFilteredRecipes(recipesByCategory)
 
         } else {
-            setFilteredRecipes([])
+            setFilteredRecipes([...recipes])
         }
         if(e.target.value == 'Favoritas') {
             if(user) {
@@ -51,28 +54,11 @@ export default function Recipes() {
         
     }
 
-    
-     
     useEffect(() => {
         getRecipes(), []
     }, [])
 
-    const createCard = () => {
-       if(filteredRecipes.length) {
-            return filteredRecipes.map((recipe, index) => {
-                return (
-                    <RecipeCard key={index} recipe={recipe}/>
-                )
-            })
-       } else {
-            return recipes.map((recipe, index) => {
-                return (
-                    <RecipeCard key={index} recipe={recipe}/>
-                )
-            })
-       }
-    }
-
+ 
     return (
         <div className="min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900">
             <Loading/>
@@ -89,7 +75,11 @@ export default function Recipes() {
             <div className="mt-6">
                 <SelectCategory filterByCategory={filterByCategory}/>
                 <div className="w-auto grid grid-cols-fit gap-6 p-6">
-                    {createCard()}
+                    {filteredRecipes?.map((recipe, index) => {
+                        return (
+                            <RecipeCard key={index} recipe={recipe}/>
+                        )
+                    })}
                 </div>
             </div>
             <ScrollToTop/>

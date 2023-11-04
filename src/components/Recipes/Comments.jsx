@@ -16,7 +16,6 @@ export default function Comments() {
         let totalComments = await GetCommentsAction()
 
         totalComments = totalComments.filter((comment) => comment.recipeId == recipeId)
-        console.log(totalComments)
    
         setComments(totalComments)
     }
@@ -27,16 +26,16 @@ export default function Comments() {
 
 
     return (
-        <div>
-            <ul className="mt-10 space-y-6 pb-10 md:px-4">
+        <div className="pb-20">
+            <ul className="mt-10 space-y-6 pb-10 md:px-4 overflow-y-scroll overflow-x-hidden divide-y-[1px] px-4 max-h-60">
                 {comments?.map((comment) => {
                     return (
-                        <li key={comment.id} className="px-4 py-4 rounded bg-[var(--orange)] text-zinc-900">
+                        <li key={comment.id} className="px-4 py-4 bg-[var(--orange)] text-zinc-900 dark:text-zinc-50">
                             <div className="flex items-center gap-2">
                                 <UserCircle2 size={40}/>
                                 <p className="font-semibold capitalize text-lg -translate-y-[2px]">{comment.name}</p>
                             </div>
-                            <p className="translate-x-10 text-zinc-700 mt-2">{comment.comment}</p>
+                            <p className="translate-x-10 text-zinc-700 dark:text-zinc-200 mt-2">{comment.comment}</p>
                         </li>
                     )
                 })}

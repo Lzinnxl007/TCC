@@ -39,7 +39,7 @@ export default function About() {
                 className="w-screen object-contain h-[70vw]"/>
             </div>
             
-            <div className="w-full h-screen flex items-center justify-around px-20 md:px-8 lg:flex-col lg:h-auto lg:py-10 md:py-16 bg-[var(--light-grey)]">
+            <div className="w-full h-screen flex items-center justify-around px-20 md:px-8 lg:flex-col lg:h-auto lg:py-10 md:py-16 bg-[var(--light-grey)] dark:bg-zinc-900">
                 <div className="w-full lg:mx-auto">
                     <h1 className="mb-6 text-4xl md:text-3xl font-semibold max-w-xl lg:mx-auto text-zinc-900 dark:text-zinc-50 ">
                         Sabia que cerca de 30% dos alimentos produzidos no Brasil são desperdiçados?
@@ -65,13 +65,13 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="w-full h-auto py-10 bg-orange-100">
+            <div className="w-full h-auto py-10 bg-orange-400">
                 <div className="mx-auto flex flex-col gap-4 items-center text-center">
-                    <h2 className="text-zinc-700 dark:text-zinc-300 text-xl">
+                    <h2 className="text-zinc-700 dark:text-zinc-200 text-xl">
                         Nossa História
                     </h2>
                     <h1 className="text-4xl font-semibold px-4 text-zinc-900 dark:text-zinc-50">A história da Desperdício Zero</h1>
-                    <p className="max-w-5xl lg:max-w-2xl md:max-w-md dark:text-zinc-300 mt-4 text-lg">
+                    <p className="max-w-5xl lg:max-w-2xl md:max-w-md dark:text-zinc-200 mt-4 text-lg">
                     O projeto Desperdício Zero foi 
                     desenvolvido por três alunos comprometidos com a promoção de escolhas alimentares 
                     conscientes e sustentáveis.
