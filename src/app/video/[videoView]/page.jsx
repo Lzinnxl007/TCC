@@ -19,6 +19,7 @@ export default async function Video() {
                     {videos?.map((video) => {
                         return (
                             <VideoRecomendationCard
+                            key={video.id}
                             id={video.id}
                             videos={videos}/>
                         )
