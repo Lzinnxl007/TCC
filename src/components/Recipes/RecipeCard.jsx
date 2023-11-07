@@ -39,7 +39,7 @@ export default function RecipeCard({ recipe }) {
                     </div>
                     <div>
                         <StarRatings
-                        rating={4.5}
+                        rating={recipe.rating}
                         starDimension="25px"
                         starSpacing="2px"
                         starRatedColor="rgb(255,244,8)"/>

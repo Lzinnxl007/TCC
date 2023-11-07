@@ -57,5 +57,6 @@ export default function Main() {
     )
 }
 /*<h1 className="text-7xl md:text-5xl font-bold leading-[70px] md:text-center text-zinc-900 dark:text-zinc-50 w-full max-w-md">
-                    Se <span className="text-[var(--green)]">Alimente</span> de Forma <span className="text-[var(--green)]">Sustentável</span>
-                </h1> */
+    Se <span className="text-[var(--green)]">Alimente</span> 
+    de Forma <span className="text-[var(--green)]">Sustentável</span>
+</h1>*/

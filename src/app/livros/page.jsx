@@ -14,7 +14,7 @@ export default function Books() {
                     Adquira mais Conhecimento com a Leitura
                 </p>
             </div>
-            <div className="w-full grid grid-cols-fit gap-8 px-12 mt-16">
+            <div className="w-auto grid grid-cols-fit gap-8 px-12 mt-16">
                 {booksList?.map((book) => {
                     return (
                         <EBookCard

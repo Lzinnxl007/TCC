@@ -27,7 +27,7 @@ export default async function Dashboard() {
       }
 
     return (
-        <section className="min-h-screen bg-[var(--light-grey)]">
+        <section className="min-h-screen dark:bg-zinc-900">
             <Header/>
             <Graphic data={data}/>
         </section>
