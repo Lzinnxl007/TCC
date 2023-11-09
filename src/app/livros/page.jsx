@@ -6,11 +6,11 @@ import { booksList } from "@/components/Ebooks/Books"
 export default function Books() {
 
     return (
-        <section className="min-h-screen bg-[var(--light-grey)]">
+        <section className="min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900">
             <Header/>
             <div className="mt-10">
-                <h1 className="text-5xl font-bold text-center my-4 text-zinc-900">eBooks</h1>
-                <p className="text-semibold text-center text-zinc-700">
+                <h1 className="text-5xl font-bold text-center my-4 text-zinc-900 dark:text-zinc-50">eBooks</h1>
+                <p className="text-semibold text-center text-zinc-700 dark:text-zinc-200">
                     Adquira mais Conhecimento com a Leitura
                 </p>
             </div>

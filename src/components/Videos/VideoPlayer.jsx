@@ -32,14 +32,14 @@ export default function VideoPlayer({ videos }) {
                 <h2 className="flex items-center gap-2 mb-4">
                     <Youtube className="fill-red-500"/>
                     <Link href={video?.credit_link}
-                    className="text-zinc-900 underline transition hover:text-zinc-600">
+                    className="text-zinc-900 dark:text-zinc-50 underline transition hover:text-zinc-600">
                         {video?.credit}
                     </Link>
                 </h2>
-                <h1 className="text-2xl font-semibold">
+                <h1 className="text-2xl text-zinc-900 font-semibold dark:text-zinc-50">
                     {video.title}
                 </h1>
-                <p className="mt-4">
+                <p className="mt-4 text-zinc-900 dark:text-zinc-50">
                     {video.description}
                 </p>
             </div>

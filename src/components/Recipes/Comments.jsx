@@ -27,7 +27,8 @@ export default function Comments() {
 
     return (
         <div className="pb-20">
-            <ul className="mt-10 space-y-6 pb-10 md:px-4 overflow-y-scroll overflow-x-hidden divide-y-[1px] px-4 max-h-60">
+            {comments?.length ? (
+                <ul className="mt-10 space-y-6 pb-10 md:px-4 overflow-y-scroll overflow-x-hidden divide-y-[1px] px-4 max-h-60">
                 {comments?.map((comment) => {
                     return (
                         <li key={comment.id} className="px-4 py-4 bg-[var(--orange)] text-zinc-900 dark:text-zinc-50">
@@ -40,6 +41,7 @@ export default function Comments() {
                     )
                 })}
             </ul>
+            ) : null}
         </div>
     )
 }

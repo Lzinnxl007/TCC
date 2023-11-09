@@ -44,12 +44,12 @@ export default function SignUpForm() {
     
 
     return (
-        <div className="w-full max-w-sm h-auto p-6 rounded-lg bg-zinc-200 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
-            <h1 className="mb-6 text-3xl font-bold text-center text-zinc-900">Cadastrar</h1>
+        <div className="w-full max-w-sm h-auto p-6 rounded-lg bg-zinc-200 dark:bg-zinc-700 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-10">
+            <h1 className="mb-6 text-3xl font-bold text-center text-zinc-900 dark:text-zinc-50">Cadastrar</h1>
             <form onSubmit={e => handleSubmit(e)}
             className="flex flex-col w-full px-4 gap-2">
 
-                <label className="font-medium text-zinc-900 translate-y-2">
+                <label className="font-medium text-zinc-900 dark:text-zinc-50 translate-y-2">
                     Nome
                 </label>
                 <input onChange={e => setName(e.target.value)}
@@ -58,7 +58,7 @@ export default function SignUpForm() {
                 placeholder="Nome"
                 className="px-4 py-1.5 rounded text-zinc-900 bg-zinc-50 border-solid border-[1px] border-zinc-300 outline-none"/>
 
-                <label className="font-medium text-zinc-900 translate-y-2">
+                <label className="font-medium text-zinc-900 dark:text-zinc-50 translate-y-2">
                     E-mail
                 </label>
                 <input onChange={e => setEmail(e.target.value)}
@@ -67,7 +67,7 @@ export default function SignUpForm() {
                 placeholder="E-mail"
                 className="px-4 py-1.5 rounded text-zinc-900 bg-zinc-50 border-solid border-[1px] border-zinc-300 outline-none"/>
                 
-                <label className="font-medium text-zinc-900 translate-y-2">
+                <label className="font-medium text-zinc-900 dark:text-zinc-50 translate-y-2">
                     Senha
                 </label>
                 <input onChange={e => setPassword(e.target.value)} 
@@ -76,7 +76,7 @@ export default function SignUpForm() {
                 placeholder="Senha"
                 className="px-4 py-1.5 rounded text-zinc-900 bg-zinc-50 border-solid border-[1px] border-zinc-300 outline-none"/>
 
-                <label className="font-medium text-zinc-900 translate-y-2">
+                <label className="font-medium text-zinc-900 dark:text-zinc-50 translate-y-2">
                     Confirme a senha
                 </label>
                 <input onChange={e => setConfirmPassword(e.target.value)} 

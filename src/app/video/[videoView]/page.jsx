@@ -8,7 +8,7 @@ export default async function Video() {
     const videos = await GetVideos()
 
     return (
-        <section className="w-screen min-h-[150vh] bg-[var(--light-grey)] ">
+        <section className="w-screen min-h-[150vh] bg-[var(--light-grey)] dark:bg-zinc-900">
             <Header/>
             <div className="flex lg:flex-col lg:items-center gap-8 p-8">
                 <div className="w-full min-w-[70%] lg:max-w-full">

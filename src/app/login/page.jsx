@@ -6,7 +6,7 @@ import Notification from "@/components/Notification/Notification"
 export default function LogIn() {
 
     return (
-        <div className="w-screen h-screen bg-[var(--light-grey)]">
+        <div className="w-screen h-screen bg-[var(--light-grey)] dark:bg-zinc-900">
             <Header/>
             <LogInForm/>
             <Notification/>

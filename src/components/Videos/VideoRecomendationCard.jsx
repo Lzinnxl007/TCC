@@ -24,7 +24,7 @@ export default function VideoRecomendationCard({ id, videos }) {
         <>
             {id !== +urlId && (
                 <Link href={`/video/watch?id=${video.id}`}>
-                    <button className="rounded-xl overflow-hidden flex gap-2 w-full min-h-[120px] shadow">
+                    <button className="rounded-xl overflow-hidden flex gap-2 w-full min-h-[120px] shadow dark:shadow-zinc-600">
                         <div className="w-full max-w-[45%] relative">
                             <Image
                             src={video?.tumbnail_url}
@@ -38,10 +38,10 @@ export default function VideoRecomendationCard({ id, videos }) {
                             </div>
                         </div>
                         <div className="py-2 px-2 text-left">
-                            <h1 className="text-sm font-semibold">
+                            <h1 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">
                                 {video?.title}
                             </h1>
-                            <p className="text-xs mt-2">
+                            <p className="text-xs mt-2 text-zinc-900 dark:text-zinc-50">
                                 {video?.credit}
                             </p>
         

@@ -1,6 +1,7 @@
 
 import Header from '@/components/Default/Header'
 import Graphic from "@/components/Dashboard/Graphic"
+import Hero from '@/components/Dashboard/Hero'
 export default async function Dashboard() {
 
 
@@ -29,6 +30,7 @@ export default async function Dashboard() {
     return (
         <section className="min-h-screen dark:bg-zinc-900">
             <Header/>
+            <Hero/>
             <Graphic data={data}/>
         </section>
     )

@@ -16,11 +16,11 @@ export default function Livro() {
 
 
     return (
-        <section className="w-screen min-h-screen bg-[var(--light-grey)]">
+        <section className="w-screen min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900">
             <Header/>
             <div className="flex w-full min-h-screen 
             items-center justify-center mt-16">
-                <div className="bg-zinc-50 lg:flex-col lg:mx-auto flex gap-8 shadow-lg rounded-xl p-8 w-full max-w-4xl h-auto">
+                <div className="bg-zinc-50 dark:bg-zinc-700 lg:flex-col lg:mx-auto flex gap-8 shadow-lg rounded-xl p-8 w-full max-w-4xl h-auto">
                     <div className="w-auto mt-6 lg:ml-4">
                         <Image src={book.image}
                         layout="responsive"
@@ -28,13 +28,13 @@ export default function Livro() {
                         height={100} 
                         className="w-full object-cover h-full lg:max-w-sm"/>
 
-                        <div className="mt-6 text-xs text-zinc-800 mr-16">
+                        <div className="mt-6 text-xs text-zinc-800 dark:text-zinc-200 mr-16">
                             <p className="max-w-xs">
                                 {book?.citation}
                             </p>
                         </div>
                         <div className="mt-10">
-                            <p className="text-zinc-600 text-sm max-w-xs">
+                            <p className="text-zinc-600 dark:text-zinc-300 text-sm max-w-xs">
                             Este trabalho está licenciado sob uma licença 
                                 
                                 <Link href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
@@ -48,17 +48,17 @@ export default function Livro() {
                         </div>
                     </div>
                     <div className="w-3/4 ml-4 lg:w-full lg:pr-10">
-                        <h1 className="text-3xl font-semibold mt-4 mb-6">
+                        <h1 className="text-3xl font-semibold mt-4 mb-6 text-zinc-900 dark:text-zinc-50">
                             {book?.title}
                         </h1>
-                        <p className="font-medium text-sm mb-8">
+                        <p className="font-medium text-sm mb-8 text-zinc-900 dark:text-zinc-50">
                             {book?.synopsis}
                         </p>
-                        <p className="text-sm">
+                        <p className="text-sm text-zinc-800 dark:text-zinc-100">
                             {book?.authors}
                         </p>
-                        <p className="my-6 text-xs flex flex-col gap-2">
-                            <span className="text-zinc-700">
+                        <p className="my-6 text-xs flex flex-col gap-2 text-zinc-900 dark:text-zinc-50">
+                            <span className="text-zinc-700 dark:text-zinc-200">
                                 Publicado em:
                             </span>
                             <span>
