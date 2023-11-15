@@ -6,9 +6,6 @@ import Share from "@/components/Recipes/Share"
 
 export default function ViewRecipe() {
 
-
-
-
     return (
         <section>
             <Header/>
