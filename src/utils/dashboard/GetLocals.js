@@ -8,14 +8,9 @@ export async function GetLocals(latitude, longitude, radius, type, keyword) {
         if (!response.ok) {
           throw new Error(`Erro na requisição: ${response.status}`)
         }
-    
-        const contentType = response.headers.get('content-type')
-        if (contentType && contentType.includes('application/json')) {
-          const data = await response.json()
-          return data.results
-        } else {
-          throw new Error('Resposta não é um JSON válido')
-        }
+        const data = await response.json()
+        return data.results
+        
       } catch (error) {
         console.log('Error fetching places:', error)
         

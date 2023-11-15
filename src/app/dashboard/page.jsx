@@ -10,20 +10,15 @@ import { getLocationFromIP } from '@/utils/dashboard/GetLocation'
 
 export default async function Dashboard() {
 
-  const { lat, lon } = await getLocationFromIP()
-
-  console.log(lat, lon)
+  const { lat, lng } = await getLocationFromIP()
 
   const radius = 4000
   const type = 'store, marketplace, establishment'
   const keyword = 'alimentos organicos e saudaveis, frutas, vegetais'
 
 
-    let locals = await GetLocals(lat, lon, radius, type, keyword)
+    let locals = await GetLocals(lat, lng, radius, type, keyword)
     locals = locals.filter((i, index) => index <= 2)
-
-  console.log(await locals)
-
 
     /*const data = {
         x: {
