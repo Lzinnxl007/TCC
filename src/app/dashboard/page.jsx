@@ -11,6 +11,7 @@ import { getLocationFromIP } from '@/utils/dashboard/GetLocation'
 export default async function Dashboard() {
 
   const { lat, lng } = await getLocationFromIP()
+  console.log(lat, lng)
 
   const radius = 4000
   const type = 'store, marketplace, establishment'
