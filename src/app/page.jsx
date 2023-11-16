@@ -15,7 +15,14 @@ export default async function Home() {
           <Header/>
           <Main/>
           <VideoApresentation/>
-          <div className="w-full h-[80vh] flex items-center justify-around py-10 bg-[var(--light-grey)] dark:bg-zinc-800">
+          
+          <Footer/>
+          <ScrollToTop/>
+          <Modal/>
+      </div>
+  )
+}
+/*<div className="w-full h-[80vh] flex items-center justify-around py-10 bg-[var(--light-grey)] dark:bg-zinc-800">
             <ReviewCard
             name="Julia Dias"
             career="Nutricionista"
@@ -27,10 +34,4 @@ export default async function Home() {
             career="Nutricionista"
             image=""
             text=""/>
-          </div>
-          <Footer/>
-          <ScrollToTop/>
-          <Modal/>
-      </div>
-  )
-}
+          </div> */
