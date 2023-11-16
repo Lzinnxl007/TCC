@@ -21,11 +21,11 @@ model emails {
 }
 
 model users {
-  id                Int    @id @unique @default(autoincrement())
-  name              String
-  email             String
-  password          String
-  photo             String
-  favorite_recipes  String
-  imc               String
+  id               Int    @id @unique @default(autoincrement())
+  name             String
+  email            String
+  password         String
+  photo            String
+  favorite_recipes String
+  imc              String
 }
