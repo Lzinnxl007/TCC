@@ -10,7 +10,7 @@ export default async function Locals({ locals }) {
             {locals?.map((item, index) => {
               return (
                <button key={index} className="w-full h-auto flex flex-col items-center rounded-xl border-solid border-2 border-orange-400 overflow-hidden">
-                  <Link href={`https://www.google.com/maps/place/?q=place_id:${item?.place_id}`}
+                  <Link href={`https://www.google.com/maps/search/?api=1&query=${item.name}`}
                   target="_blank"
                   className="w-full">
                     <div className="w-full max-h-[300px] flex items-center overflow-hidden rounded-t-xl -translate-y-2.5">
@@ -18,7 +18,8 @@ export default async function Locals({ locals }) {
                         layout="responsive"
                         width={100}
                         height={100}
-                        loading="lazy"/>
+                        loading="lazy"
+                        className="w-full h-full"/>
                     </div>
                     <div className="w-full text-left pt-4 flex flex-col px-4 pb-6">
                         <h1 className="float-left font-semibold text-left">
