@@ -8,7 +8,7 @@ import Locals from '@/components/Dashboard/Locals'
 import { GetLocals } from '@/utils/dashboard/GetLocals'
 import { getLocationFromIP } from '@/utils/dashboard/GetLocation'
 
-export default async function Dashboard() {
+export default async function Guia() {
 
   const { lat, lng } = await getLocationFromIP()
   console.log(lat, lng)
@@ -46,7 +46,7 @@ export default async function Dashboard() {
         <section className="min-h-screen dark:bg-zinc-900">
             <Header/>
             <Hero/>
-            <div className="bg-[var(--light-grey)] w-full h-auto mt-14 text-zinc-900">
+            <div className="bg-[var(--light-grey)] w-full h-auto text-zinc-900">
               <div className="w-full min-h-screen translate-y-20 px-12 md:px-2 pb-40">
                 <h1 className="text-center font-bold text-4xl px-10">
                   Escolhendo Produtos Locais e Orgânicos

@@ -67,6 +67,9 @@ export default function Header() {
                         <a href="/receitas">Receitas</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
+                        <a href="/guia">Guia</a>
+                    </li>
+                    <li className="md:dark:hover:text-zinc-700  transition ">
                         <a href="/IMC">IMC</a>
                     </li>
                     <li className="md:dark:hover:text-zinc-700  transition ">
