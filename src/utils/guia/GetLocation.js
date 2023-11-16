@@ -6,8 +6,7 @@ export const getLocationFromIP = async () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ considerIp: true }), 
+      }
     })
 
     if (!response.ok) {

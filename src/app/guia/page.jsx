@@ -5,8 +5,8 @@ import Graphic from "@/components/Dashboard/Graphic"
 import Hero from '@/components/Dashboard/Hero'
 import Image from 'next/image'
 import Locals from '@/components/Dashboard/Locals'
-import { GetLocals } from '@/utils/dashboard/GetLocals'
-import { getLocationFromIP } from '@/utils/dashboard/GetLocation'
+import { GetLocals } from '@/utils/guia/GetLocals'
+import { getLocationFromIP } from '@/utils/guia/GetLocation'
 
 export default async function Guia() {
 
@@ -46,7 +46,7 @@ export default async function Guia() {
         <section className="min-h-screen dark:bg-zinc-900">
             <Header/>
             <Hero/>
-            <div className="bg-[var(--light-grey)] w-full h-auto text-zinc-900">
+            <div className="bg-[var(--light-grey)] w-full h-auto text-zinc-900 mt-20">
               <div className="w-full min-h-screen translate-y-20 px-12 md:px-2 pb-40">
                 <h1 className="text-center font-bold text-4xl px-10">
                   Escolhendo Produtos Locais e Orgânicos
@@ -71,13 +71,13 @@ export default async function Guia() {
                         <strong>Conexão com a Origem dos Alimentos:</strong> Ao optar por produtos locais, você tem a oportunidade de conhecer a origem dos alimentos que consome. Isso estabelece uma conexão mais direta com os agricultores locais, promovendo uma compreensão mais profunda do ciclo de produção.
                       </li>
                     </ul>
-                    <div className="w-full max-w-lg lg:max-w-2xl h-[60vh] md:h-auto float-right mb-12 lg:mx-auto border-solid border-[0.4rem] border-[var(--green)] rounded overflow-hidden">
+                    <div className="w-full max-w-lg lg:max-w-2xl h-auto md:h-auto float-right mb-12 lg:mx-auto border-solid border-[0.4rem] border-[var(--green)] rounded overflow-hidden">
                       <Image src="/dashboard-local-image.jpg"
                       alt="local-food-image"
                       layout="responsive"
                       width={100}
                       height={100}
-                      className="w-full h-full "/>
+                      className="w-full h-full"/>
                     </div>
                   </div>
                 </div>
