@@ -9,6 +9,8 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico'
   },
+  url: 'www.desperdiciozero.blog.br',
+  siteName: 'Desperdício Zero',
   
 }
 

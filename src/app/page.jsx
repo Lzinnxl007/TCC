@@ -8,7 +8,7 @@ import Modal from "@/components/Initial/Modal"
 import ReviewCard from "@/components/Initial/ReviewCard"
 import VideoApresentation from "@/components/Initial/VideoApresentation"
 
-export default async function Home() {
+export default function Home() {
 
   return (
       <div className="min-h-screen bg-[var(--orange)] overflow-hidden">
