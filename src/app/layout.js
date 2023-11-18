@@ -4,13 +4,24 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Desperdício Zero | Saúde e Sustentabilidade',
-  description: 'O Desperdício Zero é uma plataforma focada em saúde e sustentabilidade que proporciona métodos e ferramentas úteis para melhorar seu bem estar enquanto dissemina praticas sustentaveis',
-  icons: {
-    icon: '/favicon.ico'
-  },
-  url: 'www.desperdiciozero.blog.br',
-  siteName: 'Desperdício Zero',
+  openGraph: {  
+    title: 'Desperdício Zero | Saúde e Sustentabilidade',
+    description: 'O Desperdício Zero é uma plataforma focada em saúde e sustentabilidade que proporciona métodos e ferramentas úteis para melhorar seu bem estar enquanto dissemina praticas sustentaveis',
+    icons: {
+      icon: '/favicon.ico'
+    },
+    images: [
+      {
+        url: '/openGraph-logo.png',
+        width: 300,
+        height: 186,
+      }
+    ],
+    url: 'www.desperdiciozero.blog.br',
+    siteName: 'Desperdício Zero',
+    locale: 'pt_BR',
+    type: 'website'
+  }
   
 }
 
