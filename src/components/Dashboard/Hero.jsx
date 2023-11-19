@@ -1,8 +1,8 @@
 
 export default function Hero() {
     return (
-        <section className="w-screen h-[90vh] mb-14">
-            <div className="bg-[url(/dashboard-hero-image.jpg)] bg-cover bg-no-repeat opacity-60 bg-center w-full h-full absolute z-0"/>
+        <section className="w-screen h-screen">
+            <div className="bg-[url(/dashboard-hero-image.jpg)] bg-cover bg-no-repeat opacity-60 bg-center w-full h-screen absolute z-0"/>
             <div className="w-full h-full flex justify-center items-center opacity-100 z-30">
                 <div className="text-center z-30">
                     <h1 className="text-8xl lg:text-7xl md:text-6xl font-bold mx-auto text-zinc-50">

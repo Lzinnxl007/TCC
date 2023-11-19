@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import Logo from "./Logo"
 import AuthButton from './AuthButton'
 import LogOutButton from '../account/LogOutButton'
-import Profile from '../account/Profile'
+import Profile from '../account/AccountButton'
 import Cookies from "js-cookie"
 export default function Header() {
 
@@ -31,17 +31,12 @@ export default function Header() {
     }, [])
 
 
-    const logout = () => {
-        Cookies.remove('token') 
-        Cookies.remove('user')
-        window.location.reload()
-    }
-
+   
 
     return (
         <header className="h-[10vh] bg-[var(--light-grey)] text-zinc-50
          dark:bg-zinc-900 dark:text-zinc-50 overflow-hidden">
-            <nav className="w-full h-full flex items-center justify-around z-20 py-4">
+            <nav className="w-full h-full flex items-center justify-around z-20 py-6">
             <a href="/">
                 <div className="flex items-center gap-4 md:gap-2">
                         {!isDark ? (
@@ -93,12 +88,6 @@ export default function Header() {
                             method="Cadastrar"
                             destiny="/signup"/>
                         </li>
-                    )}
-                    {Cookies.get('token') && (
-                        <button onClick={logout}
-                        className="translate-x-32 md:translate-x-0">
-                            <LogOutButton/>
-                        </button>
                     )}
                 </ul>
                 {token && (

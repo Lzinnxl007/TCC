@@ -11,7 +11,6 @@ import { getLocationFromIP } from '@/utils/guia/GetLocation'
 export default async function Guia() {
 
   const { lat, lng } = await getLocationFromIP()
-  console.log(lat, lng)
 
   const radius = 4000
   const type = 'store, marketplace, establishment'
@@ -46,8 +45,8 @@ export default async function Guia() {
         <section className="min-h-screen dark:bg-zinc-900">
             <Header/>
             <Hero/>
-            <div className="bg-[var(--light-grey)] w-full h-auto text-zinc-900 mt-20">
-              <div className="w-full min-h-screen translate-y-20 px-12 md:px-2 pb-40">
+            <div className="bg-[var(--light-grey)] w-full h-auto text-zinc-900">
+              <div className="w-full min-h-screen pt-20 px-12 md:px-2">
                 <h1 className="text-center font-bold text-4xl px-10">
                   Escolhendo Produtos Locais e Orgânicos
                 </h1>

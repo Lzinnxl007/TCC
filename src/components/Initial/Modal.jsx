@@ -46,7 +46,7 @@ export default function Modal() {
             <div className="text-zinc-900 w-[60%] px-4 my-auto md:py-6">
                 <h1 className="text-3xl lg:text-2xl md:text-xl font-bold text-center mb-4">Desperdício Zero</h1>
                 <h2 className="text-xl lg:text-lg md:text-sm font-semibold text-center mt-2">
-                    Quer receber novidades do nosso projeto?
+                    Deseja receber novidades do nosso projeto?
                 </h2>
                 <form onSubmit={e => handleSubmit(e)}
                 className="flex flex-col items-center gap-2 mt-6 w-full mx-auto px-2 lg:px-4">
@@ -54,16 +54,16 @@ export default function Modal() {
                     <input onChange={e => handleName(e)}
                     type="text" 
                     value={name}
-                    placeholder="Name"
-                    className="rounded-[20px] px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm outline-none border-zinc-300 border-[1px] bg-zinc-50 text-zinc-900 w-full"/>
+                    placeholder="Nome"
+                    className="rounded-[20px] px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm outline-none border-zinc-400 border-[1px] bg-zinc-50 text-zinc-900 w-full"/>
 
                     <input onChange={e => handleEmail(e)}
                     type="email" 
                     value={email}
                     placeholder="E-mail"
-                    className="rounded-[20px] px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm outline-none border-zinc-300 border-[1px] bg-zinc-50 text-zinc-900 w-full"/>
+                    className="rounded-[20px] px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm outline-none border-zinc-400 border-[1px] bg-zinc-50 text-zinc-900 w-full"/>
 
-                    <button className="px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm rounded-[20px] bg-[var(--green)] w-full font-semibold hover:opacity-90 transition">
+                    <button className="px-4 py-1.5 lg:py-1 md:py-0.5 md:text-sm rounded-[20px] bg-[var(--green)] w-full font-semibold hover:opacity-90 transition text-zinc-50">
                         Continuar
                     </button>
                 </form>
