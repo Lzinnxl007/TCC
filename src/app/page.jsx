@@ -8,32 +8,31 @@ import Main from "@/components/Initial/Main"
 import Modal from "@/components/Initial/Modal"
 import ReviewCard from "@/components/Initial/ReviewCard"
 import VideoApresentation from "@/components/Initial/VideoApresentation"
-import { useEffect } from "react"
+import React, { useEffect } from 'react';
+import { getMessaging, onMessage } from 'firebase/messaging';
+import firebaseApp from "@/utils/firebase/firebase"
+import useFcmToken from "@/utils/hooks/useFcmToken"
 export default function Home() {
 
+  const { fcmToken, notificationPermissionStatus } = useFcmToken()
+
+  fcmToken && console.log('FCM token:', fcmToken)
+
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-
-    const inviteNotification = () => {
-      if (Notification.permission === "granted") {
-        var notification = new Notification(title, options)
-      }
-    }
-
-    if ("Notification" in window) {
-      if (Notification.permission !== "granted" && Notification.permission !== "denied") {
-
-        Notification.requestPermission().then(function (permission) {
-         
-          if (permission === "granted") {
-            inviteNotification("Novidades no Site!", {
-              body: "Novo conteúdo no ar! Confira nossas últimas atualizações e descubra o que há de novo no nosso site.",
-              icon: "/logo.png"
-            })
-          }
-        })
+    if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
+      const messaging = getMessaging(firebaseApp);
+      const unsubscribe = onMessage(messaging, (payload) => {
+        console.log('Foreground push notification received:', payload)
+       
+      })
+      return () => {
+        unsubscribe() 
       }
     }
   }, [])
+
 
   return (
       <div className="min-h-screen bg-[var(--orange)] overflow-hidden">
