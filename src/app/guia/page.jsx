@@ -82,10 +82,132 @@ export default async function Guia() {
                 </div>
               </div>
               <div className="px-8 mt-10">
-                <h1 className="text-5xl lg:text-4xl md:text-3xl text-center my-6 font-bold">
+                <h1 className="text-5xl lg:text-4xl md:text-3xl text-center my-6 font-bold text-zinc-900">
                   Organicos e Sustentaveis próximos a você
                 </h1>
                 <Locals locals={locals}/>
+              </div>
+
+              <div className="w-screen h-auto px-16">
+                <h1 className="text-5xl lg:text-4xl md:text-3xl text-center mb-6 mt-10 font-bold text-zinc-900">
+                  Como Criar a Sua Composteira
+                </h1>
+                <div className="w-full flex items-center justify-around">
+
+                  <div className="mt-8 pb-10 pr-8">
+                    <div className="mt-16 mb-10">
+                      <h2 className="font-semibold text-2xl">
+                        Materiais Necessários
+                      </h2>
+                      <ul className="mt-8 list-disc">
+                        <li>Recipientes de plástico ou metal com tampa (2 unidades)</li>
+                        <li>Furadeira</li>
+                        <li>Solo ou terra</li>
+                        <li>Material marrom (folhas secas, papelão picado)</li>
+                        <li>Restos de alimentos (cascas de frutas, vegetais, borra de café, etc.)</li>
+                      </ul>
+                    </div>
+                    <h2 className="font-semibold text-2xl">
+                      Passo a Passo
+                    </h2>
+                    <ul className="mt-8 space-y-6">
+                      <li>
+                        <h3 className="font-medium mb-2">
+                          1. Prepare os Recipientes
+                        </h3>
+                        <div className="px-6">
+                          <ul>
+                            <li>
+                              - Faça pequenos furos no fundo e nas laterais de um recipiente para permitir a drenagem do líquido. Este será o recipiente de baixo.
+                            </li>
+                            <li>
+                              - Coloque este recipiente dentro do outro para coletar o líquido gerado durante a compostagem.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <h3 className="font-medium mb-2">
+                          2. Monte as Camadas
+                        </h3>
+                        <div className="px-6">
+                          <ul>
+                            <li>
+                              - Comece com uma camada de material marrom no fundo do recipiente de cima, cerca de 5-10 cm de espessura.
+                            </li>
+                            <li>
+                              - Adicione uma camada de restos de alimentos, com a mesma espessura.
+                            </li>
+                            <li>
+                              - Cubra com uma camada de solo ou terra.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <h3 className="font-medium mb-2">
+                          3. Manutenção da Composteira
+                        </h3>
+                        <div className="px-6">
+                          <ul>
+                            <li>
+                              - Mantenha a composteira úmida, mas não encharcada.
+                            </li>
+                            <li>
+                              - Misture os materiais regularmente para facilitar a decomposição.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <h3 className="font-medium mb-2">
+                          4. Tempo de Decomposição
+                        </h3>
+                        <div className="px-6">
+                          <ul>
+                            <li>
+                              - Em condições ideais, os materiais começarão a se decompor em algumas semanas a alguns meses.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <h3 className="font-medium mb-2">
+                          5. Utilização do Composto
+                        </h3>
+                        <div className="px-6">
+                          <ul>
+                            <li>
+                              - Quando pronto, utilize o composto como adubo para suas plantas em vasos, jardins ou hortas.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <h3 className="font-medium mb-2">
+                          6. Dicas Extras
+                        </h3>
+                        <div className="px-6">
+                          <ul>
+                            <li>
+                              - Posicione a composteira em local arejado, protegido da luz direta do sol e da chuva.
+                            </li>
+                            <li>
+                            Evite adicionar carnes, laticínios ou óleos na composteira para evitar odores desagradáveis.
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="ml-16">
+                    <Image src="/compost-bin-image.jpg"
+                    layout="responsive"
+                    width={100}
+                    height={100}/>
+                  </div>
+                </div>
               </div>
             </div>
         </section>

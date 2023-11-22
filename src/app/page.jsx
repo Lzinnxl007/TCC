@@ -1,3 +1,4 @@
+'use client'
 
 import Footer from "@/components/Default/Footer"
 import Header from "@/components/Default/Header"
@@ -7,8 +8,32 @@ import Main from "@/components/Initial/Main"
 import Modal from "@/components/Initial/Modal"
 import ReviewCard from "@/components/Initial/ReviewCard"
 import VideoApresentation from "@/components/Initial/VideoApresentation"
-
+import { useEffect } from "react"
 export default function Home() {
+
+  useEffect(() => {
+
+    const inviteNotification = () => {
+      if (Notification.permission === "granted") {
+        var notification = new Notification(title, options)
+      }
+    }
+
+    if ("Notification" in window) {
+      if (Notification.permission !== "granted" && Notification.permission !== "denied") {
+
+        Notification.requestPermission().then(function (permission) {
+         
+          if (permission === "granted") {
+            inviteNotification("Novidades no Site!", {
+              body: "Novo conteúdo no ar! Confira nossas últimas atualizações e descubra o que há de novo no nosso site.",
+              icon: "/logo.png"
+            })
+          }
+        })
+      }
+    }
+  }, [])
 
   return (
       <div className="min-h-screen bg-[var(--orange)] overflow-hidden">
