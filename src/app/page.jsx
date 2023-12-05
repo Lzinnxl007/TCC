@@ -21,6 +21,16 @@ export default function Home() {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
+    if ("Notification" in window) {
+      if (Notification.permission !== "granted" && Notification.permission !== "denied") {
+        Notification.requestPermission().then(function (permission) {
+          if (permission === "granted") {
+            Notification.requestPermission()
+          }
+        })
+      }
+    }
+
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       const messaging = getMessaging(firebaseApp);
       const unsubscribe = onMessage(messaging, (payload) => {

@@ -202,7 +202,11 @@ export default async function Guia() {
                     </ul>
                   </div>
 
+<<<<<<< HEAD
                   <div className="ml-16 lg:mx-auto lg:max-w-sm lg:mt-20 md:mt-10">
+=======
+                  <div className="ml-16 max-w-2xl translate-y-16">
+>>>>>>> fe3c77e3be89bc1026172b7f0d1969efa4061fea
                     <Image src="/compost-bin-image.jpg"
                     layout="responsive"
                     width={100}
