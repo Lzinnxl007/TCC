@@ -1,3 +1,4 @@
+import Footer from "@/components/Default/Footer"
 import Header from "@/components/Default/Header"
 import VideoCard from "@/components/Videos/VideoCard"
 import { GetVideos } from "@/utils/videos/GetVideos"
@@ -17,7 +18,7 @@ export default async function Videos() {
                     Aprenda a ter uma Vida mais Saúdavel com Videos Educativos
                 </p>
             </div>
-            <div className="px-10 pt-10 w-full mx-auto grid grid-cols-fit gap-y-8">
+            <div className="px-10 pt-20 w-full mx-auto grid grid-cols-fit gap-y-8 mb-20">
                 {videos?.map((video) => {
                     return (
                         <VideoCard 
@@ -27,6 +28,7 @@ export default async function Videos() {
                 })}
                 
             </div>
+            <Footer/>
         </section>
     )
 }

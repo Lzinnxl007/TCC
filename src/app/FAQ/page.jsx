@@ -1,5 +1,6 @@
+import Footer from "@/components/Default/Footer"
 import Header from "@/components/Default/Header"
-import FAQToggle from "@/components/Initial/FAQToggle"
+import FAQToggle from "@/components/FAQ/FAQToggle"
 
 export default function FAQ() {
     return (
@@ -14,7 +15,7 @@ export default function FAQ() {
                         Tem alguma duvida? Consulte aqui!
                     </p>
                 </div>
-                <div className="w-full flex justify-around mt-10 py-8">
+                <div className="w-full flex justify-around mt-10 mb-20 py-8">
                     <ul className="flex flex-col gap-2 px-8">
                         <li>
                             <FAQToggle
@@ -44,6 +45,7 @@ export default function FAQ() {
                     </ul>
                 </div>
             </main>
+            <Footer/>
         </div>
     )
 }

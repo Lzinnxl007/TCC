@@ -14,7 +14,7 @@ export default function VideoCard({ video }) {
     return (
         <button onClick={navigate}
          className="rounded-xl overflow-hidden w-full max-w-sm
-        h-auto bg-zinc-50 dark:bg-zinc-800 mx-auto">
+        h-auto bg-zinc-300/90 dark:bg-zinc-800 mx-auto">
             <div className="w-full h-1/2 relative">
                 <Image
                 src={video?.tumbnail_url}

@@ -3,6 +3,7 @@
 import Header from "@/components/Default/Header"
 import EBookCard from "@/components/Ebooks/EbookCard"
 import { booksList } from "@/components/Ebooks/Books"
+import Footer from "@/components/Default/Footer"
 export default function Books() {
 
     return (
@@ -14,7 +15,7 @@ export default function Books() {
                     Adquira mais Conhecimento com a Leitura
                 </p>
             </div>
-            <div className="w-auto grid grid-cols-fit gap-8 px-12 mt-16">
+            <div className="w-auto grid grid-cols-fit gap-8 px-12 mt-16 mb-20">
                 {booksList?.map((book) => {
                     return (
                         <EBookCard
@@ -27,6 +28,7 @@ export default function Books() {
                     )
                 })}
             </div>
+            <Footer/>
         </section>
     )
 }

@@ -7,9 +7,9 @@ export default function Volume({ muted, muteVideo }) {
         <button onClick={muteVideo} 
         className="w-12 h-12 absolute bottom-0 -right-[14px] z-40">
             {!muted ? (
-                <Volume2 color="#111"/>
+                <Volume2 color="#eee"/>
             ) : (
-                <VolumeX color="#111"/>
+                <VolumeX color="#eee"/>
             )}
         </button>
     )

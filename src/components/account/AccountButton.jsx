@@ -9,7 +9,7 @@ export default function AccountButton() {
     return (
         <Link href="/perfil">
             <button
-            className="w-14 h-14 md:w-12 md:h-12 cursor-pointer rounded-full flex items-center justify-center border-solid 
+            className="w-14 h-14 md:w-16 md:h-16 cursor-pointer rounded-full flex items-center justify-center border-solid 
             border-[3px] border-orange-400 overflow-hidden bg-zinc-200">
                 {user?.photo ? (
                     <Image src={user?.photo}

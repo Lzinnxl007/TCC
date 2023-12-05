@@ -11,6 +11,7 @@ import { GetFavoriteRecipesAction } from "@/utils/recipes/GetFavoriteRecipesActi
 import Cookies from "js-cookie"
 import { toast } from "react-toastify"
 import Notification from "@/components/Notification/Notification"
+import Footer from "@/components/Default/Footer"
 export default function Recipes() {
 
     const [recipes, setRecipes] = useState([])
@@ -72,7 +73,7 @@ export default function Recipes() {
                     Melhores sua alimentação com as melhores receitas para seu dia a dia.
                 </p>
             </div>
-            <div className="mt-6">
+            <div className="mt-6 mb-20">
                 <SelectCategory filterByCategory={filterByCategory}/>
                 <div className="w-auto grid grid-cols-fit gap-6 p-6">
                     {filteredRecipes?.map((recipe, index) => {
@@ -83,6 +84,7 @@ export default function Recipes() {
                 </div>
             </div>
             <ScrollToTop/>
+            <Footer/>
         </div>
     )
 }

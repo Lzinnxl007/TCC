@@ -45,7 +45,7 @@ export default function CalcIMC() {
 
 
     return (
-        <div className="rounded-2xl px-10 py-6 w-full max-w-md h-[350px] flex items-center relative bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-50">
+        <div className="rounded-2xl px-10 py-6 w-full max-w-md h-[350px] flex items-center relative bg-zinc-400/40 dark:bg-zinc-800 dark:text-zinc-50">
 
             <div className="group absolute left-4 top-4 cursor-pointer z-30">
                 <Info size={20} 

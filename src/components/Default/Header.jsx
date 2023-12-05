@@ -4,8 +4,7 @@ import { Menu } from 'lucide-react'
 import { useState, useEffect } from 'react'
 import Logo from "./Logo"
 import AuthButton from './AuthButton'
-import LogOutButton from '../account/LogOutButton'
-import Profile from '../account/AccountButton'
+import AccountButton from '../account/AccountButton'
 import Cookies from "js-cookie"
 export default function Header() {
 
@@ -36,44 +35,49 @@ export default function Header() {
     return (
         <header className="h-[10vh] bg-[var(--light-grey)] text-zinc-50
          dark:bg-zinc-900 dark:text-zinc-50 overflow-hidden">
-            <nav className="w-full h-full flex items-center justify-around z-20 py-6">
-            <a href="/">
-                <div className="flex items-center gap-4 md:gap-2">
+            <nav className="w-full h-full flex items-center justify-around z-20 py-6 pr-6 md:pr-0">
+            <a href="/" className="w-auto md:w-full md:px-8">
+                <div className="flex items-center gap-4 md:gap-2 w-full">
                         {!isDark ? (
-                            <Logo size={80} url="/logo.png"/>
+                            <Logo url="/logo.png"/>
                         ) : (
-                            <Logo size={70} url="/white-logo.png"/>
+                            <Logo url="/white-logo.png"/>
                         )}
-                        <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50">Desperdício 
+                        <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50 md:translate-x-4">Desperdício 
                             <span className="text-[var(--green)]">Zero</span>
                         </p>
                     </div>
                </a>
                <ul className={`flex items-center justify-center gap-6 font-medium text-lg w-auto text-zinc-900
-                md:absolute md:flex-col md:bg-[var(--light-grey)] md:shadow-xl md:dark:bg-zinc-700  md:justify-normal md:h-[91vh] md:px-6 md:py-8 md:transition-right md:duration-500 md:top-[10vh] dark:text-zinc-50
+                md:absolute md:flex-col md:bg-zinc-200 md:shadow-2xl md:dark:bg-zinc-700 md:justify-normal md:h-[91vh] md:px-6 md:py-8 md:top-[10vh] dark:text-zinc-50
                 md:z-50 ${menuShow ? 'md:flex md:right-0' : 'md:hidden md:-right-full'}`}>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="hidden md:block">
+                        {token && (
+                            <AccountButton/>
+                        )}
+                    </li>
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/">Início</a> 
                     </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/sobre">Sobre Nós</a>
                     </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/receitas">Receitas</a>
                     </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/guia">Guia</a>
                     </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/IMC">IMC</a>
                     </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/livros">Livros</a>
                     </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/videos">Videos</a>
                     </li>
-                    <li className="md:dark:hover:text-zinc-700  transition ">
+                    <li className="dark:hover:text-zinc-300 md:dark:hover:text-zinc-400 transition">
                         <a href="/FAQ">FAQ</a>
                     </li>
                     {!token && (
@@ -90,11 +94,13 @@ export default function Header() {
                         </li>
                     )}
                 </ul>
-                {token && (
-                    <Profile/>
-                )}
+                <div className="lg:hidden">
+                    {token && (
+                        <AccountButton/>
+                    )}
+                </div>
                 <button onClick={openCloseMenu}
-                className="hidden md:block cursor-pointer z-10 md:-translate-x-4">
+                className="hidden md:block cursor-pointer z-10 md:-translate-x-12 text-zinc-900 dark:text-zinc-50">
                     <Menu size={36} className="fill-zinc-900 dark:fill-zinc-50"/>
                 </button>
             </nav>

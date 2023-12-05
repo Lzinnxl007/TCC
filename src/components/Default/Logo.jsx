@@ -1,12 +1,12 @@
 import Image from "next/image"
-export default function Logo({ size, className, url }) {
+export default function Logo({ url }) {
     return (
-        <Image style={{maxWidth: size}}
+        <Image
         src={url} 
         alt="logo" 
         layout="responsive"
         width={100}
         height={100}
-        className={`drop-shadow-xl ${className}`}/>
+        className={`drop-shadow-xl w-full max-w-[70px]`}/>
     )
 }

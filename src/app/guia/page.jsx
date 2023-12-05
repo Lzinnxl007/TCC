@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Locals from '@/components/Dashboard/Locals'
 import { GetLocals } from '@/utils/guia/GetLocals'
 import { getLocationFromIP } from '@/utils/guia/GetLocation'
+import Footer from '@/components/Default/Footer'
 
 export default async function Guia() {
 
@@ -42,7 +43,7 @@ export default async function Guia() {
       }*/
 
     return (
-        <section className="min-h-screen dark:bg-zinc-900">
+        <section className="w-screen overflow-x-hidden min-h-screen dark:bg-zinc-900">
             <Header/>
             <Hero/>
             <div className="bg-[var(--light-grey)] w-full h-auto text-zinc-900">
@@ -88,13 +89,13 @@ export default async function Guia() {
                 <Locals locals={locals}/>
               </div>
 
-              <div className="w-screen h-auto px-16">
-                <h1 className="text-5xl lg:text-4xl md:text-3xl text-center mb-6 mt-10 font-bold text-zinc-900">
+              <div className="w-screen h-auto px-16 md:px-12">
+                <h1 className="text-5xl lg:text-4xl md:text-3xl text-center mb-6 mt-10 font-bold text-zinc-900 w-full">
                   Como Criar a Sua Composteira
                 </h1>
-                <div className="w-full flex items-center justify-around">
+                <div className="w-full flex lg:flex-col-reverse items-center justify-around">
 
-                  <div className="mt-8 pb-10 pr-8">
+                  <div className="mt-8 pb-10 pr-8 md:pr-0 mb-20">
                     <div className="mt-16 mb-10">
                       <h2 className="font-semibold text-2xl">
                         Materiais Necessários
@@ -201,7 +202,7 @@ export default async function Guia() {
                     </ul>
                   </div>
 
-                  <div className="ml-16">
+                  <div className="ml-16 lg:mx-auto lg:max-w-sm lg:mt-20 md:mt-10">
                     <Image src="/compost-bin-image.jpg"
                     layout="responsive"
                     width={100}
@@ -210,6 +211,7 @@ export default async function Guia() {
                 </div>
               </div>
             </div>
+            <Footer/>
         </section>
     )
 }

@@ -12,7 +12,7 @@ export default function FAQToggle({ question, answer }) {
 
     return (
         <button onClick={openClose}
-        className="w-full max-w-xl h-auto shadow rounded text-zinc-900 bg-zinc-50 dark:bg-zinc-800 relative">
+        className="w-full max-w-xl h-auto shadow rounded text-zinc-900 bg-zinc-300/90 dark:bg-zinc-800 relative">
            
            <div className="w-full h-full flex items-center justify-between gap-2 px-4 pt-0.5 translate-y-4">
                 <span className="text-zinc-900 dark:text-zinc-50">{question}</span>
@@ -22,7 +22,7 @@ export default function FAQToggle({ question, answer }) {
                 </div>
            </div>
            
-            <div className={`w-full left-0 transition-all px-6 translate-y-5 py-4 bg-zinc-50 dark:bg-zinc-800 rounded-b relative border-solid border-t-[1px] border-zinc-300 dark:border-zinc-600 overflow-hidden ${open ? 'visible h-auto mb-6 mt-4' : 'invisible h-0'}`}>
+            <div className={`w-full left-0 transition-all px-6 translate-y-5 py-4 bg-transparent dark:bg-zinc-800 rounded-b relative border-solid border-t-[1px] border-zinc-300 dark:border-zinc-600 overflow-hidden ${open ? 'visible h-auto mb-6 mt-4' : 'invisible h-0'}`}>
                 <p className="text-zinc-900 dark:text-zinc-50">
                     {answer}
                 </p>

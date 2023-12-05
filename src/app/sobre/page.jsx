@@ -1,4 +1,5 @@
 
+import Footer from "@/components/Default/Footer"
 import Header from "@/components/Default/Header"
 import Image from "next/image"
 export default function About() {
@@ -65,7 +66,7 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="w-full h-auto py-10 bg-orange-400">
+            <div className="w-full h-auto py-10 bg-orange-300">
                 <div className="mx-auto flex flex-col gap-4 items-center text-center">
                     <h2 className="text-zinc-700 dark:text-zinc-200 text-xl">
                         Nossa História
@@ -90,6 +91,7 @@ export default function About() {
                 loading="lazy"
                 className="max-w-5xl lg:max-w-3xl md:max-w-md mx-auto mt-28 md:mt-16"/>
             </div>
+            <Footer/>
         </section>
     )
 }
