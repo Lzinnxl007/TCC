@@ -9,7 +9,7 @@ export default async function Locals({ locals }) {
         <div className="mt-20 grid grid-cols-fit w-full h-auto gap-10 pb-20">
             {locals?.map((item, index) => {
               return (
-               <button key={index} className="w-full h-auto flex flex-col items-center rounded-xl border-solid border-2 border-orange-400 overflow-hidden mx-auto">
+               <button key={index} className="bg-zinc-50 dark:bg-zinc-800 dark:text-zinc-50 text-zinc-900 w-full h-auto flex flex-col items-center rounded-xl border-solid border-2 border-orange-400 overflow-hidden mx-auto">
                   <Link href={`https://www.google.com/maps/search/?api=1&query=${item.name}`}
                   target="_blank"
                   className="w-full">
@@ -25,7 +25,7 @@ export default async function Locals({ locals }) {
                         <h1 className="float-left font-semibold text-left">
                             {item?.name}
                         </h1>
-                        <p className="mt-4 italic">
+                        <p className="mt-4 italic text-zinc-700 dark:text-zinc-200">
                             {item?.vicinity}
                         </p>
                         <div className="mt-2 flex items-center gap-1">

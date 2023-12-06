@@ -10,11 +10,11 @@ export default function Footer() {
                 <nav className="w-full h-full flex justify-around md:justify-between items-center py-4">
                     <Link href="/" 
                     className="w-full flex justify-center items-center">
-                        <div className="flex items-center gap-4">
+                        <div className="flex items-center gap-4 w-full justify-center md:mr-4">
                            
                             <Logo size={90} url="/white-logo.png"/>
 
-                            <h1 className="font-extrabold text-3xl md:text-xl text-zinc-50 w-full">Desperdício Zero</h1>
+                            <h1 className="font-extrabold text-3xl md:text-xl text-zinc-50">Desperdício Zero</h1>
                         </div>
                     </Link>
                 </nav>

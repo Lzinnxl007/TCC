@@ -43,10 +43,10 @@ export default async function Guia() {
       }*/
 
     return (
-        <section className="w-screen overflow-x-hidden min-h-screen dark:bg-zinc-900">
+        <section className="w-screen overflow-x-hidden min-h-screen dark:bg-zinc-900 dark:text-zinc-50">
             <Header/>
             <Hero/>
-            <div className="bg-[var(--light-grey)] w-full h-auto text-zinc-900">
+            <div className="bg-[var(--light-grey)] w-full h-auto dark:bg-zinc-900">
               <div className="w-full min-h-screen pt-20 px-12 md:px-2">
                 <h1 className="text-center font-bold text-4xl px-10">
                   Escolhendo Produtos Locais e Orgânicos
@@ -90,7 +90,7 @@ export default async function Guia() {
               </div>
 
               <div className="w-screen h-auto px-16 md:px-12">
-                <h1 className="text-5xl lg:text-4xl md:text-3xl text-center mb-6 mt-10 font-bold text-zinc-900 w-full">
+                <h1 className="text-5xl dark:text-zinc-50 lg:text-4xl md:text-3xl text-center mb-6 mt-10 font-bold text-zinc-900 w-full">
                   Como Criar a Sua Composteira
                 </h1>
                 <div className="w-full flex lg:flex-col-reverse items-center justify-around">
@@ -201,8 +201,8 @@ export default async function Guia() {
                       </li>
                     </ul>
                   </div>
-                  <div className="ml-16 lg:mx-auto lg:max-w-sm lg:mt-20 md:mt-10">
-                  <div className="ml-16 max-w-2xl translate-y-16">
+                  <div className="ml-16 lg:mx-auto lg:max-w-sm lg:mt-20 md:mt-0">
+                  <div className="ml-16 mb-6 md:ml-0 max-w-2xl translate-y-16">
 
                     <Image src="/compost-bin-image.jpg"
                     layout="responsive"
