@@ -43,7 +43,7 @@ export default function Header() {
                         ) : (
                             <Logo url="/white-logo.png"/>
                         )}
-                        <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50 md:translate-x-4">Desperdício 
+                        <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50 md:text-md">Desperdício 
                             <span className="text-[var(--green)]">Zero</span>
                         </p>
                     </div>
@@ -100,7 +100,7 @@ export default function Header() {
                     )}
                 </div>
                 <button onClick={openCloseMenu}
-                className="hidden md:block cursor-pointer z-10 md:-translate-x-12 text-zinc-900 dark:text-zinc-50">
+                className="hidden md:block cursor-pointer z-10 md:-translate-x-8 ml-2 text-zinc-900 dark:text-zinc-50">
                     <Menu size={36} className="fill-zinc-900 dark:fill-zinc-50"/>
                 </button>
             </nav>

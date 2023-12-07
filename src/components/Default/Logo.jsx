@@ -7,6 +7,6 @@ export default function Logo({ url }) {
         layout="responsive"
         width={100}
         height={100}
-        className={`drop-shadow-xl w-full max-w-[70px]`}/>
+        className={`drop-shadow-xl w-full max-w-[70px] sm:max-w-[50px]`}/>
     )
 }
