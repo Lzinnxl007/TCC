@@ -49,7 +49,19 @@ export default function Home() {
           <Header/>
           <Main/>
           <VideoApresentation/>
-          
+          <div className="w-full h-auto py-28 lg:gap-y-28 flex items-center lg:flex-col justify-evenly bg-[var(--light-grey)] dark:bg-zinc-800">
+            <ReviewCard
+            name="Vanessa A."
+            career="Nutricionista"
+            image="/nutri.jpg"
+            text="O Desperdício Zero é uma fonte nutricional abrangente, oferecendo receitas detalhadas com tabelas nutricionais e cálculos de IMC. Essa plataforma promove escolhas alimentares conscientes, sendo uma valiosa aliada para uma abordagem saudável e sustentável."/>
+
+            <ReviewCard
+            name="Priscila N."
+            career="Psicologa"
+            image="/psico.jpg"
+            text="O site Desperdício Zero é uma abordagem psicologicamente consciente que, ao explorar temas como a compulsão alimentar, oferece informações valiosas e promove a conexão emocional com práticas sustentáveis, tornando-se um aliado no processo de transformação pessoal e coletiva."/>
+          </div> 
           <Footer/>
           <ScrollToTop/>
           <Modal/>

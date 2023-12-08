@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function ReviewCard({ image, text, name, career }) {
     return (
-        <div className="w-full h-[430px] max-w-xs rounded-2xl bg-zinc-50 dark:bg-[var(--light-grey)] shadow-xl relative mt-16 ">
+        <div className="w-full h-[500px] max-w-xs rounded-2xl bg-zinc-50 dark:bg-zinc-200 dark:bg-[var(--light-grey)] shadow-xl relative mt-16 ">
             <div className="w-2/3 aspect-square rounded-full -translate-y-[40%] mx-auto overflow-hidden h-auto  shadow-lg">
                 <Image src={image} alt="person-image"
                 layout="responsive"
