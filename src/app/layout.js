@@ -5,6 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Início',
+  description: 'O Desperdício Zero é uma plataforma focada em saúde e sustentabilidade que proporciona métodos e ferramentas úteis para melhorar seu bem estar enquanto dissemina praticas sustentaveis',
   openGraph: {  
     title: 'Desperdício Zero | Saúde e Sustentabilidade',
     description: 'O Desperdício Zero é uma plataforma focada em saúde e sustentabilidade que proporciona métodos e ferramentas úteis para melhorar seu bem estar enquanto dissemina praticas sustentaveis',

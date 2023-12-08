@@ -3,7 +3,7 @@
 import CalcIMC from "@/components/IMC/CalcIMC"
 import Header from "@/components/Default/Header"
 import IMCTable from "@/components/IMC/IMCTable"
-import Graphic from "@/components/Dashboard/Graphic"
+import Graphic from "@/components/Guia/Graphic"
 import { Context } from "@/context/IMC"
 import { useEffect, useState } from "react"
 import Notification from "@/components/Notification/Notification"

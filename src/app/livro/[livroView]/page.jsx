@@ -20,7 +20,7 @@ export default function Livro() {
             <Header/>
             <div className="flex w-full min-h-screen 
             items-center justify-center mt-16">
-                <div className="bg-zinc-50 dark:bg-zinc-700 lg:flex-col lg:mx-auto flex gap-8 shadow-lg rounded-xl p-8 w-full max-w-4xl h-auto">
+                <div className="bg-zinc-300 dark:bg-zinc-700 lg:flex-col lg:mx-auto flex gap-8 shadow-lg rounded-xl p-8 w-full max-w-4xl h-auto">
                     <div className="w-auto mt-6 lg:ml-4">
                         <Image src={book.image}
                         layout="responsive"

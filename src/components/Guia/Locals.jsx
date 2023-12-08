@@ -15,6 +15,7 @@ export default async function Locals({ locals }) {
                   className="w-full">
                     <div className="w-full max-h-[300px] flex items-center overflow-hidden rounded-t-xl -translate-y-2.5">
                         <Image src={`https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${item.photos?.[0].photo_reference}&key=${process.env.GOOGLE_CLOUD_API_KEY}`}
+                        alt="local comercial"
                         layout="responsive"
                         width={100}
                         height={100}

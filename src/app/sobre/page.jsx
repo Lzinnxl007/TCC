@@ -22,7 +22,7 @@ export default function About() {
                 </div>
                 <div className="w-full max-w-lg md:max-w-sm px-4 lg:mb-10">
                     <Image src="/about.png" 
-                    alt="about-image" 
+                    alt="imagem complementar" 
                     layout="responsive"
                     width={100}
                     height={100}
@@ -32,7 +32,7 @@ export default function About() {
             </div>
             <div className="bg-[var(--light-grey)]">
                 <Image src="/about-team-image.jpg" 
-                alt="team-image" 
+                alt="grupo" 
                 layout="responsive"
                 width={100}
                 height={100}
@@ -57,7 +57,7 @@ export default function About() {
                 </div>
                 <div className="max-w-lg lg:mt-10">
                     <Image src="/argumentation-complementary-image.jpg" 
-                    alt="argumentation-complementary-image" 
+                    alt="imagem complementar" 
                     layout="responsive"
                     width={100}
                     height={100}
@@ -84,7 +84,8 @@ export default function About() {
                     alternativas mais saudáveis e sustentáveis disponíveis.
                     </p>
                 </div>
-                <Image src="/about-work-image.jpg" alt="about-work-image" 
+                <Image src="/about-work-image.jpg" 
+                alt="reunião do grupo" 
                 layout="responsive"
                 width={100}
                 height={100}

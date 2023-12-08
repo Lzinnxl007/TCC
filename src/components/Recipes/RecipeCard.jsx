@@ -21,7 +21,7 @@ export default function RecipeCard({ recipe }) {
             <div className="w-full h-3/5 relative bottom-4">
                 <Image src={recipe.image} 
                 layout="fill"
-                alt="recipe-image" 
+                alt="receita" 
                 loading="lazy"
                 className="w-full h-full object-cover absolute top-0 left-0"/>
             </div>

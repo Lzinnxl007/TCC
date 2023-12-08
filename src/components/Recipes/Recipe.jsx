@@ -41,7 +41,7 @@ export default function Recipe() {
                 <div className="w-full flex lg:flex-col-reverse items-center justify-evenly lg:gap-8 lg:px-8 md:px-2">
                     <div className="w-full h-[65vh]">
                         <img src={recipe?.image} 
-                        alt="food-image" 
+                        alt="receita" 
                         loading="lazy"
                         className="w-full h-full object-cover"/>
                     </div>

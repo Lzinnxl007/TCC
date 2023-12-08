@@ -11,7 +11,7 @@ export default function AuthButton({ method, destiny, type }) {
         variants: {
             color: {
                 primary: 'bg-orange-400 hover:bg-orange-500',
-                secondary: 'bg-transparent border-solid border-2 border-[var(--green)] text-[var(--green)] hover:bg-[var(--green)] hover:text-zinc-50 hover:border-none hover:ml-1'
+                secondary: 'bg-transparent border-solid border-2 dark:border-[var(--green)] border-zinc-50 text-zinc-50 dark:text-[var(--green)] hover:bg-zinc-50 dark:hover:bg-[var(--green)] hover:text-[var(--green)] dark:hover:text-zinc-50 hover:border-none hover:ml-1'
             }
         },
         defaultVariants: {

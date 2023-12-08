@@ -18,7 +18,7 @@ export default function VideoCard({ video }) {
             <div className="w-full h-1/2 relative">
                 <Image
                 src={video?.tumbnail_url}
-                alt="tumbnail-image"
+                alt="tumbnail do video"
                 width={100}
                 height={100}
                 layout="responsive"

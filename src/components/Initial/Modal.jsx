@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { X } from "lucide-react"
 import { SaveEmailAction } from '@/utils/SaveEmailsAction'
+import Image from 'next/image'
 export default function Modal() {
 
     const [email, setEmail] = useState('')
@@ -74,7 +75,11 @@ export default function Modal() {
             </button>
             
             <div className="w-1/2 h-full">
-                <img src="/modal-image.webp" alt="modal-image" 
+                <Image src="/modal-image.webp" 
+                alt="modal imagem"
+                layout="responsive"
+                width={100}
+                height={100} 
                 className="w-full h-full object-cover"/>
             </div>
         </div>

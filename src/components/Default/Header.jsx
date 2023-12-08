@@ -33,7 +33,7 @@ export default function Header() {
    
 
     return (
-        <header className="h-[10vh] bg-[var(--light-grey)] text-zinc-50
+        <header className="h-[10vh] bg-[var(--green)] text-zinc-50
          dark:bg-zinc-900 dark:text-zinc-50 overflow-hidden">
             <nav className="w-full h-full flex items-center justify-around z-20 py-6 pr-6 md:pr-0">
             <a href="/" className="w-auto md:w-full md:px-8">
@@ -44,7 +44,7 @@ export default function Header() {
                             <Logo url="/white-logo.png"/>
                         )}
                         <p className="text-3xl font-bold whitespace-nowrap md:text-2xl text-zinc-900 dark:text-zinc-50 md:text-md">Desperdício 
-                            <span className="text-[var(--green)]">Zero</span>
+                            <span className="text-zinc-50 dark:text-[var(--green)]">Zero</span>
                         </p>
                     </div>
                </a>

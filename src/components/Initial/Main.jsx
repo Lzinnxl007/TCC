@@ -46,7 +46,7 @@ export default function Main() {
             <div>
                 <Image 
                 src="/main-image.png" 
-                alt="complementar" 
+                alt="imagem complementar" 
                 layout="responsive"
                 width={100}
                 height={100}
