@@ -11,7 +11,7 @@ export default function IMCTable() {
         else {
           if (IMC >= min && IMC <= max) return 'text-emerald-600 font-semibold'
         }
-        return ''
+        return null
     }
 
     return (

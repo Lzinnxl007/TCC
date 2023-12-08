@@ -20,7 +20,7 @@ export default function Footer() {
                 </nav>
                
             </header>
-            <div className="flex justify-evenly w-full mt-10 px-10">
+            <div className="flex justify-evenly w-full mt-10 px-10 md:text-sm">
                     <div>
                         <ul>
                             <li className="transition text-zinc-100 dark:hover:text-zinc-50">

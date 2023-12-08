@@ -16,20 +16,20 @@ export default function Livro() {
 
 
     return (
-        <section className="w-screen min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900">
+        <section className="w-screen min-h-screen bg-[var(--light-grey)] dark:bg-zinc-900 px-6">
             <Header/>
             <div className="flex w-full min-h-screen 
             items-center justify-center mt-16">
-                <div className="bg-zinc-300 dark:bg-zinc-700 lg:flex-col lg:mx-auto flex gap-8 shadow-lg rounded-xl p-8 w-full max-w-4xl h-auto">
-                    <div className="w-auto mt-6 lg:ml-4">
+                <div className="bg-zinc-300 dark:bg-zinc-700 lg:flex-col lg:mx-auto flex gap-8 shadow-lg rounded-xl py-10 md:py-4 md:px-4 w-full max-w-4xl h-auto">
+                    <div className="w-auto ml-10 lg:ml-0">
                         <Image src={book.image}
                         layout="responsive"
                         width={100}
                         height={100} 
                         className="w-full object-cover h-full lg:max-w-sm"/>
 
-                        <div className="mt-6 text-xs text-zinc-800 dark:text-zinc-200 mr-16">
-                            <p className="max-w-xs">
+                        <div className="mt-6 text-xs text-zinc-800 dark:text-zinc-200 ">
+                            <p className="w-full max-w-xs break-words">
                                 {book?.citation}
                             </p>
                         </div>
@@ -47,7 +47,7 @@ export default function Livro() {
 
                         </div>
                     </div>
-                    <div className="w-3/4 ml-4 lg:w-full lg:pr-10">
+                    <div className="w-full ml-4 pr-10">
                         <h1 className="text-3xl font-semibold mt-4 mb-6 text-zinc-900 dark:text-zinc-50">
                             {book?.title}
                         </h1>
@@ -67,7 +67,8 @@ export default function Livro() {
                             
                         </p>
                         
-                        <Link href={book.link}>
+                        <Link href={book.link}
+                        target="_blank">
                             <button className="w-full py-1.5 bg-orange-400 hover:bg-orange-500 transition text-zinc-50 font-medium rounded mt-10">
                                 Baixar
                             </button>

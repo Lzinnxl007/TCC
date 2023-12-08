@@ -75,11 +75,11 @@ export default function Graphic({ data }) {
 
     return (
         
-        <div className="w-fill">
+        <div className="w-auto">
           <ReactApexChart 
           options={options} 
           series={data.series} 
-          width={450}
+          width={'100%'}
           height={350}/>
         </div>
         

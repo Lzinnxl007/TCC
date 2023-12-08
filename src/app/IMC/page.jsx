@@ -83,7 +83,7 @@ export default function IMC() {
             <Notification/>
             <Header/>
             <div className="min-h-screen">
-                {user && (
+            {user && (
                     <Loading/>
                         )}
                         <div className="w-full flex flex-col items-center justify-center gap-8 px-6 translate-y-[10vh]">

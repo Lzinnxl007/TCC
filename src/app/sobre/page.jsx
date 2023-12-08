@@ -8,30 +8,24 @@ export default function About() {
         <section className="min-h-screen bg-[var(--orange)]">
             <Header/>  
             <div className="min-h-screen flex items-center justify-around w-full h-[90vh] lg:flex-col-reverse
-             lg:mt-[0.5vh] lg:gap-[0.5vh] lg:h-auto lg:py-10  dark:bg-zinc-900 bg-[var(--light-grey)]">
+              lg:gap-[0.5vh] lg:h-auto lg:py-10  dark:bg-zinc-900 bg-[var(--light-grey)]">
                 <div className="lg:text-center">
                     <h2 className="text-xl tracking-wider  dark:text-zinc-200 text-zinc-700">Sobre Nós</h2>
                     <h1 className="md:px-8 text-6xl font-semibold max-w-xl my-4 lg:mb-6 md:text-4xl 
                     leading-[70px] dark:text-zinc-50 text-zinc-900">
-                        Alimente-se com consciência, cuide do planeta e de você.
+                        Comprometidos com nutrição e sustentabilidade.
                     </h1>
                     <p className="text-lg max-w-lg md:max-w-sm md:mx-auto leading-7 text-zinc-700 dark:text-zinc-200  md:px-6">
                         Somos apaixonados por comida que faz bem para o corpo e para o planeta. Acreditamos que uma alimentação saudável e sustentável pode transformar vidas e preservar o meio ambiente.
                         Nosso desejo é oferecer uma alternativa deliciosa e equilibrada para aqueles que desejam fazer escolhas alimentares conscientes.
                     </p>
                 </div>
-                <div className="w-full max-w-lg md:max-w-sm px-4 lg:mb-10">
-                    <Image src="/about.png" 
-                    alt="imagem complementar" 
-                    layout="responsive"
-                    width={100}
-                    height={100}
-                    loading="lazy"
-                    className="w-full h-full"/>
+                <div className="w-full aspect-square max-w-md md:max-w-xs px-4 lg:mb-10 rounded-full overflow-hidden bg-[url('/about.jpg')] bg-cover bg-center">
+                    
                 </div>
             </div>
             <div className="bg-[var(--light-grey)]">
-                <Image src="/about-team-image.jpg" 
+                <Image src="/about-team-image.png" 
                 alt="grupo" 
                 layout="responsive"
                 width={100}
@@ -62,17 +56,17 @@ export default function About() {
                     width={100}
                     height={100}
                     loading="lazy"
-                    className="w-full"/>
+                    className="w-auto"/>
                 </div>
             </div>
 
-            <div className="w-full h-auto py-10 bg-orange-300">
+            <div className="w-full h-auto py-10 bg-orange-300 pb-20">
                 <div className="mx-auto flex flex-col gap-4 items-center text-center">
-                    <h2 className="text-zinc-700 dark:text-zinc-200 text-xl">
+                    <h2 className="text-zinc-700 text-xl">
                         Nossa História
                     </h2>
-                    <h1 className="text-4xl font-semibold px-4 text-zinc-900 dark:text-zinc-50">A história da Desperdício Zero</h1>
-                    <p className="max-w-5xl lg:max-w-2xl md:max-w-md dark:text-zinc-200 mt-4 text-lg">
+                    <h1 className="text-4xl font-semibold px-4 text-zinc-900">A história da Desperdício Zero</h1>
+                    <p className="max-w-5xl lg:max-w-2xl md:max-w-md mt-4 text-lg">
                     O projeto Desperdício Zero foi 
                     desenvolvido por três alunos comprometidos com a promoção de escolhas alimentares 
                     conscientes e sustentáveis.
@@ -84,7 +78,7 @@ export default function About() {
                     alternativas mais saudáveis e sustentáveis disponíveis.
                     </p>
                 </div>
-                <Image src="/about-work-image.jpg" 
+                <Image src="/about-work-image.png" 
                 alt="reunião do grupo" 
                 layout="responsive"
                 width={100}
